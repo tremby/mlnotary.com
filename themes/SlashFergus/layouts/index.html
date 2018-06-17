@@ -4,7 +4,7 @@
 {{.Content}}
 
 
-<section class="hero background:white overflow:hidden">
+<section class="hero background:white">
   {{ partial "partial/header" . }}
     <div class="hero/content">
       <h1 class="font font-weight:light font-size:h2 font-size-lg:h1 font-leading:0 margin-bottom:3">
@@ -25,9 +25,59 @@
   </div>
 </section>
 
+<section class="hero background:white">
+  <div class="row">
+    <div class="column:12 column-md:3 padding-y:10vh background-size:cover background-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
 
+    </div>
+    <div class="column:12 column-md:6 padding-y:10vh background:primary">
+      <div class="margin:auto max-width:60 align:center padding-y:5vh">
+        <span class="line line:short margin-bottom:5vh background:white margin:auto"></span>
+        <h3 class="font font-weight:light font-leading:2 color:white margin-bottom:4">
+          Marine Landing Notary Public, provides Notary Public Services emphasizing excellent customer services, as efficiently as possible.
+        </h3>
+
+        <p class="color:white">
+          Jonathan Wong<br>
+          <span class="opacity:6">Director, Marine Landing</span>
+        </p>
+      </div>
+    </div>
+    <div class="column:12 column-md:3 padding-y:10vh background-size:cover background-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column:12 column-md:3 padding:2 padding-md:7 padding-y:5vh">
+      <h4 class="font font-weight:light font-leading:1 margin-bottom:3">
+        Our Services <br>The key missing element
+      </h4>
+      <p>
+        We prepare the documents that are necessary to transfer the property and register the mortgage that secures your loan.
+      </p>
+      <a href="{{ .Site.BaseURL }}/services" class="color:black font-weight:medium">Learn more</a>
+    </div>
+    <div class="column:12 column-md:3 padding-y:10vh background-size:cover background-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+
+    </div>
+    <div class="column:12 column-md:3 padding:2 padding-md:7 padding-y:5vh">
+      <h4 class="font font-weight:light font-leading:1 margin-bottom:3">
+        Our Services <br>The key missing element
+      </h4>
+      <p>
+        We prepare the documents that are necessary to transfer the property and register the mortgage that secures your loan.
+      </p>
+      <a href="{{ .Site.BaseURL }}/services" class="color:black font-weight:medium">Learn more</a>
+    </div>
+    <div class="column:12 column-md:3 padding-y:10vh background-size:cover background-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+
+    </div>
+  </div>
+
+</section>
 
 {{ partial "partial/cta" . }}
 {{ partial "partial/footer" . }}
 
-{{ partial "partial/foot" . }}
+{{ partial "foot" . }}
