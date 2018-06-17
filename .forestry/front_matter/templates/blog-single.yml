@@ -1,0 +1,32 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+- type: text
+  label: Meta Title
+  name: meta_title
+- type: text
+  name: meta_description
+  label: Meta Description
+- type: text
+  name: author
+  label: Author
+- type: text
+  label: Duration
+  name: duration
+- type: tag_list
+  name: categories
+  label: Categories
+- type: boolean
+  name: feature
+  label: Feature
+- type: file
+  name: thumbnail
+  label: Thumbnail
+pages:
+- content/blog/hello-this-is-a-blog-post-that-is-very-long.md
+- content/blog/that-is-the-question.md
+- content/blog/to-grow-or-not-to-grow--that-is-the-question.md

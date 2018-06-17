@@ -1,0 +1,27 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+- type: text
+  label: Meta Title
+  name: meta_title
+- type: text
+  label: Meta Description
+  name: meta_description
+- type: text
+  name: hero_title
+  label: Hero Title
+- type: text
+  name: hero_subtitle
+  label: Hero Subtitle
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - block-feature-card
+pages:
+- content/features/_index.md

@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{.Content}}
+  <div class="page-blocks">
+    {{- range .Params.block_label -}}
+        {{- if eq .template "block-template" -}}
+          {{ partial "partial/test" (dict "Params" .) }}
+        {{- end -}}
+    {{- end -}}
+  </div>
+{{end}}

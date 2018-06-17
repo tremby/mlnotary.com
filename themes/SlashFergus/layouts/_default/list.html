@@ -1,0 +1,8 @@
+{{ define "main" }}
+  This is the default list block
+  {{.Content}}
+  {{ range .Pages }}
+    <a href="{{.URL}}">{{ .Title }}</a><br><br>
+    {{ .Params.deprecated }}
+  {{end}}
+{{end}}

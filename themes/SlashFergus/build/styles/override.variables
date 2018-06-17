@@ -1,0 +1,34 @@
+/******************************
+TYPOGRAPHY
+******************************/
+
+$font-family: 'Theinhardt Web', sans-serif !default;
+$font-size: 1.4rem !default;
+
+/******************************
+COLORS
+******************************/
+
+$colors: (
+  red: #f52c00,
+  orange: #FF691a,
+  yellow: #FFDD24,
+  green: #00c16d,
+  blue: #007eff,
+  purple: #4739ff,
+  black: #453A60,
+  grey: #cccccc,
+  white: #fff,
+  primary: #453A60,
+  primary-tint: #0F44DC,
+  primary-shade: #0031BC,
+  secondary: #FF5600,
+  secondary-tint: #FF6C22,
+  secondary-shade: #EA4F00,
+  background: #f9fafb,
+  background-focus: #f1f5fb,
+  background-active: #e4e9f1,
+  default-color: #4D5871,
+  link-color: #0036D0,
+  border-color: #e3e6ea
+) !default;

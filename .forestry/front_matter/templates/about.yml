@@ -1,0 +1,42 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+- type: text
+  label: Quote
+  name: quote
+- type: text
+  label: Column 1 Title
+  name: column_1_title
+- type: textarea
+  name: column_1_paragraph
+  label: Column 1 Paragraph
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: column_2_title
+  label: Column 2 Title
+- type: textarea
+  name: column_2_paragraph
+  label: Column 2 Paragraph
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - block-about-profile
+pages:
+- content/company/about/_index.md

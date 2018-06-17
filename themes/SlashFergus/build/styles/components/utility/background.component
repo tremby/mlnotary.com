@@ -1,0 +1,15 @@
+/************************************************************
+BACKGROUND
+************************************************************/
+
+.background {
+
+  &\:transparent {
+    background-color: transparent !important;
+  }
+  @each $key, $value in $colors {
+    &\:#{$key} {
+      background-color: var(--#{$key}) !important;
+    }
+  }
+}

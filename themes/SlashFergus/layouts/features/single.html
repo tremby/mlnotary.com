@@ -1,0 +1,78 @@
+{{ partial "head" . }}
+{{ partial "partial/menus/menu-slide" . }}
+
+<div class="background:white js-header">
+  {{ partial "partial/header" . }}
+</div>
+
+<section class="background:black background:hero-andrew-03 padding-top-sm:4">
+  <div class="wrap wrap:padding-x padding-y:10vh align:center">
+    <h1 class="font font-size:h3 font-size-md:h2 font-size-lg:h1 margin-bottom:2 font-leading:0 align:center color:white">
+      {{ .Params.hero_title | safeHTML }}
+    </h1>
+    <h2 class="font font-weight:regular font-size:h6 font-size-sm:h5 font-leading:2 align:center color:white max-width:100 margin:auto margin-bottom:3">
+      {{ .Params.hero_subtitle | safeHTML }}
+    </h2>
+  </div>
+</section>
+
+{{ range .Params.blocks }}
+  {{ if eq "block-section-text-image" .template }}
+    <section class="{{ if .background }}background:white{{else}}background:background{{end}} padding-y:8vh">
+      <div class="wrap wrap:padding-x">
+        <div class="row row-gutter:2 row-gutter-md:5">
+
+
+          <div class="column:12 column-sm:6 display:flex align-item:middle align:flex-center {{ if .right_align }} column-order:1 column-order-sm:2 align-content:right{{end}}">
+            <div class="margin-bottom:4 margin-bottom-sm:none max-width:50">
+              <h3 class="font font-size:h5 font-size-sm:h3 margin-bottom:3 font-leading:0">
+                {{ .title }}
+              </h3>
+              <p class="font margin-bottom:4">
+                {{ .description }}
+              </p>
+              {{ range .blocks }}
+                {{ if eq "block-list" .template }}
+                  <div class="card display:inline-block padding:2 border:radius">
+                    <ul class="list list-gutter:0">
+
+                      {{ range .item }}
+                        <li class="list/item font-size:micro color:black"><i class="fas fa-check color:green margin-right:1"></i> {{ . }}</li>
+                      {{ end }}
+                    </ul>
+                  </div>
+                {{ end }}
+                {{ if eq "block-cards" .template }}
+                  <div class="card display:inline-block border:radius">
+                    {{ range .blocks }}
+                      <div class="card/content">
+                        <h6 class="font font-size:body font-size-sm:body margin-bottom:1 font-leading:0">
+                          {{ .title }}
+                        </h6>
+                        <p class="font font-size:micro">
+                          {{ .description }}
+                        </p>
+                      </div>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+
+          <div class="column:12 column-sm:6 {{ if .right_align }} column-order:2 column-order-sm:1 {{end}}">
+            <div class="margin-bottom:4 margin-bottom-sm:none padding-x-sm:5">
+              <img src="{{ .image }}" class="image image:fluid {{ if .right_align }}js-reveal-left{{else}}js-reveal-right{{end}}" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+
+{{ partial "partial/modals/modal-register"}}
+{{ partial "partial/cta" . }}
+{{ partial "partial/footer" . }}
+{{ partial "foot" . }}

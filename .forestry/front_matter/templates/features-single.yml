@@ -1,0 +1,42 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- name: title
+  label: title
+  type: text
+  hidden: false
+- type: text
+  label: Meta Title
+  name: meta_title
+- type: text
+  name: meta_description
+  label: Meta Description
+- type: text
+  name: hero_title
+  label: Hero Title
+- type: text
+  name: hero_subtitle
+  label: Hero Subtitle
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - block-section-text-image
+pages:
+- content/features/team-management.md
+- content/features/service-industry.md
+- content/features/run-your-office.md
+- content/features/reporting.md
+- content/features/quoting.md
+- content/features/plumber.md
+- content/features/other-services.md
+- content/features/on-the-job.md
+- content/features/manage-your-team.md
+- content/features/track-manage-jobs.md
+- content/features/invoicing.md
+- content/features/integrations.md
+- content/features/ferguspay.md
+- content/features/electrician.md
+- content/features/scheduling.md
+- content/features/grow-your-business.md

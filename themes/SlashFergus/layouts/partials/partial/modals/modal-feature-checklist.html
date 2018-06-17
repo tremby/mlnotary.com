@@ -1,0 +1,38 @@
+<div class="js-modal-feature-checklist max-width:50" style="width:100%; max-width: 400px;">
+  <div class="card">
+    <div class="card/content padding:5">
+      <h3 class="font font-size:h2 font-leading:0 align:center margin-bottom:3 font-leading:0">
+        Grab your Fergus Feature <span class="font font-weight:bold font:underline color:primary js-typed">Checklist</span>
+      </h3>
+      <h6 class="font font-size:h6 font-weight:regular align:center margin-bottom:3">Use the Feature Checklist to help you decide on the right software for your trade business</h6>
+
+      <form class="form">
+        <div class="form/item">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Email" class="form/input:fluid">
+        </div>
+        <div class="form/item">
+          <label for="country">Country</label>
+          <div class="form/select form/select:fluid">
+            <select class="form/input:fluid">
+              <option>New Zealand</option>
+              <option>Australia</option>
+              <option>UK</option>
+            </select>
+            <div class="form/arrow"></div>
+          </div>
+        </div>
+        <div class="form/item margin-bottom:4">
+          <label class="form/checkbox font-size:tiny">
+            I agree to the <a href="{{ .Site.BaseURL }}/terms-of-service">Terms and Conditions</a>
+            <input type="checkbox"/>
+            <div class="form/checkbox-indicator"></div>
+          </label>
+        </div>
+        <div class="form/item">
+          <input type="submit" class="button button:fluid color:yellow button:elevate" value="Get Started">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+---
+hide_body: true
+is_partial: true
+fields:
+- type: text
+  label: Source
+  name: source
+- type: text
+  label: Testimonial
+  name: testimonial
+- type: text
+  label: Name
+  name: name
+- type: text
+  name: company
+  label: Company

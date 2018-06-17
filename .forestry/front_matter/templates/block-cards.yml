@@ -1,0 +1,9 @@
+---
+hide_body: true
+is_partial: true
+fields:
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - block-title-description
