@@ -1,0 +1,134 @@
+/*
+Title: SlashCSS
+Version: 0.1.0
+Updated: 2018-05-28
+Author: Jin Su Park
+Site: slashcss.com
+*/
+
+/************************************************************
+1. OVERRIDE VARIABLES
+************************************************************/
+
+@import "override.variables";
+
+/************************************************************
+2. DEFAULT VARIABLES
+************************************************************/
+
+@import "default.variables";
+
+/************************************************************
+3. COMPONENTS
+************************************************************/
+
+@import "components/import.components";
+
+/************************************************************
+5. THIRD PARTY
+************************************************************/
+
+@import "../fonts/theinhardt/css/theinhardt.scss";
+@import "../vendors/iziModal/css/iziModal.min.scss";
+@import "../vendors/prism/prism.scss";
+@import "../vendors/fontawesome/css/fontawesome-all.scss";
+@import "../vendors/slick/slick.scss";
+@import "../vendors/slick/slick-theme.scss";
+
+/************************************************************
+6. EXTENSIONS
+************************************************************/
+
+:root {
+  --button-font-size: 16px;
+}
+
+.js-reveal, .js-reveal-right, .js-reveal-left, .js-reveal-set-1 {
+  visibility: hidden;
+}
+
+.iziModal {
+  background: transparent;
+  box-shadow: none;
+}
+
+.js-modal {
+  display: none;
+}
+
+.js-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: 0s;
+  z-index: 3;
+  &.is-not-top {
+    transform: translateY(0);
+  }
+  background: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  @media (min-width: $sm) {
+    height: 60px;
+  }
+  @media (min-width: $md) {
+    height: 65px;
+  }
+  @media (min-width: $lg) {
+    height: 160px;
+  }
+  a {
+    color: var(--black);
+  }
+}
+
+.hero {
+  position: relative;
+  height: 100%;
+  &\/content {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    width: 100%;
+    max-width: 1000px;
+  }
+  &\/footer {
+    position: absolute;
+    bottom: 160px;
+    left: 8%;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+.line {
+  &\:short {
+    width: 80px;
+    height: 2px;
+    background: var(--black);
+  }
+}
+
+
+.fill {
+  &\:footer {
+    background: #231E28;
+  }
+}
+
+.tab{
+  &\:services {
+    .tab\/header-item {
+      opacity: .3;
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+}

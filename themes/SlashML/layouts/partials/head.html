@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <title>Fergus | {{ .Page.Title }}</title>
+  <!-- Page Meta -->
+  <meta charset="utf-8" />
+  <meta name="description" content="LOREMMETA">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+  <!-- Social Media Open Graph -->
+  <meta property="og:title" content="LOREMMETA">
+  <meta property="og:description" content="LOREMMETA">
+  <meta property="og:image" content="LOREMMETA/thumbnail.jpg">
+  <meta property="og:url" content="LOREMMETA/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/favicon-96x96.png" sizes="96x96">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/iPhone-6-Plus.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/assets/styles/main.css">
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+  <!--
+      You need to include this script tag on any page that has a Google Map.
+
+      The following script tag will work when opening this example locally on your computer.
+      But if you use this on a localhost server or a live website you will need to include an API key.
+      Sign up for one here (it's free for small usage):
+          https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+      After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs0jj4meEsM8vlBOPUDJYYrJJnCHwy7W8"></script>
+  -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs0jj4meEsM8vlBOPUDJYYrJJnCHwy7W8"></script>
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script> -->
+
+  <script type="text/javascript">
+      // When the window has finished loading create our google map below
+      google.maps.event.addDomListener(window, 'load', init);
+
+      function init() {
+          // Basic options for a simple Google Map
+          // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+          var mapOptions = {
+              // How zoomed in you want the map to start at (always required)
+              zoom: 11,
+
+              // The latitude and longitude to center the map (always required)
+              center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+              // How you would like to style the map.
+              // This is where you would paste any style found on Snazzy Maps.
+              styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+          };
+
+          // Get the HTML DOM element that will contain your map
+          // We are using a div with id="map" seen below in the <body>
+          var mapElement = document.getElementById('js-map');
+
+          // Create the Google Map using our element and options defined above
+          var map = new google.maps.Map(mapElement, mapOptions);
+
+          // Let's also add a marker while we're at it
+          var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(40.6700, -73.9400),
+              map: map,
+              title: 'Snazzy!'
+          });
+      }
+  </script>
+</head>
+<body class="{{ .Page.Params.layout }}">
