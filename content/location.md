@@ -1,4 +1,4 @@
 +++
 title = "Home"
-layout = "about"
+layout = "location"
 +++

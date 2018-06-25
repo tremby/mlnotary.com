@@ -3,7 +3,7 @@ TYPOGRAPHY
 ******************************/
 
 $font-family: 'Theinhardt Web', sans-serif !default;
-$font-size: 1.4rem !default;
+$font-size: 1.8rem !default;
 
 $font-weights: (
   light: 300,
@@ -34,7 +34,7 @@ $colors: (
   secondary-tint: #FF6C22,
   secondary-shade: #EA4F00,
   background: #f9fafb,
-  background-focus: #f1f5fb,
+  background-focus: #f4f4f5,
   background-active: #e4e9f1,
   default-color: #4D5871,
   link-color: #0036D0,

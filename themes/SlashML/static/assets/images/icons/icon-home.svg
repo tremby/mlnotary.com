@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="icon-home" transform="translate(8.000000, 13.000000)" stroke="#000000" stroke-width="2">
+            <path d="M0.717921457,70.5873514 L84.8768432,70.5873514" id="Shape" stroke-linecap="round"></path>
+            <path d="M0.717921457,41.1692933 L37.308757,26.4602642" id="Shape" stroke-linecap="round"></path>
+            <path d="M8.03608856,38.2973554 L8.03608856,70.5873514" id="Shape"></path>
+            <path d="M31.8201317,0.719463378 L84.8768432,33.8147788" id="Shape" stroke-linecap="round"></path>
+            <path d="M77.5586761,29.3322021 L77.5586761,70.5873514" id="Shape"></path>
+            <polyline id="Shape" points="66.5814254 22.441022 66.5814254 8.07397791 73.8995925 8.07397791 73.8995925 26.9787575"></polyline>
+            <rect id="Rectangle-path" stroke-linecap="round" x="44.6269241" y="55.8783223" width="25.6135849" height="14.7090291"></rect>
+            <path d="M59.2632583,55.8783223 L59.2632583,70.5873514" id="Shape" stroke-linecap="round"></path>
+            <ellipse id="Oval" stroke-linecap="round" cx="50.1155494" cy="30.1375215" rx="5.48862533" ry="5.5158859"></ellipse>
+            <rect id="Rectangle-path" stroke-linecap="round" x="15.3542557" y="52.2010651" width="14.6363342" height="18.3862863"></rect>
+            <path d="M15.3542557,44.8465505 L29.9905899,44.8465505" id="Shape" stroke-linecap="round"></path>
+            <path d="M37.308757,4.22388955 L37.308757,70.5873514" id="Shape"></path>
+        </g>
+    </g>
+</svg>

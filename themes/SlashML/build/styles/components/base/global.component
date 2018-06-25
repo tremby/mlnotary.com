@@ -106,7 +106,7 @@ OTHER
 
 ol, ul {
 	margin: 0;
-	margin-left: calc(var(--u1) + var(--u0));
+	margin-left: var(--u2);
 	margin-bottom: var(--u2);
 }
 li {
