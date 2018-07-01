@@ -9,7 +9,7 @@ fields:
   label: Service Text
   name: service_text
 - type: text
-  name: location_text
-  label: Location Text
+  name: about_text
+  label: About Text
 pages:
 - content/location.md
