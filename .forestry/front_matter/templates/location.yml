@@ -1,0 +1,13 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Headline
+  name: headline
+- type: text
+  label: Service Text
+  name: service_text
+- type: text
+  name: location_text
+  label: Location Text
