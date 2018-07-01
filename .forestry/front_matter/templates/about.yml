@@ -38,5 +38,3 @@ fields:
   label: Blocks
   template_types:
   - block-about-profile
-pages:
-- content/company/about/_index.md

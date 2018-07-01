@@ -26,7 +26,3 @@ fields:
 - type: file
   name: thumbnail
   label: Thumbnail
-pages:
-- content/blog/hello-this-is-a-blog-post-that-is-very-long.md
-- content/blog/that-is-the-question.md
-- content/blog/to-grow-or-not-to-grow--that-is-the-question.md

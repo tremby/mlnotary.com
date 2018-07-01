@@ -23,5 +23,3 @@ fields:
   label: Blocks
   template_types:
   - block-feature-card
-pages:
-- content/features/_index.md
