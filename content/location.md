@@ -1,4 +1,5 @@
 +++
-title = "Home"
 layout = "location"
+title = "Location"
+
 +++
