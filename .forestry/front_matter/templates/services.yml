@@ -5,3 +5,5 @@ fields:
 - type: text
   name: headline
   label: Headline
+pages:
+- content/services.md
