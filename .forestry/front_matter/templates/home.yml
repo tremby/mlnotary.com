@@ -17,3 +17,5 @@ fields:
 - type: text
   name: location_text
   label: Location Text
+pages:
+- content/_index.md
