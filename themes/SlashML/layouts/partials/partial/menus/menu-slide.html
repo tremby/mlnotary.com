@@ -31,8 +31,8 @@
       <div class="padding:2">
         <span class="line line:short margin-bottom:5vh margin:auto margin-bottom:10vh"></span>
         <h6 class="font font-size:tiny font-leading:2 font-weight:regular align:center margin-bottom:10vh">
-          509 SW Marine Drive, Vancouver, BC V6P 0G8
-          <a href="mailto:jwong@mlnotary.com" class="color:primary">jwong@mlnotary.com</a> T (604) 687 6166<br>F (604)687 8002
+          {{ .Site.Data.meta.address_1 }}, {{ .Site.Data.meta.address_2 }}
+          <a href="mailto:{{ .Site.Data.meta.email }}" class="color:primary">{{ .Site.Data.meta.email }}</a> T {{ .Site.Data.meta.phone }}<br>F {{ .Site.Data.meta.fax }}
         </h6>
         <img src="/assets/images/logo.svg" class="image image-shape:square image-size:3 margin:auto">
       </div>

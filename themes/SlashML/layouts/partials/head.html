@@ -6,14 +6,14 @@
   <title>Maring Landing | {{ .Page.Title }}</title>
   <!-- Page Meta -->
   <meta charset="utf-8" />
-  <meta name="description" content="LOREMMETA">
+  <meta name="description" content="{{ .Site.Data.meta.description }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
   <!-- Social Media Open Graph -->
-  <meta property="og:title" content="LOREMMETA">
-  <meta property="og:description" content="LOREMMETA">
-  <meta property="og:image" content="LOREMMETA/thumbnail.jpg">
-  <meta property="og:url" content="LOREMMETA/">
+  <meta property="og:title" content="{{ .Site.Data.meta.title }}">
+  <meta property="og:description" content="{{ .Site.Data.meta.description }}">
+  <meta property="og:image" content="/thumbnail.jpg">
+  <meta property="og:url" content="/">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Icons -->
@@ -63,10 +63,10 @@
           // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
           var mapOptions = {
               // How zoomed in you want the map to start at (always required)
-              zoom: 11,
+              zoom: 16,
 
               // The latitude and longitude to center the map (always required)
-              center: new google.maps.LatLng(40.6700, -73.9400), // New York
+              center: new google.maps.LatLng(49.210406, -123.117258), // New York
 
               // How you would like to style the map.
               // This is where you would paste any style found on Snazzy Maps.
@@ -82,7 +82,7 @@
 
           // Let's also add a marker while we're at it
           var marker = new google.maps.Marker({
-              position: new google.maps.LatLng(40.6700, -73.9400),
+              position: new google.maps.LatLng(49.210406, -123.117258),
               map: map,
               title: 'Snazzy!'
           });
