@@ -1,0 +1,14 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Headline
+  name: headline
+- type: textarea
+  label: About
+  name: about
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
