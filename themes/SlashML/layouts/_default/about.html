@@ -13,7 +13,7 @@
   </div>
   <div class="column:12 column-sm:6 padding:3 padding-sm:10 padding-y-sm:10vh font-size:h6">
     <div class="max-width:90">
-      {{ .Params.about }}
+      {{ .Params.about | markdownify }}
 
     </div>
 
