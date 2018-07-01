@@ -1,7 +1,0 @@
----
-hide_body: true
-is_partial: true
-fields:
-- type: list
-  label: Item
-  name: item
