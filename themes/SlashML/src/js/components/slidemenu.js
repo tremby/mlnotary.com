@@ -25,16 +25,21 @@
 		let overlayClass = '.slidemenu\\/overlay'
 
     let slidemenu = document.querySelector(slidemenuClass)
-		let toggle = document.querySelector(toggleClass)
-		let close = document.querySelector(closeClass)
-		let overlay = document.querySelector(overlayClass)
+		let allToggle = document.querySelectorAll(toggleClass)
+		let close = slidemenu.querySelector(closeClass)
+		let overlay = slidemenu.querySelector(overlayClass)
 		let activeClass = 'is-active'
 
-		/* add click event */
-		toggle.addEventListener('click', function(e) {
-			e.preventDefault()
-			activate(slidemenu)
-		})
+		/* Initialize each component */
+    for (let i = 0; i < allToggle.length; i++) {
+			let toggle = allToggle[i]
+
+			/* add click event */
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault()
+				activate(slidemenu)
+			})
+		}
 
 		close.addEventListener('click', function(e) {
 			e.preventDefault()
@@ -45,6 +50,7 @@
 			e.preventDefault()
 			activate(slidemenu)
 		})
+
 
 		/* Activates the chosen accordion and deactivates the rest */
 		function activate(slidemenu) {
