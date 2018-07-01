@@ -1,0 +1,19 @@
+---
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: hero_title
+  label: Hero Title
+- type: text
+  name: hero_footer
+  label: Hero Footer
+- type: text
+  label: Quote
+  name: quote
+- type: text
+  label: Service Text
+  name: service_text
+- type: text
+  name: location_text
+  label: Location Text
