@@ -1,7 +1,3 @@
-# FergusWeb
-
-Our shiny new Fergus marketing website
-
 ## Templating Engine
 
 Hugo Version 38.1
