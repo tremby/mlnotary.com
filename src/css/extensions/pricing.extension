@@ -1,0 +1,17 @@
+/************************************************************
+PRICING
+************************************************************/
+
+.pricing-bg {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1580px;
+    width: 100%;
+    height: 2000px;
+    background: var(--blue-l5);
+    z-index: 0;
+    transform: skewY(-12deg);
+  }
+}

@@ -1,0 +1,64 @@
+/************************************************************
+MIN
+************************************************************/
+
+$min-levels: 10 !default;
+
+.#{$prefix}min {
+
+  &-width {
+    &\:100\% {
+      min-width: 100% !important;
+    }
+    @while $min-levels > 0 {
+      &\:#{$min-levels}00px {
+        min-width: $min-levels * 100px !important;
+      }
+      $min-levels: $min-levels - 1;
+    }
+  }
+  &-height {
+    &\:100\% {
+      min-height: 100% !important;
+    }
+    @while $min-levels > 0 {
+      &\:#{$min-levels}00px {
+        min-height: $min-levels * 100px !important;
+      }
+      $min-levels: $min-levels - 1;
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-width {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          &\:100\% {
+            min-width: 100% !important;
+          }
+          @while $min-levels > 0 {
+            &\:#{$min-levels}00px {
+              min-width: $min-levels * 100px !important;
+            }
+            $min-levels: $min-levels - 1;
+          }
+        }
+      }
+    }
+    &-height {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          &\:100\% {
+            min-height: 100% !important;
+          }
+          @while $min-levels > 0 {
+            &\:#{$min-levels}00px {
+              min-height: $min-levels * 100px !important;
+            }
+            $min-levels: $min-levels - 1;
+          }
+        }
+      }
+    }
+  }
+}

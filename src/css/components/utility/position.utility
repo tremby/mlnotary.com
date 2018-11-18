@@ -1,0 +1,56 @@
+/************************************************************
+POSITION
+************************************************************/
+
+.#{$prefix}position {
+  position: static !important;
+  &\:absolute {
+    position: absolute !important;
+  }
+  &\:fixed {
+    position: fixed !important;
+  }
+  &\:relative {
+    position: relative !important;
+  }
+  &-top {
+    top: 0 !important;
+  }
+  &-right {
+    right: 0 !important;
+  }
+  &-bottom {
+    bottom: 0 !important;
+  }
+  &-left {
+    left: 0 !important;
+  }
+  @each $key, $value in $screens {
+    &\@#{$key} {
+      @media (min-width : #{$value}) {
+        position: static !important;
+        &\:absolute {
+          position: absolute !important;
+        }
+        &\:fixed {
+          position: fixed !important;
+        }
+        &\:relative {
+          position: relative !important;
+        }
+        &-top {
+          top: 0 !important;
+        }
+        &-right {
+          right: 0 !important;
+        }
+        &-bottom {
+          bottom: 0 !important;
+        }
+        &-left {
+          left: 0 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/************************************************************
+DISPLAY
+************************************************************/
+
+.#{$prefix}display {
+  display: block !important;
+  &\:none {
+    display: none !important;
+  }
+  &\:inline-block {
+    display: inline-block !important;
+  }
+  &\:flex {
+    display: flex !important;
+  }
+  &\:inline-flex {
+    display: inline-flex !important;
+  }
+  &\:grid {
+    display: grid !important;
+  }
+  @each $key, $value in $screens {
+    &\@#{$key} {
+      @media (min-width : $value) {
+        display: block !important;
+        &\:none {
+          display: none !important;
+        }
+        &\:inline-block {
+          display: inline-block !important;
+        }
+        &\:flex {
+          display: flex !important;
+        }
+        &\:inline-flex {
+          display: inline-flex !important;
+        }
+        &\:grid {
+          display: grid !important;
+        }
+      }
+    }
+  }
+}

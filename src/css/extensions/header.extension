@@ -1,0 +1,39 @@
+/************************************************************
+HEADER
+************************************************************/
+
+.header {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  &\:home {
+    justify-content: space-between;
+    padding-top: var(--u5);
+    @media (min-width: $sm) {
+      padding-top: var(--u9);
+    }
+    .header\/content {
+      display: flex;
+      align-items: center;
+      &\:mobile {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    .header\/item {
+      padding-right: var(--u8);
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        display: flex;
+      }
+    }
+    .header\/logo {
+      width: 100px;
+      @media (min-width: $sm) {
+        width: 120px;
+      }
+    }
+  }
+}

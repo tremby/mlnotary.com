@@ -1,0 +1,243 @@
+/*
+Title: ipfind
+Version: 0.1.0
+Updated: 2018-08-23
+Author: Jin Su Park
+Site: ipfind.com
+*/
+
+/************************************************************
+1. FONTS & BUILD VARIABLES
+************************************************************/
+
+// include SCSS overrides before the build variables
+@import "../fonts/theinhardt.scss";
+@import "override.variables";
+@import "build.variables";
+
+/************************************************************
+2. COMPONENTS
+************************************************************/
+
+// include custom components here
+@import "components/import.components";
+
+/************************************************************
+3. ROOT VARIABLES
+************************************************************/
+
+// override component CSS variables here
+:root {
+
+}
+
+/************************************************************
+4. THIRD PARTY
+************************************************************/
+
+// include any other 3rd party css libraries here
+
+/************************************************************
+5. EXTENSIONS
+************************************************************/
+
+// @import "extensions/header.extension";
+// include any other 3rd party css libraries here
+
+/************************************************************
+6. CUSTOM CSS
+************************************************************/
+
+// this is where you can write your own CSS
+
+:root {
+  --button-font-size: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  @media (min-width: $sm) {
+    height: 90px;
+  }
+  @media (min-width: $md) {
+    height: 120px;
+  }
+  @media (min-width: $lg) {
+    height: 120px;
+  }
+  a {
+    color: var(--black);
+  }
+}
+
+.hero {
+  position: relative;
+  height: auto;
+  @media (min-width: $sm) {
+    height: 600px;
+  }
+  @media (min-width: $md) {
+    height: 900px;
+  }
+  @media (min-width: $lg) {
+    height: calc(100% - 80px);
+  }
+  &\/content {
+    position: relative;
+    padding: var(--u6);
+    padding-top: 10vh;
+    padding-bottom: 0vh;
+    @media (min-width: $sm) {
+      position: absolute;
+      bottom: 40%;
+      left: 8%;
+      width: 90%;
+      max-width: 1000px;
+      padding: 0;
+    }
+    @media (min-width: $md) {
+      bottom: 45%;
+    }
+    @media (min-width: $lg) {
+      bottom: 40%;
+    }
+  }
+  &\/footer {
+    position: relative;
+    width: 100%;
+    padding: var(--u6);
+    padding-bottom: 10vh;
+    @media (min-width: $sm) {
+      position: absolute;
+      bottom: 10%;
+      left: 8%;
+      max-width: 500px;
+      padding: 0;
+    }
+    @media (min-width: $md) {
+      bottom: 10%;
+    }
+    @media (min-width: $lg) {
+      bottom: 10%;
+    }
+  }
+}
+
+.line {
+  &\:short {
+    width: 60px;
+    height: 2px;
+    background: var(--black);
+    @media (min-width: $sm) {
+      width: 80px;
+    }
+  }
+}
+
+
+.fill {
+  &\:footer {
+    background: #231E28;
+  }
+}
+
+.tab{
+  &\:services {
+    .tab\/header-item {
+      opacity: .3;
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.image {
+  &\:logo {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    @media (min-width: $md) {
+      width: 50px;
+      height: 50px;
+    }
+    @media (min-width: $lg) {
+      width: 68px;
+      height: 68px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.menu {
+  &\:main {
+    height: 50px;
+    .menu\/content {
+      display: flex;
+      margin:0;
+      padding: 0;
+      &:first-child {
+        flex-grow: 1;
+        &:last-child {
+          justify-content: flex-start;
+        }
+      }
+      &:nth-child(2) {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:last-child {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+
+    .menu\/hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+			width: 26px;
+			height: 50px;
+			cursor: pointer;
+
+			span {
+				display: block;
+				position: relative;
+				width: 26px;
+				height: 3px;
+				background: var(--primary);
+				border-radius: 20px;
+				transition: all 0ms 300ms;
+
+				&:before {
+					display: block;
+					position: absolute;
+    			bottom: 7px;
+					content: '';
+					width: 100%;
+					height: 3px;
+					background: var(--primary);
+					border-radius: 20px;
+				}
+				&:after {
+					display: block;
+					position: absolute;
+    			top: 7px;
+					content: '';
+					width: 100%;
+					height: 3px;
+					background: var(--primary);
+					border-radius: 20px;
+				}
+			}
+		}
+  }
+}

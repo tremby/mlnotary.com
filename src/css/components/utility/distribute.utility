@@ -1,0 +1,50 @@
+/************************************************************
+DISTRIBUTE
+************************************************************/
+
+$distribute-gutters: 7 !default;
+
+
+.#{$prefix}distribute {
+
+  &-x {
+    @while $distribute-gutters > 0 {
+      &\:u#{$distribute-gutters * 2} > * + * {
+        margin-left: var(--u#{$distribute-gutters * 2}) !important;
+      }
+      $distribute-gutters: $distribute-gutters - 1;
+    }
+    @each $key, $value in $screens {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          @while $distribute-gutters > 0 {
+            &\:u#{$distribute-gutters * 2} > * + * {
+              margin-left: var(--u#{$distribute-gutters * 2}) !important;
+            }
+            $distribute-gutters: $distribute-gutters - 1;
+          }
+        }
+      }
+    }
+  }
+  &-y {
+    @while $distribute-gutters > 0 {
+      &\:u#{$distribute-gutters * 2} > * + * {
+        margin-top: var(--u#{$distribute-gutters * 2}) !important;
+      }
+      $distribute-gutters: $distribute-gutters - 1;
+    }
+    @each $key, $value in $screens {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          @while $distribute-gutters > 0 {
+            &\:u#{$distribute-gutters * 2} > * + * {
+              margin-top: var(--u#{$distribute-gutters * 2}) !important;
+            }
+            $distribute-gutters: $distribute-gutters - 1;
+          }
+        }
+      }
+    }
+  }
+}

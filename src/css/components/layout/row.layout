@@ -1,0 +1,49 @@
+/************************************************************
+GRID
+************************************************************/
+
+$row-gutters: 5 !default;
+
+.#{$prefix}row {
+
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+
+	/******************************
+  GUTTER
+  ******************************/
+
+	&-gutter {
+		@while $row-gutters > 0 {
+			&\:u#{$row-gutters * 2} {
+				margin-left: var(--u-#{$row-gutters * 2});
+				margin-right: var(--u-#{$row-gutters * 2});
+				& > [class^=column] {
+					padding-left: var(--u#{$row-gutters * 2});
+					padding-right: var(--u#{$row-gutters * 2});
+				}
+			}
+			$row-gutters: $row-gutters - 1;
+		}
+		@each $key, $value in $screens {
+			&\@#{$key} {
+				@media (min-width : #{$value}) {
+					@while $row-gutters > 0 {
+						&\:u#{$row-gutters * 2} {
+							margin-left: var(--u-#{$row-gutters * 2});
+							margin-right: var(--u-#{$row-gutters * 2});
+							& > [class^=column] {
+								padding-left: var(--u#{$row-gutters * 2});
+								padding-right: var(--u#{$row-gutters * 2});
+							}
+						}
+						$row-gutters: $row-gutters - 1;
+					}
+				}
+			}
+		}
+	}
+}

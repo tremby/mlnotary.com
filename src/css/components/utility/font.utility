@@ -1,0 +1,99 @@
+/************************************************************
+FONT
+************************************************************/
+
+$font-heights: 8 !default;
+
+.#{$prefix}font {
+
+  /******************************
+  FONT SIZES
+  ******************************/
+
+  &-size {
+    @each $font-size, $value in $font-sizes {
+      &\:#{$font-size} {
+        font-size: var(--#{$font-size}) !important;
+      }
+      @each $screen, $size in $screens {
+        &\@#{$screen} {
+          @media (min-width : #{$size}) {
+            &\:#{$font-size} {
+              font-size: var(--#{$font-size}) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  FONT WEIGHTS
+  ******************************/
+
+  &-weight {
+    @each $key, $value in $font-weights {
+      &\:#{$key} {
+        font-weight: var(--#{$key}) !important;
+      }
+    }
+    @each $screen, $size in $screens {
+      &\@#{$screen} {
+        @media (min-width : #{$size}) {
+          @each $key, $value in $font-weights {
+            &\:#{$key} {
+              font-weight: var(--#{$key}) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  LINE HEIGHT
+  ******************************/
+
+  &-height {
+    &\:1 {
+      line-height: 1 !important;
+    }
+		@while $font-heights > 0 {
+      &\:1\.#{$font-heights} {
+        line-height: calc((#{$font-heights} / 10) + 1) !important;
+      }
+      $font-heights: $font-heights - 1;
+    }
+    @each $screen, $size in $screens {
+      &\@#{$screen} {
+        @media (min-width : #{$size}) {
+          &\:1 {
+            line-height: 1 !important;
+          }
+          @while $font-heights > 0 {
+            &\:1\.#{$font-heights} {
+              line-height: calc((#{$font-heights} / 10) + 1) !important;
+            }
+            $font-heights: $font-heights - 1;
+          }
+        }
+      }
+    }
+	}
+
+  /******************************
+  TRANSFORM
+  ******************************/
+
+  &-case {
+    &\:none {
+      text-transform: none !important;
+    }
+    &\:upper {
+      text-transform: uppercase !important;
+    }
+    &\:lower {
+      text-transform: lowercase !important;
+    }
+  }
+}

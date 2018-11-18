@@ -1,0 +1,31 @@
+/************************************************************
+CARD
+************************************************************/
+
+:root {
+	--card-bg: var(--white);
+	--card-radius: var(--radius);
+	--card-content-padding: var(--u6);
+}
+
+.#{$prefix}card {
+	display: block;
+	background-color: var(--card-bg);
+	border: var(--border);
+	border-radius: var(--card-radius);
+	transition: var(--transition);
+	overflow: hidden;
+
+	/******************************
+  CHILD ELEMENTS
+  ******************************/
+
+	&\/content {
+		padding: var(--card-content-padding);
+	  &:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	  }
+	}
+}

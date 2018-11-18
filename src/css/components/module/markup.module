@@ -1,0 +1,52 @@
+/************************************************************
+MARKUP
+************************************************************/
+
+.#{$prefix}markup {
+  h1,h2,h3,h4,h5,h6 {
+  	&:first-child {
+  		margin-top: 0;
+  	}
+  	&:last-child {
+  		margin-bottom: 0;
+  	}
+  }
+  h1 {
+  	margin-top: var(--u12);
+  	margin-bottom: var(--u6);
+  }
+  h2 {
+  	margin-top: var(--u12);
+  	margin-bottom: var(--u6);
+  }
+  h3 {
+  	margin-top: var(--u11);
+  	margin-bottom: var(--u6);
+  }
+  h4 {
+  	margin-top: var(--u10);
+  	margin-bottom: var(--u6);
+  }
+  h5 {
+  	margin-top: var(--u8);
+  	margin-bottom: var(--u6);
+  }
+  h6 {
+  	margin-top: var(--u8);
+  	margin-bottom: var(--u6);
+  }
+  ol, ul {
+  	margin: 0;
+  	margin-left: var(--u5);
+  	margin-bottom: var(--u6);
+  }
+  li {
+  	padding-left: var(--u0);
+  }
+  ol {
+  	list-style-type: decimal;
+  }
+  ul {
+  	list-style-type: disc;
+  }
+}

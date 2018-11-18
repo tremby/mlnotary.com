@@ -1,0 +1,137 @@
+/************************************************************
+GRID
+************************************************************/
+
+$grid-gutters: 5 !default;
+
+.#{$prefix}grid {
+
+  display: grid;
+
+  &\:inline {
+    display: inline-grid;
+  }
+  @each $key, $value in $screens {
+    &\@#{$key} {
+      @media (min-width : #{$value}) {
+        display: grid;
+        &\:inline {
+          display: inline-grid;
+        }
+      }
+    }
+  }
+
+  /******************************
+  COLUMN
+  ******************************/
+
+	@while $columns > 0 {
+		&\:#{$columns} {
+      display: grid;
+      grid-template-columns: repeat($columns, 1fr);
+		}
+		$columns: $columns - 1;
+	}
+  @each $key, $value in $screens {
+    &\@#{$key} {
+      @media (min-width : #{$value}) {
+        @while $columns > 0 {
+      		&\:#{$columns} {
+            display: grid;
+            grid-template-columns: repeat($columns, 1fr);
+      		}
+      		$columns: $columns - 1;
+      	}
+      }
+    }
+  }
+
+  /******************************
+  GUTTER
+  ******************************/
+
+  &-gutter {
+    @while $grid-gutters > 0 {
+      &\:u#{$grid-gutters * 2} {
+        grid-column-gap: var(--u#{$grid-gutters * 2});
+        grid-row-gap: var(--u#{$grid-gutters * 2});
+      }
+      $grid-gutters: $grid-gutters - 1;
+    }
+    @each $key, $value in $screens {
+      &\@#{$key} {
+        @media (min-width : #{$value}) {
+          @while $grid-gutters > 0 {
+            &\:u#{$grid-gutters * 2} {
+              grid-column-gap: var(--u#{$grid-gutters * 2});
+              grid-row-gap: var(--u#{$grid-gutters * 2});
+            }
+            $grid-gutters: $grid-gutters - 1;
+          }
+        }
+      }
+    }
+    &-row {
+      @while $grid-gutters > 0 {
+        &\:u#{$grid-gutters * 2} {
+          grid-row-gap: var(--u#{$grid-gutters * 2});
+        }
+        $grid-gutters: $grid-gutters - 1;
+      }
+      @each $key, $value in $screens {
+        &\@#{$key} {
+          @media (min-width : #{$value}) {
+            @while $grid-gutters > 0 {
+              &\:u#{$grid-gutters * 2} {
+                grid-row-gap: var(--u#{$grid-gutters * 2});
+              }
+              $grid-gutters: $grid-gutters - 1;
+            }
+          }
+        }
+      }
+    }
+    &-column {
+      @while $grid-gutters > 0 {
+        &\:u#{$grid-gutters * 2} {
+          grid-column-gap: var(--u#{$grid-gutters * 2});
+        }
+        $grid-gutters: $grid-gutters - 1;
+      }
+      @each $key, $value in $screens {
+        &\@#{$key} {
+          @media (min-width : #{$value}) {
+            @while $grid-gutters > 0 {
+              &\:u#{$grid-gutters * 2} {
+                grid-column-gap: var(--u#{$grid-gutters * 2});
+              }
+              $grid-gutters: $grid-gutters - 1;
+            }
+          }
+        }
+      }
+    }
+    @each $key, $value in $screens {
+      &\@#{$key} {
+        @media (min-width : #{$value}) {
+          @while $grid-gutters > 0 {
+            &\:u#{$grid-gutters * 2} {
+              grid-column-gap: var(--u#{$grid-gutters * 2});
+              grid-row-gap: var(--u#{$grid-gutters * 2});
+            }
+            $grid-gutters: $grid-gutters - 1;
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/item {
+    position: relative;
+  }
+}

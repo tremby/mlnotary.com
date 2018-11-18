@@ -1,0 +1,64 @@
+/************************************************************
+MAX
+************************************************************/
+
+$max-levels: 10 !default;
+
+.#{$prefix}max {
+
+  &-width {
+    &\:100\% {
+      max-width: 100% !important;
+    }
+    @while $max-levels > 0 {
+      &\:#{$max-levels}00px {
+        max-width: $max-levels * 100px !important;
+      }
+      $max-levels: $max-levels - 1;
+    }
+  }
+  &-height {
+    &\:100\% {
+      max-height: 100% !important;
+    }
+    @while $max-levels > 0 {
+      &\:#{$max-levels}00px {
+        max-height: $max-levels * 100px !important;
+      }
+      $max-levels: $max-levels - 1;
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-width {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          &\:100\% {
+            max-width: 100% !important;
+          }
+          @while $max-levels > 0 {
+            &\:#{$max-levels}00px {
+              max-width: $max-levels * 100px !important;
+            }
+            $max-levels: $max-levels - 1;
+          }
+        }
+      }
+    }
+    &-height {
+      &\@#{$key} {
+        @media (min-width: $value) {
+          &\:100\% {
+            max-height: 100% !important;
+          }
+          @while $max-levels > 0 {
+            &\:#{$max-levels}00px {
+              max-height: $max-levels * 100px !important;
+            }
+            $max-levels: $max-levels - 1;
+          }
+        }
+      }
+    }
+  }
+}

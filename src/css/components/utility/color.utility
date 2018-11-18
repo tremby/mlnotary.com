@@ -1,0 +1,19 @@
+/************************************************************
+COLOR
+************************************************************/
+
+.#{$prefix}color {
+
+  @each $key, $value in $colors {
+    &\:#{$key} {
+      color: var(--#{$key}) !important;
+    }
+  }
+  @each $key, $value in $tonal-colors {
+    @each $tone, $hex in $value {
+      &\:#{$tone} {
+        color: var(--#{$tone}) !important;
+      }
+    }
+  }
+}

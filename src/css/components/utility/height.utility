@@ -1,0 +1,42 @@
+/************************************************************
+HEIGHT
+************************************************************/
+
+$heights: 20 !default;
+
+.#{$prefix}height {
+  &\:auto {
+    height: auto !important;
+  }
+  @for $i from 1 through 10 {
+    &\:#{$i}0\% {
+      height: #{$i}0% !important;
+    }
+  }
+  @while $heights > 0 {
+    &\:u#{$heights} {
+      height: var(--u#{$heights}) !important;
+    }
+    $heights: $heights - 1;
+  }
+  @each $key, $value in $screens {
+    &\@#{$key} {
+      @media (min-height: #{$value}) {
+        &\:auto {
+          height: auto !important;
+        }
+        @for $i from 1 through 10 {
+          &\:#{$i}0\% {
+            height: #{$i}0% !important;
+          }
+        }
+        @while $heights > 0 {
+          &\:u#{$heights} {
+            height: var(--u#{$heights}) !important;
+          }
+          $heights: $heights - 1;
+        }
+      }
+    }
+  }
+}

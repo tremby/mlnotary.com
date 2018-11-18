@@ -1,0 +1,47 @@
+/************************************************************
+FORM
+************************************************************/
+
+:root {
+  --form-label-weight: var(--body);
+  --form-label-size: var(--tiny);
+
+  --form-success-color: var(--green);
+  --form-alert-color: var(--orange);
+  --form-warning-color: var(--red);
+}
+
+.#{$prefix}form {
+
+  /******************************
+  FIELDSET
+  ******************************/
+
+  &\/item {
+    position: relative;
+    display: block;
+    margin-bottom: var(--u4);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:after {
+      content: "";
+      display: table !important;
+      clear: both !important;
+    }
+  }
+  &\/message {
+    padding-top: var(--u1);
+    font-size: var(--micro);
+    color: var(--default-color);
+    &.is-success {
+      color: var(--form-success-color);
+    }
+    &.is-alert {
+      color: var(--form-alert-color);
+    }
+    &.is-warning {
+      color: var(--form-warning-color);
+    }
+  }
+}
