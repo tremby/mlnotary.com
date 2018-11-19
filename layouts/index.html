@@ -1,38 +1,24 @@
 {{ partial "head" . }}
-{{ partial "partial/menus/menu-slide" . }}
+{{ partial "header" . }}
 
-{{.Content}}
+<section class="hero fill:primary-l5">
 
-{{ partial "partial/header" . }}
-
-<section class="hero fill:white">
-
-    <div class="hero/content">
-      <h1 class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-size@md:h1 font-size@lg:h1 font-leading:2 margin-bottom:u10">
+    <div class="hero/content align:center">
+      <h1 class="font-weight:regular font-weight@sm:regular font-size:h6 font-size@sm:h3 font-height:1.2 max-width:900px margin:auto">
         {{ .Params.hero_title }}
       </h1>
-    </div>
-
-    <div class="hero/footer">
-      <span class="line line:short margin-bottom:5vh"></span>
-      <a href="mailto:jwong@mlnotary.com" class="display font-size:h4 font-weight:regular color:black margin-bottom:u4 display:block">
-        Get in touch
-      </a>
-      <p class="font-size:tiny">
-        {{ .Params.hero_footer }}
-      </p>
     </div>
 </section>
 
 <section>
   <div class="row fill:white">
-    <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+    <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1504355080015-bba52674577b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=090323df2e679b3b5df56edc7f2629cb&auto=format&fit=crop&w=800&q=60');">
 
     </div>
     <div class="column:12 column@md:6 padding-y:10vh fill:primary">
       <div class="margin:auto max-width:600px align:center padding-y:5vh">
         <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
-        <h3 class="font-size:h4 font-size@sm:h3 font-weight:light font-leading:2 color:white margin-bottom:u4">
+        <h3 class="font-size:h4 font-size@sm:h3 font-weight:light font-leading:2 color:white margin-bottom:u8">
           {{ .Params.quote }}
         </h3>
 
@@ -42,7 +28,7 @@
         </p>
       </div>
     </div>
-    <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+    <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1470075801209-17f9ec0cada6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4977696e317b5dcffd2986c04826b8da&auto=format&fit=crop&w=800&q=60');">
 
     </div>
   </div>
@@ -54,13 +40,13 @@
       <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
         Our Services
       </h4>
-      <p class="font-size:tiny">
+      <p class="font-size:tiny max-width:400px margin-bottom:u12">
         {{ .Params.service_text }}
       </p>
-      <a href="/services" class="font-size:tiny color:black font-weight:bold">Learn more</a>
+      <a href="/services" class="font-size:body color:black font-weight:regular">Learn more</a>
     </div>
   </div>
-  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60'); background-size:cover; background-position:bottom center !important;">
 
   </div>
   <div class="column:12 column@md:3 padding:u6 padding@md:u10 padding-y:5vh flex align-items:center">
@@ -68,17 +54,17 @@
       <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
         Our Location
       </h4>
-      <p class="font-size:tiny">
+      <p class="font-size:tiny max-width:400px margin-bottom:u12">
         {{ .Params.location_text }}
       </p>
-      <a href="/location" class="font-size:tiny color:black font-weight:bold">Learn more</a>
+      <a href="/location" class="font-size:body color:black font-weight:regular">Learn more</a>
     </div>
   </div>
-  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1520931674431-de5b4b2cc562?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf892a06a8141d8d0823c4b4c6cce613&auto=format&fit=crop&w=800&q=60');">
 
   </div>
 </section>
 
-{{ partial "partial/cta" . }}
-{{ partial "partial/footer" . }}
+{{ partial "cta" . }}
+{{ partial "footer" . }}
 {{ partial "foot" . }}

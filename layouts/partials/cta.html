@@ -1,0 +1,23 @@
+<section class="row">
+  <div id="js-map" class="column:12 column@md:6 padding-y:10vh" style="min-height: 600px;">
+
+  </div>
+  <div class="column:12 column@md:6 padding:u6 padding-y:5vh padding@sm:u10 fill:primary-l5 align:center flex align-items:center justify-content:center">
+    <div>
+      <!-- <span class="line line:short margin-bottom:5vh"></span> -->
+
+      <h5 class="font-leading:2 font-weight:regular margin-bottom:u6">
+        {{ .Site.Data.meta.address_1 }}<br>
+        {{ .Site.Data.meta.address_2 }}
+      </h5>
+
+      <h5 class="font-leading:2 font-weight:regular margin-bottom:u10">
+        <a href="mailto:{{ .Site.Data.meta.email }}" class="color:black">{{ .Site.Data.meta.email }}</a><br>T {{ .Site.Data.meta.phone }}, F {{ .Site.Data.meta.fax }}
+      </h5>
+
+      <p class="font-size:tiny max-width:400px margin:auto">
+        {{ .Site.Data.meta.cta_text }}
+      </p>
+    </div>
+  </div>
+</section>
