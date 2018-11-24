@@ -2,65 +2,92 @@
 {{ partial "header" . }}
 
 <section>
-  <div id="js-map" class="column:12 padding-y:10vh min-height:60">
+  <div id="js-map" class="column:12 padding-y:10vh min-height:600px">
 
   </div>
 </section>
 
 
-<section class="row fill:white">
-  <div class="column:12 column@sm:6 padding:4 padding@sm:10 padding-y@sm:10vh">
-    <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 margin-bottom:5 max-width:70 margin:auto">
+<section class="row fill:primary-l5">
+  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
+    <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:700px margin:auto">
       {{ .Params.headline }}
 
-      <span class="line line:short margin-top:10"></span>
+      <span class="line line:short margin-top:u10"></span>
     </h2>
 
 
   </div>
-  <div class="column:12 column@sm:6 padding:4 padding@sm:10 padding-y@sm:10vh font-size:h6">
+  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
     <div class="row margin-bottom:10">
-      <div class="column">
-        <h6 class="font font-weight:regular">
-          {{ .Site.Data.meta.address_1 }}<br>
-          {{ .Site.Data.meta.address_2 }}
-        </h6>
-      </div>
-      <div class="column">
-        <h6 class="font font-weight:regular">
-          <a href="mailto:{{ .Site.Data.meta.email }}" class="color:primary">{{ .Site.Data.meta.email }}</a><br>T {{ .Site.Data.meta.phone }}, F {{ .Site.Data.meta.fax }}
-        </h6>
+      <div class="column:12 column@sm:8">
+        <p>
+          Transit
+          We are conveniently located within walking distance of the Marine Drive Canada Line station.
+        </p>
+
+        <p>
+          Parking
+          If traveling by car, please be aware there is free street parking along Lord Street.  Please be mindful of the parking restrictions in the area.
+        </p>
+        <p>
+          There is also a parking lot located in the complex on P1 that is a paid parking lot.  To access the parking lot, please enter along Lord Street and follow the signs along the building.  This is the same entrance as the residential entrance.  You are welcome to park anywhere that is marked as a retail spot.  There is a elevator for our clients to bring you up to the ground floor.
+
+        </p>
+
+
+
+        <p>
+          {{ .Site.Data.meta.cta_text }}
+        </p>
+
+        <div class="row margin-top:u12">
+          <div class="column:12 column@sm:6 margin-bottom:u8 margin-bottom@sm:u0">
+            <h5 class="font-weight:regular">
+              {{ .Site.Data.meta.address_1 }}<br>
+              {{ .Site.Data.meta.address_2 }}
+            </h5>
+          </div>
+
+          <div class="column:12 column@sm:6">
+            <h5 class="font-weight:regular">
+              <a href="mailto:{{ .Site.Data.meta.email }}" class="color:primary">{{ .Site.Data.meta.email }}</a><br>T {{ .Site.Data.meta.phone }}, F {{ .Site.Data.meta.fax }}
+            </h5>
+          </div>
+        </div>
+
       </div>
     </div>
-    <p class="font-size:tiny max-width:40">
-      {{ .Site.Data.meta.cta_text }}
-    </p>
   </div>
 </section>
 
-<section class="row fill:background">
-  <div class="column:12 column@md:3 padding:u6 padding@md:u8 padding-y:5vh">
-    <h4 class="font font-weight:regular font-leading:1 margin-bottom:3">
-      Our Services
-    </h4>
-    <p class="font-size:tiny">
-      {{ .Params.service_text }}
-    </p>
-    <a href="/services" class="font-size:tiny color:black font-weight:bold">Learn more</a>
+<section class="row fill:white">
+  <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+    <div>
+      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
+        Our Services
+      </h4>
+      <p class="font-size:tiny max-width:400px margin-bottom:u12">
+        {{ .Params.service_text }}
+      </p>
+      <a href="/services" class="font-size:body color:black font-weight:regular">Learn more</a>
+    </div>
   </div>
-  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60'); background-size:cover; background-position:bottom center !important;">
 
   </div>
-  <div class="column:12 column@md:3 padding:u6 padding@md:u8 padding-y:5vh">
-    <h4 class="font font-weight:regular font-leading:1 margin-bottom:3">
-      About us
-    </h4>
-    <p class="font-size:tiny">
-      {{ .Params.about_text }}
-    </p>
-    <a href="/about" class="font-size:tiny color:black font-weight:bold">Learn more</a>
+  <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+    <div>
+      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
+        About Us
+      </h4>
+      <p class="font-size:tiny max-width:400px margin-bottom:u12">
+        {{ .Params.about_text }}
+      </p>
+      <a href="/about" class="font-size:body color:black font-weight:regular">Learn more</a>
+    </div>
   </div>
-  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://placeimg.com/800/500/tech');">
+  <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1520931674431-de5b4b2cc562?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf892a06a8141d8d0823c4b4c6cce613&auto=format&fit=crop&w=800&q=60');">
 
   </div>
 </section>

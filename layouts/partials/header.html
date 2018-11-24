@@ -2,18 +2,19 @@
 
   <div class="header/content header/content:left">
     <div class="header/item">
-      <a href="/" class="media:logo">
+      <a href="/" class="header/logo">
         <img src="/assets/images/logo-ol.svg" />
       </a>
     </div>
-    <div class="header/item">
-      <div class="menu/hamburger js-hamburger">
+    <div class="header/item display:flex display@sm:none">
+      <a class="header/hamburger js-hamburger">
         <span></span>
-      </div>
+        <span></span>
+      </a>
     </div>
   </div>
 
-  <div class="header/content header/content:middle">
+  <div class="header/content header/content:right">
     <div class="header/item">
       <a href="/services" class="font font-weight:regular font-size:tiny font-size@sm:h5" title="Our Services">
         Our Services
@@ -28,15 +29,6 @@
       <a href="/location" class="font font-weight:regular font-size:tiny font-size@sm:h5" title="Our Location">
         Our Location
       </a>
-    </div>
-  </div>
-
-  <div class="header/content header/content:right">
-    <div class="header/item align:right justify-content:end">
-      <div>
-        <a href="mailto:{{ .Site.Data.meta.email }}" class="font-size:tiny" title="Contact Us">jonathan@mlnotary.com</a><br />
-        <a href="tel: +610290503" class="font-size:tiny" title="Contact Us"> +61 029 0503</a>
-      </div>
     </div>
   </div>
 </header>

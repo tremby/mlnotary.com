@@ -1,12 +1,14 @@
 {{ partial "head" . }}
 {{ partial "header" . }}
 
-<section class="hero fill:primary-l5">
+<section class="hero">
 
-    <div class="hero/content align:center">
-      <h1 class="font-weight:regular font-weight@sm:regular font-size:h6 font-size@sm:h3 font-height:1.2 max-width:900px margin:auto">
+    <div class="hero/content align:left align@sm:center">
+      <h1 class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin-bottom:u6 margin:auto" style="max-width: 1100px">
         {{ .Params.hero_title }}
       </h1>
+      <a href="mailto:{{ .Site.Data.meta.email }}" class="font-size:tiny fone-height:1" title="Contact Us">jonathan@mlnotary.com</a><br />
+      <span class="font-size:tiny fone-height:1" title="Contact Us"> +61 029 0503</span>
     </div>
 </section>
 
@@ -18,7 +20,7 @@
     <div class="column:12 column@md:6 padding-y:10vh fill:primary">
       <div class="margin:auto max-width:600px align:center padding-y:5vh">
         <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
-        <h3 class="font-size:h4 font-size@sm:h3 font-weight:light font-leading:2 color:white margin-bottom:u8">
+        <h3 class="font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8">
           {{ .Params.quote }}
         </h3>
 
@@ -35,7 +37,7 @@
 </section>
 
 <section class="row fill:white">
-  <div class="column:12 column@md:3 padding:u6 padding@md:u10 padding-y:5vh flex align-items:center">
+  <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
     <div>
       <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
         Our Services
@@ -49,7 +51,7 @@
   <div class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center" style="background-image:url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60'); background-size:cover; background-position:bottom center !important;">
 
   </div>
-  <div class="column:12 column@md:3 padding:u6 padding@md:u10 padding-y:5vh flex align-items:center">
+  <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
     <div>
       <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
         Our Location

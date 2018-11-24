@@ -6,36 +6,57 @@ HEADER
   display: flex;
   position: relative;
   z-index: 10;
-  justify-content: center;
-  height: 140px;
-  padding: var(--u6);
+  justify-content: space-between;
   @media (min-width: $sm) {
 
   }
-  .header\/content {
+  &\/content {
     display: flex;
-    align-items: center;
+    width: 100%;
+    justify-content: space-between;
     &\:left {
-      position: absolute;
-      left: 0;
-      padding-left: var(--u6);
+      padding: var(--u6);
+      padding-right: var(--u4);
+      @media (min-width: $sm) {
+        padding: var(--u8) var(--u10);
+      }
     }
     &\:right {
-      position: absolute;
-      right: 0;
-      padding-right: var(--u6);
+      display: none;
+      padding-right: var(--u10);
+      @media (min-width: $sm) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
     }
   }
-  .header\/item {
-    padding-right: var(--u8);
+  &\/item {
+    padding-right: var(--u10);
     &:last-child {
       padding-right: 0;
     }
   }
-  .header\/logo {
-    width: 100px;
+  &\/logo {
+    display: block;
+    width: 40px;
     @media (min-width: $sm) {
-      width: 120px;
+      width: 60px;
+    }
+  }
+  &\/hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 30px;
+    span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: 2px 0;
+      background: var(--primary);
     }
   }
 }

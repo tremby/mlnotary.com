@@ -3,13 +3,13 @@
 {{ partial "header" . }}
 
 <section class="row fill:white">
-  <div class="column:12 padding-y:6vh fill:primary">
-    <div class="margin:auto max-width:100 align:center padding-x:3 padding-y:5vh">
+  <div class="column:12 padding-y:6vh hero:services">
+    <div class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative" style="z-index: 10;">
       <p class="color:white margin-bottom:3">
         Our Service
       </p>
 
-      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:5">
+      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
         {{ .Params.headline }}
       </h2>
       <span class="line line:short fill:white margin:auto"></span>
@@ -18,97 +18,151 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap max-width:100% overflow:hidden padding-left:none">
+<section class="">
+  <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
 
-    <div class="tab tab-direction:left tab:reset tab:services row">
+    <div class="tab tab-position:left tab:reset tab:services row">
 
-      <div class="tab/header column:12 column@sm:4 fill:white padding:4 padding@sm:10">
-        <a href="#service-1" class="tab/header-item font-size:h4 is-active">
+      <div class="tab/header column:12 column@sm:4 fill:grey-l5 padding:4 padding@sm:u10 padding@md:u12">
+        <a href="#service-1" class="tab/item font-size:h4 is-active">
           Wills and Estates
         </a>
-        <a href="#service-2" class="tab/header-item font-size:h4">
+        <a href="#service-2" class="tab/item font-size:h4">
           Real Estate Purchase and Sale
         </a>
-        <a href="#service-3" class="tab/header-item font-size:h4">
+        <a href="#service-3" class="tab/item font-size:h4">
           Powers of Attorney
         </a>
-        <a href="#service-4" class="tab/header-item font-size:h4">
+        <a href="#service-4" class="tab/item font-size:h4">
           Personal Planning Documents
         </a>
-        <a href="#service-5" class="tab/header-item font-size:h4">
+        <a href="#service-5" class="tab/item font-size:h4">
           Mortgage Refinancing
         </a>
-        <a href="#service-6" class="tab/header-item font-size:h4">
+        <a href="#service-6" class="tab/item font-size:h4">
           Notarizations
         </a>
       </div>
 
-      <div class="tab/content column:12 column@sm:8 fill:background padding:4 padding@sm:10">
-        <div id="service-1" class="tab/content-item is-active">
-          <article class="max-width:100">
-            <img src="/assets/images/icons/icon-home.svg" class="image opacity:2 margin-bottom:5">
+      <div class="tab/content column:12 column@sm:8 fill:white padding:4 padding@sm:u10 padding@md:u12">
+        <div id="service-1" class="tab/item is-active">
+          <article class="max-width:800px markup">
+            <h3 class="font-weight:regular">
+              Wills and Estates
+            </h3>
             <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
+              Under the Wills, Estates and Succession Act (WESA), a will is a legal document that provides instructions that one must follow upon a person’s death in regards to the handling of one’s estate.
             </p>
             <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
+              We can assist in preparing and executing a Will that suits your needs and help you define the executor of your Will, guardian for your children and trustee of your estate. These are all important decisions that should be made carefully and in full trust.
+            </p>
+            <h3 class="font-weight:regular">
+              Who Should Have a Will?
+            </h3>
+            <p class="margin-bottom:u2">
+              Adults in BC who:
             </p>
             <ul>
-              <li>Own property, including real estate, vehicles, or other assets</li>
-              <li>Have a dependent spouse or children; and</li>
-              <li>Wish to have someone they know and trust take care of</li>
+              <li>Own property, including real estate, vehicles, or other assets;</li>
+              <li>Have a dependent spouse or children</li>
+              <li>Wish to have someone they know and trust take care of their estate after their death.</li>
+            </ul>
+            <p>
+              We can prepare a Will that fits your needs at a reasonable cost. If you own assets if British Columbia as well as around the world, it is possible to have a Will that deals only with your British Columbia assets. If you die without a Will in British Columbia, your estate will be administered pursuant to the the Wills, Estates and Succession Act, (WESA) by the Supreme Court rather than by choices made by you.
+            </p>
+          </article>
+        </div>
+        <div id="service-2" class="tab/item">
+          <article class="max-width:800px markup">
+            <h3 class="font-weight:regular">
+              Real Estate Purchase and Sale
+            </h3>
+            <p>
+              Purchasing and selling your home is one of the biggest decisions and financial investments of your life. We are here to help you in the purchasing and selling process — also known as conveyance  — from when property is conveyed from the seller (vendor) to the buyer (purchaser). We will support you with the necessary documents to make the transition to home ownership as smooth as possible.
+            </p>
+            <h3 class="font-weight:regular">
+              How it works
+            </h3>
+            <p class="margin-bottom:u2">
+              Land ownership in BC is recorded in the Land Title Office. As notaries, we assist you with the following:
+            </p>
+            <ul>
+              <li>Form A Transfer: a document where the current owner will sign to confirm the agreement of transfer ownership and agreed purchase price</li>
+              <li>Property Transfer Tax: a form that is required under BC law for every property transfer transaction.</li>
+              <li>Form F: a certificate of payment for condos and strata property to confirm strata fees and assessments have been paid</li>
+              <li>Buyer’s and Seller’s Statement of Adjustments: any items such as strata fees or property taxes that are adjusted between the Buyer and Seller, dependant on who paid the expenses and when sale is completed</li>
+              <li>
+                State of Title: a document where the Registrar of Land Titles guarantee the person named as the Registered Owners is in fact the listed owner.
+                </li>
             </ul>
           </article>
         </div>
-        <div id="service-2" class="tab/content-item">
-          <article class="max-width:100">
+        <div id="service-3" class="tab/item">
+          <article class="max-width:800px markup">
+            <h3 class="font-weight:regular">
+              Powers of Attorney
+            </h3>
             <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
-            </p>
-            <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
-            </p>
-          </article>
-        </div>
-        <div id="service-3" class="tab/content-item">
-          <article class="max-width:100">
-            <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
-            </p>
-            <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
+              Also known as POA, Power of Attorney is a document that allows a person to authorize another person (attorney) to act on their behalf. The POA gives the representative authority to make decisions when another is unable to act for themselves. Usually, a POA exists as a person for financial arrangements such as buying and selling property and signing tax returns. A POA can be arranged for a specific purpose during a specific period of time or be arranged for more general purposes. POA can be dismissed or changed at any time.
             </p>
           </article>
         </div>
-        <div id="service-4" class="tab/content-item">
-          <article class="max-width:100">
-            <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
-            </p>
-            <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
-            </p>
-          </article>
+        <div id="service-4" class="tab/item">
+        <article class="max-width:800px markup">
+          <h3 class="font-weight:regular">
+            Personal Planning Documents
+          </h3>
+          <p>
+            In BC, one personal planning document is a Representation Agreement. A Representation Agreement is an important document that specifies who has the right to make decisions in relation to healthcare on your behalf. This includes refusal of life support and healthcare decisions that are important to the individual. The agreement is valuable for individuals with no partner or children, or if children are in conflict with one another about a decision involving the individual’s health.
+          </p>
+          <p>
+            We will work together with families to define a representative they see fit to act on behalf of the individual.
+          </p>
+          <p class="margin-bottom:u2">
+            A Representation Agreement can include decisions involving but not limited to:
+          </p>
+          <ul>
+            <li>Routine finances</li>
+            <li>Health and Personal Care</li>
+            <li>Refusal or consent to life-support treatment and care</li>
+            <li>Consent to medical procedures</li>
+            <li>Living arrangements</li>
+          </ul>
+        </article>
         </div>
-        <div id="service-5" class="tab/content-item">
-          <article class="max-width:100">
-            <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
-            </p>
-            <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
-            </p>
-          </article>
+        <div id="service-5" class="tab/item">
+        <article class="max-width:800px markup">
+          <h3 class="font-weight:regular">
+            Mortgage Refinancing
+          </h3>
+          <p>
+            A mortgage refinancing, or Home Equity Loan, gives you the opportunity to leverage the value of your home to access funds for renovations, truition, investments or other life decisions.  Most homeowners have significant equity to their homes, either by paying off a mortgage or increase of home value in the market.  Mortgage refinancing includes borrowing money against the current value of your home. We will help you navigate the refinancing process by providing legal advice, preparing necessary documents and assisting in making funds available to meet the needs of your life decisions.
+          </p>
+        </article>
         </div>
-        <div id="service-6" class="tab/content-item">
-          <article class="max-width:100">
-            <p>
-              The process followed when buying a property is called a conveyance. What happens is the ownership of title to the property is conveyed from the seller (vendor) to the buyer (purchaser). We will prepare the forms and perform the actions necessary to facilitate this process. Here’s a link to an article where I explain the Conveyancing Process in British Columbia.
+        <div id="service-6" class="tab/item">
+          <article class="max-width:800px markup">
+            <h3 class="font-weight:regular">
+              Notarization
+            </h3>
+            <p class="margin-bottom:u2">
+              When we notarize a document, we are administering an oath, affirmation or declaration over the document(s).
             </p>
             <p>
-              When a person buys a property, what they are acquiring is the fee simple title to the property. “Fee Simple” comes from the roots meaning that anyone can own the property and it can be inherited by anyone. This fee simple ownership means that you acquire the greatest bundle of rights that one can acquire related to a specific piece of property.
+              We notarize a wide variety of personal documents, including but not limited to:
             </p>
+            <ul>
+              <li>Statutory Declarations</li>
+              <li>Insurance Loss Declarations</li>
+              <li>Certified True Copies of Documents</li>
+              <li>Notarizations and Attestations of Signatures</li>
+              <li>Execution or Authentications of International Documents</li>
+              <li>Letters of Invitation for Foreign Travel</li>
+              <li>Authorizations of Minor Child Travel</li>
+              <li>Proof of Identity for Travel Purposes</li>
+              <li>Passport Application Documentation</li>
+              <li>Identity Documents Required For Your Notarization Appointment</li>
+            </ul>
           </article>
         </div>
       </div>
