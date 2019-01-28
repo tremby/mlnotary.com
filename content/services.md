@@ -1,5 +1,5 @@
 +++
-headline = "Marine Landing Notary Public, provides Notary Public Services emphasizing excellent customer services, as efficiently as possible."
+headline = "Marine Landing Notary Public emphasizes excellent and efficient customer relations, while providing a wide range of services."
 layout = "services"
 title = "Services"
 
