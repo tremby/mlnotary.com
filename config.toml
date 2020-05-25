@@ -1,3 +1,6 @@
 baseURL= "/"
 languageCode = "en-us"
 title = "Marine Landing Notary Public"
+
+[markup.goldmark.renderer]
+unsafe= true

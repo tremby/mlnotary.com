@@ -1,159 +1,94 @@
-{{ partial "head" . }}
-
-{{ partial "header" . }}
+{{ partial "head" . }} {{ partial "header" . }}
 
 <section class="row fill:white">
   <div class="column:12 padding-y:6vh hero:services">
-    <div class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative" style="z-index: 10;">
+    <div
+      class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative"
+      style="z-index: 10;"
+    >
       <p class="color:white margin-bottom:3">
-        Our Service
+        Our Services
       </p>
 
-      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
+      <h2
+        class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10"
+      >
         {{ .Params.headline }}
       </h2>
       <span class="line line:short fill:white margin:auto"></span>
-
     </div>
   </div>
 </section>
 
 <section class="">
   <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
-
     <div class="tab tab-position:left tab:reset tab:services row">
-
-      <div class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12">
-        <a href="#service-1" class="tab/item font-size:h4 is-active">
-          Wills and Estates
-        </a>
-        <a href="#service-2" class="tab/item font-size:h4">
+      <div
+        class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12"
+      >
+        <a href="#service-1" class="tab/item font-size:h4">
           Real Estate Purchase and Sale
         </a>
-        <a href="#service-3" class="tab/item font-size:h4">
-          Powers of Attorney
+        <a href="#service-2" class="tab/item font-size:h4">
+          Mortgage Refinancing
+        </a>
+        <a href="#service-3" class="tab/item font-size:h4 is-active">
+          Wills and Estates
         </a>
         <a href="#service-4" class="tab/item font-size:h4">
-          Personal Planning Documents
+          Powers of Attorney
         </a>
         <a href="#service-5" class="tab/item font-size:h4">
-          Mortgage Refinancing
+          Personal Planning Documents
         </a>
         <a href="#service-6" class="tab/item font-size:h4">
           Notarizations
         </a>
       </div>
 
-      <div class="tab/content column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12">
-        <div id="service-1" class="tab/item is-active">
+      <div
+        class="tab/content column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12"
+      >
+        <div id="service-1" class="tab/item">
           <article class="max-width:800px markup">
-            <h3 class="font-weight:regular">
-              Wills and Estates
-            </h3>
-            <p>
-              Under the provincial Wills, Estates and Succession Act (WESA), a will is a legal document that provides instructions which one must follow upon a person’s death in regards to the handling of their estate.
-            </p>
-            <p>
-              We prepare and execute a will tailored to your needs and help you define the executor of your will, the guardian for your children, and the trustee of your estate. All these important decisions should be made carefully and in complete trust.
-            </p>
-            <h3 class="font-weight:regular">
-              Who Should Have a Will?
-            </h3>
-            <p class="margin-bottom:u2">
-              Adults in BC who:
-            </p>
-            <ul>
-              <li>Own property, including real estate, vehicles, and/or other assets;</li>
-              <li>Have a dependent spouse or children;</li>
-              <li>Wish to have someone they know and trust take care of their estate after their death.</li>
-            </ul>
-            <p>
-              We will prepare a will that fits your needs at a reasonable cost. If you own assets in British Columbia as well as around the world, it is possible to have a will that relates only with your B.C. assets. Without a will in B.C. upon your death, your estate will be administered pursuant to the Wills, Estates and Succession Act (WESA) by the Supreme Court rather than by choices and decisions made by you.
-            </p>
+            {{ partial "services/real-estate-conveyancing" | markdownify }}
           </article>
         </div>
         <div id="service-2" class="tab/item">
           <article class="max-width:800px markup">
-            <h3 class="font-weight:regular">
-              Real Estate Purchase and Sale
-            </h3>
-            <p>
-              Purchasing and selling your home is one of the biggest decisions and financial investments of your life. We are here to help you through the process — also known as conveyance — from when property is conveyed from the seller (vendor) to the buyer (purchaser). We will support you with the necessary documents to make the transition to/from home ownership as smooth as possible.
-            </p>
-            <h3 class="font-weight:regular">
-              How it works
-            </h3>
-            <p class="margin-bottom:u2">
-              Land ownership in B.C. is recorded in the Land Title Office. As notaries, we assist you with the following:
-            </p>
-            <ul>
-              <li>Form A Transfer: a document for the current owner to sign and confirm the agreement of transfer ownership and agreed purchase price.</li>
-              <li>Property Transfer Tax: a form required under B.C. law for every property transfer transaction.</li>
-              <li>Form F: a certificate of payment for condos and strata property to confirm strata fees and assessments have been paid.</li>
-              <li>Buyer’s and Seller’s Statement of Adjustments: any items such as strata fees or property taxes which are adjusted between the buyer and seller, dependant on who paid the expenses and when sale is completed.</li>
-              <li>
-                State of Title: a document for the Registrar of Land Titles to guarantee that the individual named as the “Registered Owners” is in fact the listed owner.
-                </li>
-            </ul>
+            <article class="max-width:800px markup">
+              {{ partial "services/mortgage-refinancing" | markdownify }}
+            </article>
           </article>
         </div>
-        <div id="service-3" class="tab/item">
+        <div id="service-3" class="tab/item is-active">
+          <article class="max-width:800px markup">
+            {{ partial "services/wills" | markdownify }}
+          </article>
+        </div>
+        <div id="service-4" class="tab/item">
           <article class="max-width:800px markup">
             <h3 class="font-weight:regular">
               Powers of Attorney
             </h3>
             <p>
-              Also known as POA, a Power of Attorney is a document that allows an individual to authorize another person (attorney) to act on their behalf.
+              A Power of Attorney (also known in it’s shortened form as POA) is a personal planning document which
+authorizes another person (attorney) to act on their behalf. There are different types of Powers of
+Attorney (General, Enduring, Specific) all of which are used in differing circumstances.
             </p>
             <p>
-              The POA gives the representative authority to make decisions when unable to act for themselves. Usually, a POA exists as a person for financial arrangements, such as buying and selling property and signing tax returns. A POA can be arranged for a specific purpose during a specific period of time or be arranged for more general purposes.
-            </p>
-            <p>
-              POA can be dismissed or changed at any time.
+              A Power of Attorney gives the attorney authority to make decisions on behalf of the donor when they are
+unable to act for themselves. Specific Powers of Attorney are most commonly used to assist in the
+purchase or sale of property, or even for purchasing and/or leasing vehicles. Enduring Powers of
+Attorney are most commonly discussed in conjunction with other personal planning documents with older
+adults. A Power of Attorney can be revoked or changed at any time.
             </p>
           </article>
         </div>
-        <div id="service-4" class="tab/item">
-        <article class="max-width:800px markup">
-          <h3 class="font-weight:regular">
-            Personal Planning Documents
-          </h3>
-          <p>
-            In B.C., the Representation Agreement is an important document which specifies who has the right to make decisions in relation to healthcare on your behalf.
-          </p>
-          <p>
-            This personal planning document includes refusal of life support and healthcare decisions that are important to the individual. The agreement is valuable for individuals with no partner or children, or if their children are in conflict with one another about a decision involving the individual’s health.
-          </p>
-          <p>
-            We will work together with families to define a representative they see fit to act on behalf of the individual.
-          </p>
-          <p class="margin-bottom:u2">
-            A Representation Agreement can include decisions involving but not limited to:
-          </p>
-          <ul>
-            <li>Routine finances</li>
-            <li>Health and personal care</li>
-            <li>Refusal or consent to life-support treatment and care</li>
-            <li>Consent to medical procedures</li>
-            <li>Living arrangements</li>
-          </ul>
-        </article>
-        </div>
         <div id="service-5" class="tab/item">
-        <article class="max-width:800px markup">
-          <h3 class="font-weight:regular">
-            Mortgage Refinancing
-          </h3>
-          <p>
-            A mortgage refinancing, or home equity loan, gives an individual the opportunity to leverage the value of their home to access funds for renovations, tuition, investments, or other life decisions.
-          </p>
-          <p>
-            Most homeowners have significant equity to their homes, either by paying off a mortgage or increase of home value in the market. Mortgage refinancing includes borrowing money against the current value of their home.
-          </p>
-          <p>
-            We will help navigate the refinancing process by providing legal advice, preparing necessary documents, and assisting in making funds available to meet the needs of those life decisions.
-          </p>
-        </article>
+          <article class="max-width:800px markup">
+              {{ partial "services/personal-planning-documents" | markdownify }}
+            </article>
         </div>
         <div id="service-6" class="tab/item">
           <article class="max-width:800px markup">
@@ -161,7 +96,8 @@
               Notarization
             </h3>
             <p class="margin-bottom:u2">
-              When we notarize a document, we are administering an oath, affirmation, or declaration over the document(s).
+              When we notarize a document, we are administering an oath, affirmation, or declaration
+              over the document(s).
             </p>
             <p>
               We notarize a variety of personal documents, including but not limited to:
@@ -182,14 +118,7 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-{{ partial "cta" . }}
-
-
-
-
-{{ partial "footer" . }}
-{{ partial "foot" . }}
+{{ partial "cta" . }} {{ partial "footer" . }} {{ partial "foot" . }}

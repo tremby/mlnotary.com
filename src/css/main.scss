@@ -158,7 +158,8 @@ MARKUP
   }
   h3 {
   	margin-top: var(--u11);
-  	margin-bottom: var(--u6);
+    margin-bottom: var(--u6);
+    font-weight: 400;
   }
   h4 {
   	margin-top: var(--u10);
@@ -187,3 +188,4 @@ MARKUP
   	list-style-type: disc;
   }
 }
+
