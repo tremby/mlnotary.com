@@ -472,5 +472,10 @@ var slidemenu = new Slidemenu();
 
 $( document ).ready(function() {
   console.log("document is ready");
-
+  $(".slider").slick({
+    autoplay: true,
+    fade: true,
+    draggable: true,
+    arrows: false
+  });
 });
