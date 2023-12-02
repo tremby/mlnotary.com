@@ -23,8 +23,7 @@ Adults in BC who:
 We will prepare a will that fits your needs at a reasonable cost. If you own assets in British Columbia as
 well as around the world, it is possible to have a will that relates only with your British Columbia assets.
 
-<a href="https://www.notaries.bc.ca/resources/Upload/27-03-2019-11-37-
-17_Services%20BC%20Notaries%20Provide%20-%20Wills%20Preparation.pdf" class="color:primary font-weight:bold">Five reasons why you need a will</a>
+**[Five reasons why you need a will](https://www.bcnotaryassociation.ca/resources/pr/?id=2)**
 
 ### Wills Process
 
