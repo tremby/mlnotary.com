@@ -17,7 +17,7 @@ tenant, and change of address on title.
 Land ownership in British Columbia is recorded in the Land Title Office. As your notary public, we will
 assist you with the following:
 
-- **Transfer**: preparation of the legal forms that needed to transfer property from the transferor to the
+- **Transfer**: preparation of the legal forms needed to transfer property from the transferor to the
   transferee
 - **Mortgage**: preparation of the required land title forms and lender forms necessary to complete the
   mortgage of the property
