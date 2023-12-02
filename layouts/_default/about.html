@@ -1,20 +1,16 @@
 {{ define "main" }}
-<section class="row fill:white padding-y:10vh padding-y@sm:none">
-  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh">
-
-    <h1 class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:700px margin:auto">
-      {{ .Params.headline }}
-    </h1>
-
-  </div>
-  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh font-size:h6">
-    <div class="max-width:900px">
-      {{ .Params.about | markdownify }}
+  <section class="row fill:white padding-y:10vh padding-y@sm:none">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh">
+      <h1 class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:700px margin:auto">
+        {{ .Params.headline }}
+      </h1>
     </div>
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh font-size:h6">
+      <div class="max-width:900px">
+        {{ .Params.about | markdownify }}
+      </div>
+    </div>
+  </section>
 
-  </div>
-
-</section>
-
-{{ partial "cta" . }}
+  {{ partial "cta" . }}
 {{ end }}

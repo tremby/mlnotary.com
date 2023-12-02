@@ -1,86 +1,75 @@
 {{ define "main" }}
+  <section class="hero">
+    <div class="hero/content align:left align@sm:center">
+      <h1
+        class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin-bottom:u6 margin:auto"
+        style="max-width: 1100px;"
+      >
+        {{ .Params.hero_title }}
+      </h1>
+    </div>
+  </section>
 
-<section class="hero">
-  <div class="hero/content align:left align@sm:center">
-    <h1
-      class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin-bottom:u6 margin:auto"
-      style="max-width: 1100px;"
-    >
-      {{ .Params.hero_title }}
-    </h1>
-  </div>
-</section>
+  <section>
+    <div class="row fill:white">
+      <div
+        class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1504355080015-bba52674577b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=090323df2e679b3b5df56edc7f2629cb&auto=format&fit=crop&w=800&q=60');
+        "
+      ></div>
+      <div class="column:12 column@md:6 padding-y:10vh fill:primary">
+        <div class="margin:auto max-width:600px align:center padding-y:5vh">
+          <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
+          <h3 class="font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8">
+            {{ .Params.quote }}
+          </h3>
 
-<section>
-  <div class="row fill:white">
-    <div
-      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1504355080015-bba52674577b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=090323df2e679b3b5df56edc7f2629cb&auto=format&fit=crop&w=800&q=60');
-      "
-    ></div>
-    <div class="column:12 column@md:6 padding-y:10vh fill:primary">
-      <div class="margin:auto max-width:600px align:center padding-y:5vh">
-        <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
-        <h3
-          class="font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8"
-        >
-          {{ .Params.quote }}
-        </h3>
+          <p class="color:white">
+            Jonathan Wong<br />
+            <span class="opacity:6">Director, Marine Landing</span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+        style="background-image:url('/assets/images/office-01.jpg"
+      ></div>
+    </div>
+  </section>
 
-        <p class="color:white">
-          Jonathan Wong<br />
-          <span class="opacity:6">Director, Marine Landing</span>
+  <section class="row fill:white">
+    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+      <div>
+        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Services</h4>
+        <p class="font-size:body max-width:400px margin-bottom:u12">
+          {{ .Params.service_text }}
         </p>
+        <a href="/services" class="font-size:body color:black font-weight:bold">Learn more</a>
       </div>
     </div>
     <div
       class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-      style="background-image:url('/assets/images/office-01.jpg"
+      style="
+        background-image: url('/assets/images/office-02.jpg');
+        background-size: cover;
+        background-position: bottom center !important;
+      "
     ></div>
-  </div>
-</section>
-
-<section class="row fill:white">
-  <div
-    class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center"
-  >
-    <div>
-      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
-        Our Services
-      </h4>
-      <p class="font-size:body max-width:400px margin-bottom:u12">
-        {{ .Params.service_text }}
-      </p>
-      <a href="/services" class="font-size:body color:black font-weight:bold">Learn more</a>
+    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+      <div>
+        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Location</h4>
+        <p class="font-size:body max-width:400px margin-bottom:u12">
+          {{ .Params.location_text }}
+        </p>
+        <a href="/location" class="font-size:body color:black font-weight:bold">Learn more</a>
+      </div>
     </div>
-  </div>
-  <div
-    class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-    style="
-      background-image: url('/assets/images/office-02.jpg');
-      background-size: cover;
-      background-position: bottom center !important;
-    "
-  ></div>
-  <div
-    class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center"
-  >
-    <div>
-      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
-        Our Location
-      </h4>
-      <p class="font-size:body max-width:400px margin-bottom:u12">
-        {{ .Params.location_text }}
-      </p>
-      <a href="/location" class="font-size:body color:black font-weight:bold">Learn more</a>
-    </div>
-  </div>
-  <div
-    class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-    style="background-image: url('/assets/images/office-03.jpg');"
-  ></div>
-</section>
+    <div
+      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      style="background-image: url('/assets/images/office-03.jpg');"
+    ></div>
+  </section>
 
   {{ partial "cta" . }}
 {{ end }}

@@ -1,89 +1,84 @@
-'use strict';
+"use strict";
 // Create an immediately invoked functional expression to wrap our code
-;(function() {
+(function () {
+  // Constructor Method
+  window.Slidemenu = function () {
+    // Define Constructor
+    let defaults = {
+      element: ".slidemenu",
+      toggleClass: ".js-hamburger",
+      closeClass: ".slidemenu\\/close",
+    };
 
-	// Constructor Method
-	window.Slidemenu = function() {
+    // Override defaults
+    if (arguments[0] && typeof arguments[0] === "object") {
+      this.options = extendDefaults(defaults, arguments[0]);
+    } else {
+      this.options = defaults;
+    }
 
-		// Define Constructor
-		let defaults = {
-			element: '.slidemenu',
-			toggleClass: '.js-hamburger',
-			closeClass: '.slidemenu\\/close'
-		}
+    let slidemenuClass = this.options.element;
+    let toggleClass = this.options.toggleClass;
+    let closeClass = this.options.closeClass;
+    let overlayClass = ".slidemenu\\/overlay";
 
-		// Override defaults
-		if (arguments[0] && typeof arguments[0] === 'object') {
-			this.options = extendDefaults(defaults, arguments[0]);
-		} else {
-			this.options = defaults
-		}
+    let allSlidemenu = document.querySelectorAll(slidemenuClass);
+    let activeClass = "is-active";
 
-		let slidemenuClass = this.options.element
-		let toggleClass = this.options.toggleClass
-		let closeClass = this.options.closeClass
-		let overlayClass = '.slidemenu\\/overlay'
+    /* Initialize each component */
+    for (let i = 0; i < allSlidemenu.length; i++) {
+      let slidemenu = allSlidemenu[i];
+      let allToggle = document.querySelectorAll(toggleClass);
+      let allClose = slidemenu.querySelectorAll(closeClass);
+      let allOverlay = slidemenu.querySelectorAll(overlayClass);
 
-    let allSlidemenu = document.querySelectorAll(slidemenuClass)
-		let activeClass = 'is-active'
+      for (let i = 0; i < allToggle.length; i++) {
+        let toggle = allToggle[i];
 
-		/* Initialize each component */
-		for (let i = 0; i < allSlidemenu.length; i++) {
-			let slidemenu = allSlidemenu[i]
-			let allToggle = document.querySelectorAll(toggleClass)
-			let allClose = slidemenu.querySelectorAll(closeClass)
-			let allOverlay = slidemenu.querySelectorAll(overlayClass)
+        /* add click event */
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          activate(slidemenu);
+        });
+      }
 
-			for (let i = 0; i < allToggle.length; i++) {
-				let toggle = allToggle[i]
+      for (let i = 0; i < allToggle.length; i++) {
+        let close = allClose[i];
 
-				/* add click event */
-				toggle.addEventListener('click', function(e) {
-					e.preventDefault()
-					activate(slidemenu)
-				})
-			}
+        /* add click event */
+        close.addEventListener("click", function (e) {
+          e.preventDefault();
+          activate(slidemenu);
+        });
+      }
 
-			for (let i = 0; i < allToggle.length; i++) {
-				let close = allClose[i]
+      for (let i = 0; i < allOverlay.length; i++) {
+        let overlay = allOverlay[i];
 
-				/* add click event */
-				close.addEventListener('click', function(e) {
-					e.preventDefault()
-					activate(slidemenu)
-				})
-			}
+        /* add click event */
+        overlay.addEventListener("click", function (e) {
+          e.preventDefault();
+          activate(slidemenu);
+        });
+      }
+    }
 
-			for (let i = 0; i < allOverlay.length; i++) {
-				let overlay = allOverlay[i]
+    /* Activates the chosen accordion and deactivates the rest */
+    function activate(slidemenu) {
+      slidemenu.classList.toggle(activeClass);
+    }
+  };
 
-				/* add click event */
-				overlay.addEventListener('click', function(e) {
-					e.preventDefault()
-					activate(slidemenu)
-				})
-			}
-		}
+  // Public Methods
 
-		/* Activates the chosen accordion and deactivates the rest */
-		function activate(slidemenu) {
-			slidemenu.classList.toggle(activeClass)
-		}
-	}
-
-
-	// Public Methods
-
-
-	// Private Methods
-	function extendDefaults(source, properties) {
-		let property;
-		for (property in properties) {
-			if (properties.hasOwnProperty(property)) {
-				source[property] = properties[property];
-			}
-		}
-		return source;
-	}
-
-}());
+  // Private Methods
+  function extendDefaults(source, properties) {
+    let property;
+    for (property in properties) {
+      if (properties.hasOwnProperty(property)) {
+        source[property] = properties[property];
+      }
+    }
+    return source;
+  }
+})();

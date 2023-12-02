@@ -1,81 +1,72 @@
 {{ define "main" }}
+  <section class="row fill:primary-l5">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
+      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:700px margin:auto">
+        {{ .Params.headline }}
 
-<section class="row fill:primary-l5">
-  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
-    <h2
-      class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:700px margin:auto"
-    >
-      {{ .Params.headline }}
 
-      <span class="line line:short margin-top:u10"></span>
-    </h2>
-  </div>
-  <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
-    <div class="row margin-bottom:10">
-      <div class="column:12 column@sm:8">
-        <h6 class="margin-bottom:u2 font-weight:medium">Transit</h6>
-        <p>
-          We are conveniently located within walking distance of the Canada Line’s Marine Drive station and the
-Marine Drive bus bay station on Interurban Way.
-        </p>
+        <span class="line line:short margin-top:u10"></span>
+      </h2>
+    </div>
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
+      <div class="row margin-bottom:10">
+        <div class="column:12 column@sm:8">
+          <h6 class="margin-bottom:u2 font-weight:medium">Transit</h6>
+          <p>
+            We are conveniently located within walking distance of the Canada Line’s Marine Drive station and the Marine
+            Drive bus bay station on Interurban Way.
+          </p>
 
-        <h6 class="margin-bottom:u2 font-weight:medium">Parking</h6>
-        <p>
-          If arriving by vehicle, there is free street parking along Lord Street. Please be mindful of the parking
-restrictions in the area.
-        </p>
-        <p>
-          A paid parking lot is also located in the complex (Northwest) on parking level P1. To access the parking
-lot, please follow the signs along the building and enter the residential entrance via Lord Street. All stalls
-marked as a retail spot are available for parking. An elevator will then take you up to the ground floor.
-        </p>
+          <h6 class="margin-bottom:u2 font-weight:medium">Parking</h6>
+          <p>
+            If arriving by vehicle, there is free street parking along Lord Street. Please be mindful of the parking
+            restrictions in the area.
+          </p>
+          <p>
+            A paid parking lot is also located in the complex (Northwest) on parking level P1. To access the parking
+            lot, please follow the signs along the building and enter the residential entrance via Lord Street. All
+            stalls marked as a retail spot are available for parking. An elevator will then take you up to the ground
+            floor.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="row fill:white">
-  <div
-    class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center"
-  >
-    <div>
-      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
-        Our Services
-      </h4>
-      <p class="font-size:tiny max-width:400px margin-bottom:u12">
-        {{ .Params.service_text }}
-      </p>
-      <a href="/services" class="font-size:body color:black font-weight:bold">Learn more</a>
+  <section class="row fill:white">
+    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+      <div>
+        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Services</h4>
+        <p class="font-size:tiny max-width:400px margin-bottom:u12">
+          {{ .Params.service_text }}
+        </p>
+        <a href="/services" class="font-size:body color:black font-weight:bold">Learn more</a>
+      </div>
     </div>
-  </div>
-  <div
-    class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-    style="
-      background-image: url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60');
-      background-size: cover;
-      background-position: bottom center !important;
-    "
-  ></div>
-  <div
-    class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center"
-  >
-    <div>
-      <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">
-        About Us
-      </h4>
-      <p class="font-size:tiny max-width:400px margin-bottom:u12">
-        {{ .Params.about_text }}
-      </p>
-      <a href="/about" class="font-size:body color:black font-weight:bold">Learn more</a>
+    <div
+      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60');
+        background-size: cover;
+        background-position: bottom center !important;
+      "
+    ></div>
+    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
+      <div>
+        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">About Us</h4>
+        <p class="font-size:tiny max-width:400px margin-bottom:u12">
+          {{ .Params.about_text }}
+        </p>
+        <a href="/about" class="font-size:body color:black font-weight:bold">Learn more</a>
+      </div>
     </div>
-  </div>
-  <div
-    class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-    style="
-      background-image: url('https://images.unsplash.com/photo-1520931674431-de5b4b2cc562?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf892a06a8141d8d0823c4b4c6cce613&auto=format&fit=crop&w=800&q=60');
-    "
-  ></div>
-</section>
+    <div
+      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1520931674431-de5b4b2cc562?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf892a06a8141d8d0823c4b4c6cce613&auto=format&fit=crop&w=800&q=60');
+      "
+    ></div>
+  </section>
 
-{{ .Content }}
+  {{ .Content }}
 {{ end }}

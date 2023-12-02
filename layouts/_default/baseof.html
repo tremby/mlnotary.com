@@ -1,36 +1,36 @@
 <!doctype html>
 <html>
-<head>
-  <link rel="canonical" href="{{ .Permalink }}">
+  <head>
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-  <title>Marine Landing | {{ .Page.Title }}</title>
-  <!-- Page Meta -->
-  <meta charset="utf-8" />
-  <meta name="description" content="{{ .Site.Data.meta.description }}">
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Marine Landing | {{ .Page.Title }}</title>
+    <!-- Page Meta -->
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ .Site.Data.meta.description }}" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
-  <!-- Social Media Open Graph -->
-  <meta property="og:title" content="{{ .Site.Data.meta.title }}">
-  <meta property="og:description" content="{{ .Site.Data.meta.description }}">
-  <meta property="og:image" content="/thumbnail.jpg">
-  <meta property="og:url" content="/">
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Social Media Open Graph -->
+    <meta property="og:title" content="{{ .Site.Data.meta.title }}" />
+    <meta property="og:description" content="{{ .Site.Data.meta.description }}" />
+    <meta property="og:image" content="/thumbnail.jpg" />
+    <meta property="og:url" content="/" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Icons -->
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="apple-touch-icon" sizes="180x180" href="/iPhone-6-Plus.png">
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/iPhone-6-Plus.png" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-</head>
-<body>
-  {{ partial "header" . }}
-  {{ block "main" . }}
-  {{ end }}
-  {{ partial "slidemenu" . }}
-  {{ partial "footer" . }}
-<script src="/assets/js/main.js"></script>
-</body>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+  </head>
+  <body>
+    {{ partial "header" . }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "slidemenu" . }}
+    {{ partial "footer" . }}
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

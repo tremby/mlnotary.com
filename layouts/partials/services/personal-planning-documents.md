@@ -1,10 +1,10 @@
 ### Other Personal Planning Documents
 
 > Although B.C. doesn’t use “living wills,” advance directives and substitute decision-making agreements
-like representation agreements can serve a similar purpose. In a medical crisis, these documents will
-allow the person of your choice to make important health care decisions for you, if you’re not able to
-make those decisions yourself. <br>If you don’t have a representation agreement or advance directive for health care decisions, the law may allow family members or the Public Guardian and Trustee to make decisions on your behalf. <br><br> – <a href="https://www2.gov.bc.ca/gov/content/family-social-
-supports/seniors/financial-legal-matters/wills-and-estate-planning">BC Provincial Government</a>
+> like representation agreements can serve a similar purpose. In a medical crisis, these documents will
+> allow the person of your choice to make important health care decisions for you, if you’re not able to
+> make those decisions yourself. <br>If you don’t have a representation agreement or advance directive for health care decisions, the law may allow family members or the Public Guardian and Trustee to make decisions on your behalf. <br><br> – <a href="https://www2.gov.bc.ca/gov/content/family-social-
+> supports/seniors/financial-legal-matters/wills-and-estate-planning">BC Provincial Government</a>
 
 We offer personal planning services where personal planning documents such as representation
 agreements and advance directives are discussed, often in conjunction with the preparation of a client’s
@@ -20,6 +20,7 @@ We will work together with families to define a representative they see fit to a
 individual.
 
 A Representation Agreement can include decisions involving but not limited to:
+
 - Routine finances
 - Health and personal care
 - Refusal or consent to life-support treatment and care

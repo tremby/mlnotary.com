@@ -6,6 +6,7 @@
     "build:assets": "gulp",
     "build:pages": "hugo",
     "build": "npm run build:assets && npm run build:pages",
+    "format": "prettier *.js layouts src static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jin Park, Bart Nagel",

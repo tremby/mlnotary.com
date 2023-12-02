@@ -1,124 +1,98 @@
 {{ define "main" }}
-<section class="row fill:white">
-  <div class="column:12 padding-y:6vh hero:services">
-    <div
-      class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative"
-      style="z-index: 10;"
-    >
-      <p class="color:white margin-bottom:3">
-        Our Services
-      </p>
-
-      <h2
-        class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10"
-      >
-        {{ .Params.headline }}
-      </h2>
-      <span class="line line:short fill:white margin:auto"></span>
-    </div>
-  </div>
-</section>
-
-<section class="">
-  <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
-    <div class="tab tab-position:left tab:reset tab:services row">
+  <section class="row fill:white">
+    <div class="column:12 padding-y:6vh hero:services">
       <div
-        class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12"
+        class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative"
+        style="z-index: 10;"
       >
-        <a href="#service-1" class="tab/item font-size:h4">
-          Real Estate Purchase and Sale
-        </a>
-        <a href="#service-2" class="tab/item font-size:h4">
-          Mortgage Refinancing
-        </a>
-        <a href="#service-3" class="tab/item font-size:h4 is-active">
-          Wills and Estates
-        </a>
-        <a href="#service-4" class="tab/item font-size:h4">
-          Powers of Attorney
-        </a>
-        <a href="#service-5" class="tab/item font-size:h4">
-          Personal Planning Documents
-        </a>
-        <a href="#service-6" class="tab/item font-size:h4">
-          Notarizations
-        </a>
+        <p class="color:white margin-bottom:3">Our Services</p>
+
+        <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
+          {{ .Params.headline }}
+        </h2>
+        <span class="line line:short fill:white margin:auto"></span>
       </div>
+    </div>
+  </section>
 
-      <div
-        class="tab/content column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12"
-      >
-        <div id="service-1" class="tab/item">
-          <article class="max-width:800px markup">
-            {{ partial "services/real-estate-conveyancing.md" | markdownify }}
-          </article>
+  <section class="">
+    <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
+      <div class="tab tab-position:left tab:reset tab:services row">
+        <div class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12">
+          <a href="#service-1" class="tab/item font-size:h4"> Real Estate Purchase and Sale </a>
+          <a href="#service-2" class="tab/item font-size:h4"> Mortgage Refinancing </a>
+          <a href="#service-3" class="tab/item font-size:h4 is-active"> Wills and Estates </a>
+          <a href="#service-4" class="tab/item font-size:h4"> Powers of Attorney </a>
+          <a href="#service-5" class="tab/item font-size:h4"> Personal Planning Documents </a>
+          <a href="#service-6" class="tab/item font-size:h4"> Notarizations </a>
         </div>
-        <div id="service-2" class="tab/item">
-          <article class="max-width:800px markup">
+
+        <div class="tab/content column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12">
+          <div id="service-1" class="tab/item">
             <article class="max-width:800px markup">
-              {{ partial "services/mortgage-refinancing.md" | markdownify }}
+              {{ partial "services/real-estate-conveyancing.md" | markdownify }}
             </article>
-          </article>
-        </div>
-        <div id="service-3" class="tab/item is-active">
-          <article class="max-width:800px markup">
-            {{ partial "services/wills.md" | markdownify }}
-          </article>
-        </div>
-        <div id="service-4" class="tab/item">
-          <article class="max-width:800px markup">
-            <h3 class="font-weight:regular">
-              Powers of Attorney
-            </h3>
-            <p>
-              A Power of Attorney (also known in it’s shortened form as POA) is a personal planning document which
-authorizes another person (attorney) to act on their behalf. There are different types of Powers of
-Attorney (General, Enduring, Specific) all of which are used in differing circumstances.
-            </p>
-            <p>
-              A Power of Attorney gives the attorney authority to make decisions on behalf of the donor when they are
-unable to act for themselves. Specific Powers of Attorney are most commonly used to assist in the
-purchase or sale of property, or even for purchasing and/or leasing vehicles. Enduring Powers of
-Attorney are most commonly discussed in conjunction with other personal planning documents with older
-adults. A Power of Attorney can be revoked or changed at any time.
-            </p>
-          </article>
-        </div>
-        <div id="service-5" class="tab/item">
-          <article class="max-width:800px markup">
+          </div>
+          <div id="service-2" class="tab/item">
+            <article class="max-width:800px markup">
+              <article class="max-width:800px markup">
+                {{ partial "services/mortgage-refinancing.md" | markdownify }}
+              </article>
+            </article>
+          </div>
+          <div id="service-3" class="tab/item is-active">
+            <article class="max-width:800px markup">
+              {{ partial "services/wills.md" | markdownify }}
+            </article>
+          </div>
+          <div id="service-4" class="tab/item">
+            <article class="max-width:800px markup">
+              <h3 class="font-weight:regular">Powers of Attorney</h3>
+              <p>
+                A Power of Attorney (also known in it’s shortened form as POA) is a personal planning document which
+                authorizes another person (attorney) to act on their behalf. There are different types of Powers of
+                Attorney (General, Enduring, Specific) all of which are used in differing circumstances.
+              </p>
+              <p>
+                A Power of Attorney gives the attorney authority to make decisions on behalf of the donor when they are
+                unable to act for themselves. Specific Powers of Attorney are most commonly used to assist in the
+                purchase or sale of property, or even for purchasing and/or leasing vehicles. Enduring Powers of
+                Attorney are most commonly discussed in conjunction with other personal planning documents with older
+                adults. A Power of Attorney can be revoked or changed at any time.
+              </p>
+            </article>
+          </div>
+          <div id="service-5" class="tab/item">
+            <article class="max-width:800px markup">
               {{ partial "services/personal-planning-documents.md" | markdownify }}
             </article>
-        </div>
-        <div id="service-6" class="tab/item">
-          <article class="max-width:800px markup">
-            <h3 class="font-weight:regular">
-              Notarization
-            </h3>
-            <p class="margin-bottom:u2">
-              When we notarize a document, we are administering an oath, affirmation, or declaration
-              over the document(s).
-            </p>
-            <p>
-              We notarize a variety of personal documents, including but not limited to:
-            </p>
-            <ul>
-              <li>Statutory Declarations</li>
-              <li>Insurance Loss Declarations</li>
-              <li>Certified True Copies of Documents</li>
-              <li>Notarizations and Attestations of Signatures</li>
-              <li>Execution or Authentications of International Documents</li>
-              <li>Letters of Invitation for Foreign Travel</li>
-              <li>Authorizations of Minor Child Travel</li>
-              <li>Proof of Identity for Travel Purposes</li>
-              <li>Passport Application Documentation</li>
-              <li>Identity Documents Required For Your Notarization Appointment</li>
-            </ul>
-          </article>
+          </div>
+          <div id="service-6" class="tab/item">
+            <article class="max-width:800px markup">
+              <h3 class="font-weight:regular">Notarization</h3>
+              <p class="margin-bottom:u2">
+                When we notarize a document, we are administering an oath, affirmation, or declaration over the
+                document(s).
+              </p>
+              <p>We notarize a variety of personal documents, including but not limited to:</p>
+              <ul>
+                <li>Statutory Declarations</li>
+                <li>Insurance Loss Declarations</li>
+                <li>Certified True Copies of Documents</li>
+                <li>Notarizations and Attestations of Signatures</li>
+                <li>Execution or Authentications of International Documents</li>
+                <li>Letters of Invitation for Foreign Travel</li>
+                <li>Authorizations of Minor Child Travel</li>
+                <li>Proof of Identity for Travel Purposes</li>
+                <li>Passport Application Documentation</li>
+                <li>Identity Documents Required For Your Notarization Appointment</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-{{ partial "cta" . }}
+  {{ partial "cta" . }}
 {{ end }}
