@@ -35,14 +35,8 @@ gulp.task('css', function () {
 // Concatenate & Minify JS
 gulp.task('js', function () {
   console.log('gulp js started')
-  return gulp.src(['src/vendors/jquery/jquery-3.3.1.min.js',
-                   'src/vendors/prism/prism.js',
-                   'src/vendors/scrollreveal/scrollreveal.min.js',
-                   'src/js/components/tab.js',
-                   'src/js/components/accordion.js',
-                   'src/js/components/dropdown.js',
+  return gulp.src(['src/js/components/tab.js',
                    'src/js/components/slidemenu.js',
-                   'src/js/components/notice.js',
                    'src/js/main.js'])
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('generated/assets/js'))
