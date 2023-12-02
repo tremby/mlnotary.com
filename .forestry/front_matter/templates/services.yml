@@ -1,9 +1,0 @@
----
-label: services
-hide_body: true
-fields:
-- type: text
-  name: headline
-  label: Headline
-pages:
-- content/services.md
