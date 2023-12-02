@@ -2,11 +2,9 @@ const gulp = require('gulp'); // gulp
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss'); // postcss
-const cssnext=  require('postcss-cssnext'); // process custom variables
 const mqpacker = require('css-mqpacker'); // consolidate media query
 const cssnano = require('cssnano'); // minify css
 const concat = require('gulp-concat'); // concatenate js
-const uglify = require('gulp-uglify'); // minify js
 
 /*
 Top Level Functions
@@ -21,7 +19,6 @@ gulp.watch - watch files and folders for changes
 gulp.task('css', function () {
   console.log('gulp css started')
   var plugins = [
-    // cssnext({ browsers: ["last 2 versions"] }),
     mqpacker(),
     cssnano({ autoprefixer: false,
               reduceIdents: false })
