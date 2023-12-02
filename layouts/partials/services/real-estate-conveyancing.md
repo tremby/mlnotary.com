@@ -9,7 +9,7 @@ possible.
 We also assist clients with commercial purchases, private transactions, and family transfers of real estate
 property.
 
-Other real estate services with which we can assist you include changing your name on title, transmission of a joint
+Other real estate services with which we can assist you include changing your name on a title, transmission of a joint
 tenant, and change of address on title.
 
 ### How it works
