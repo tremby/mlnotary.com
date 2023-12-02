@@ -19,7 +19,7 @@ their children are in conflict with one another about a decision involving the i
 We will work together with families to define a representative they see fit to act on behalf of the
 individual.
 
-A Representation Agreement can include decisions involving but not limited to:
+A representation agreement can include decisions involving but not limited to:
 
 - Routine finances
 - Health and personal care
