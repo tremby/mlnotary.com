@@ -26,7 +26,7 @@ assist you with the following:
 - **Statement of adjustments**: in any transaction whether buyer or seller, there is a statement of adjustments
   which reflect the credits and debits in your transactions. Any adjustments such as property taxes and
   strata maintenance fees are reflected on this document
-- **Strata property management forms**: we assist you in obtaining the necessary strata forms necessary to
+- **Strata property management forms**: we assist you in obtaining the strata forms necessary to
   complete your transaction and ensure all strata fees are paid for.
 - **Sate of title certificate**: at the end of your transaction, we will obtain a state of title certificate from
   the Land Title Office which proves that you are the registered owner of the property.
