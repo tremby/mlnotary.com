@@ -1,4 +1,4 @@
-### Wills and Estates
+### Wills
 
 > Making a will is an important part of planning for your family’s future. If you die without a will, your
 > property will be divided according to B.C. law, and the costs to administer your estate will increase.
