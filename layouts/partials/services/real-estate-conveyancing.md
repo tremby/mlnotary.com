@@ -28,5 +28,5 @@ assist you with the following:
   strata maintenance fees are reflected on this document
 - **Strata property management forms**: we assist you in obtaining the strata forms necessary to
   complete your transaction and ensure all strata fees are paid for.
-- **Sate of title certificate**: at the end of your transaction, we will obtain a state of title certificate from
+- **State of title certificate**: at the end of your transaction, we will obtain a state of title certificate from
   the Land Title Office which proves that you are the registered owner of the property.
