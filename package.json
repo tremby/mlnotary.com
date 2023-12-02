@@ -1,13 +1,15 @@
 {
-  "name": "slashcss",
+  "name": "mlnotary.com",
   "version": "1.0.0",
-  "description": "Build source files for SlashCSS framework.",
-  "main": "index.js",
+  "description": "Marine Landing Notary website",
   "scripts": {
+    "build:assets": "gulp",
+    "build:pages": "hugo",
+    "build": "npm run build:assets && npm run build:pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jin Park",
-  "license": "ISC",
+  "author": "Jin Park, Bart Nagel",
+  "license": "UNLICENSED",
   "devDependencies": {
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
