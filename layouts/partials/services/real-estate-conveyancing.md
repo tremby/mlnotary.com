@@ -10,7 +10,7 @@ We also assist clients with commercial purchases, private transactions, and fami
 property.
 
 Other real estate services with which we can assist you include changing your name on a title, transmission of a joint
-tenant, and change of address on title.
+tenant, and changing the address on a title.
 
 ### How it works
 
