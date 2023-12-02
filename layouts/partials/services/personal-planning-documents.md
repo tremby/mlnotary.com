@@ -32,7 +32,7 @@ A representation agreement can include decisions involving but not limited to:
 - Living arrangements
 
 Our clients often come to our office looking for a “living will”. It is important to note that we do not have
-such document in British Columbia. The document that is most similar to a living will is known as an
+such a document in British Columbia. The document that is most similar to a living will is known as an
 advance directive. An advance directive differs from a representation agreement in that it lists your healthcare
 wishes and does not appoint a representative to act for you. We consult with our clients about this and
 can assist with the preparation of advance directives.
