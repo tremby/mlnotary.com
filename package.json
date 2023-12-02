@@ -1,7 +1,7 @@
 {
   "name": "mlnotary.com",
   "version": "1.0.0",
-  "description": "Marine Landing Notary website",
+  "description": "Marine Landing Notary Public website",
   "scripts": {
     "build:assets": "gulp",
     "build:pages": "hugo",
