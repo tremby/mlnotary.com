@@ -1,5 +1,5 @@
 const gulp = require('gulp'); // gulp
-const sass = require('gulp-sass'); // sass
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss'); // postcss
 const cssnext=  require('postcss-cssnext'); // process custom variables
@@ -51,11 +51,11 @@ gulp.task('js', function () {
 		.pipe(gulp.dest('../static/assets/js'))
 });
 
+gulp.task('default', gulp.parallel('css', 'js'));
+
 // Watch
-gulp.task('watch', ['default'], function () {
+gulp.task('watch', gulp.series('default', function () {
   gulp.watch(['css/**/*.*'], ['css'])
   gulp.watch(['js/**/*.*'], ['js'])
   gulp.watch(['vendor/**/*.*'], ['js'])
-});
-
-gulp.task('default', ['css', 'js']);
+}));

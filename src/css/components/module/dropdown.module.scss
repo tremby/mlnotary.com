@@ -53,7 +53,7 @@ DROPDOWN
     &\:top {
       .dropdown\/content {
         top: auto;
-        bottom: calc(100% + 0);
+        bottom: 100%;
         &:before {
           display: none;
         }
@@ -61,7 +61,7 @@ DROPDOWN
       &-center {
         .dropdown\/content {
           top: auto;
-          bottom: calc(100% + 0);
+          bottom: 100%;
           left: 50%;
           transform: translateX(-50%);
           &:before {
@@ -73,7 +73,7 @@ DROPDOWN
         .dropdown\/content {
           top: auto;
           right: 0;
-          bottom: calc(100% + 0);
+          bottom: 100%;
           &:before {
             display: none;
           }

@@ -12,15 +12,15 @@ Site: ipfind.com
 
 // include SCSS overrides before the build variables
 @import "../fonts/theinhardt.scss";
-@import "override.variables";
-@import "build.variables";
+@import "override.variables.scss";
+@import "build.variables.scss";
 
 /************************************************************
 2. COMPONENTS
 ************************************************************/
 
 // include custom components here
-@import "components/import.components";
+@import "components/import.components.scss";
 
 /************************************************************
 3. ROOT VARIABLES
@@ -41,7 +41,7 @@ Site: ipfind.com
 5. EXTENSIONS
 ************************************************************/
 
-@import "extensions/header.extension";
+@import "extensions/header.extension.scss";
 // include any other 3rd party css libraries here
 
 /************************************************************

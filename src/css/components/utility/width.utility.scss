@@ -10,7 +10,7 @@ $widths: 20 !default;
   }
   @for $i from 1 through 10 {
     &\:#{$i}0\% {
-      width: #{$i}0% !important;
+      width: #{percentage($i/10)} !important;
     }
   }
   @while $widths > 0 {
@@ -27,7 +27,7 @@ $widths: 20 !default;
         }
         @for $i from 1 through 10 {
           &\:#{$i}0\% {
-            width: #{$i}0% !important;
+            width: #{percentage($i/10)} !important;
           }
         }
         @while $widths > 0 {

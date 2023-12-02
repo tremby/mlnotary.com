@@ -10,7 +10,7 @@ $heights: 20 !default;
   }
   @for $i from 1 through 10 {
     &\:#{$i}0\% {
-      height: #{$i}0% !important;
+      height: #{percentage($i/10)} !important;
     }
   }
   @while $heights > 0 {
@@ -27,7 +27,7 @@ $heights: 20 !default;
         }
         @for $i from 1 through 10 {
           &\:#{$i}0\% {
-            height: #{$i}0% !important;
+            height: #{percentage($i/10)} !important;
           }
         }
         @while $heights > 0 {
