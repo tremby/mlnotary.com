@@ -2,7 +2,7 @@
 
 A mortgage gives an individual the opportunity to leverage the value of their home to access funds for
 renovations, tuition, investments, debt consolidation, or other life decisions.
-Most homeowners have significant equity to their homes, either by paying off a mortgage in the past or an
+Many homeowners in the Lower Mainland have significant equity in their homes, either by paying off a mortgage in the past or an
 increase of home value due to market conditions. When paying out an existing loan and obtaining a new
 loan, this is known as mortgage refinancing.
 
