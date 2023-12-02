@@ -1,4 +1,4 @@
-{{ partial "head" . }} {{ partial "header" . }}
+{{ define "main" }}
 
 <section class="hero">
   <div class="hero/content align:left align@sm:center">
@@ -82,4 +82,5 @@
   ></div>
 </section>
 
-{{ partial "cta" . }} {{ partial "footer" . }} {{ partial "foot" . }}
+  {{ partial "cta" . }}
+{{ end }}

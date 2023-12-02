@@ -1,5 +1,4 @@
-{{ partial "head" . }} {{ partial "header" . }}
-
+{{ define "main" }}
 <section class="row fill:white">
   <div class="column:12 padding-y:6vh hero:services">
     <div
@@ -121,4 +120,5 @@ adults. A Power of Attorney can be revoked or changed at any time.
   </div>
 </section>
 
-{{ partial "cta" . }} {{ partial "footer" . }} {{ partial "foot" . }}
+{{ partial "cta" . }}
+{{ end }}

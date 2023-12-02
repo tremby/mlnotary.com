@@ -1,4 +1,4 @@
-{{ partial "head" . }} {{ partial "header" . }}
+{{ define "main" }}
 
 <section class="row fill:primary-l5">
   <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
@@ -77,4 +77,5 @@ marked as a retail spot are available for parking. An elevator will then take yo
   ></div>
 </section>
 
-{{.Content}} {{ partial "footer" . }} {{ partial "foot" . }}
+{{ .Content }}
+{{ end }}

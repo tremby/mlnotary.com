@@ -1,7 +1,4 @@
-{{ partial "head" . }}
-
-{{ partial "header" . }}
-
+{{ define "main" }}
 <section class="row fill:white padding-y:10vh padding-y@sm:none">
   <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh">
 
@@ -20,9 +17,4 @@
 </section>
 
 {{ partial "cta" . }}
-
-
-
-
-{{ partial "footer" . }}
-{{ partial "foot" . }}
+{{ end }}
