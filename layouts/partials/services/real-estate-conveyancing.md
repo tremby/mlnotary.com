@@ -1,4 +1,4 @@
-### Real Estate Conveyancing
+### Real Estate Purchase and Sale
 
 Purchasing and selling your property is one of the biggest decisions and financial investments of your life.
 We are here to help you through the process — also known as conveyance — from when property is
