@@ -17,16 +17,16 @@ tenant, and change of address on title.
 Land ownership in British Columbia is recorded in the Land Title Office. As your notary public, we will
 assist you with the following:
 
-- Transfer—preparation of the legal forms that needed to transfer property from the Transferor to the
+- **Transfer**: preparation of the legal forms that needed to transfer property from the Transferor to the
   Transferee
-- Mortgage—preparation of the required land title forms and lender forms necessary to complete the
+- **Mortgage**: preparation of the required land title forms and lender forms necessary to complete the
   mortgage of the property
-- Property Transfer Tax—preparation of the necessary forms and remitting the tax to the Ministry of
+- **Property Transfer Tax**: preparation of the necessary forms and remitting the tax to the Ministry of
   Finance on your behalf
-- Statement of Adjustments—in any transaction whether buyer or seller, there is a statement of adjustments
+- **Statement of Adjustments**: in any transaction whether buyer or seller, there is a statement of adjustments
   which reflect the credits and debits in your transactions. Any adjustments such as property taxes and
   strata maintenance fees are reflected on this document
-- Strata Property Management Forms—we assist you in obtaining the necessary strata forms necessary to
+- **Strata Property Management Forms**: we assist you in obtaining the necessary strata forms necessary to
   complete your transaction and ensure all strata fees are paid for.
-- Sate of Title Certificate—at the end of your transaction, we will obtain a State of Title Certificate from
+- **Sate of Title Certificate**: at the end of your transaction, we will obtain a State of Title Certificate from
   the Land Title Office which proves that you are the registered owner of the property.
