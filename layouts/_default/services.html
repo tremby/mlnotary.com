@@ -5,7 +5,7 @@
         <p class="color:white margin-bottom:3">Our Services</p>
 
         <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
-          {{ .Params.headline }}
+          At Marine Landing Notary Public, we emphasize a personable client relationship, while maintaining the highest integrity of services performed.
         </h2>
         <span class="line line:short fill:white margin:auto"></span>
       </div>
@@ -16,73 +16,16 @@
     <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
       <div class="tab tab-position:left tab:reset tab:services row">
         <div class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12">
-          <a href="#service-1" class="tab/item font-size:h4 is-active"> Real Estate Purchase and Sale </a>
-          <a href="#service-2" class="tab/item font-size:h4"> Mortgage Refinancing </a>
-          <a href="#service-3" class="tab/item font-size:h4"> Wills </a>
-          <a href="#service-4" class="tab/item font-size:h4"> Powers of Attorney </a>
-          <a href="#service-5" class="tab/item font-size:h4"> Other Personal Planning Documents </a>
-          <a href="#service-6" class="tab/item font-size:h4"> Notarizations </a>
+          {{ $page := .Page }}
+          {{ range site.Menus.services }}
+            <a href="{{ .URL }}" class="tab/item font-size:h4 {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}">{{ .Name }}</a>
+          {{ end }}
         </div>
 
         <div class="tab/content column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12">
-          <div id="service-1" class="tab/item is-active">
+          <div class="tab/item">
             <article class="max-width:800px markup">
-              {{ partial "services/real-estate-conveyancing.md" | markdownify }}
-            </article>
-          </div>
-          <div id="service-2" class="tab/item">
-            <article class="max-width:800px markup">
-              <article class="max-width:800px markup">
-                {{ partial "services/mortgage-refinancing.md" | markdownify }}
-              </article>
-            </article>
-          </div>
-          <div id="service-3" class="tab/item">
-            <article class="max-width:800px markup">
-              {{ partial "services/wills.md" | markdownify }}
-            </article>
-          </div>
-          <div id="service-4" class="tab/item">
-            <article class="max-width:800px markup">
-              <h3 class="font-weight:regular">Powers of Attorney</h3>
-              <p>
-                A power of attorney (also known in its shortened form as POA) is a personal planning document which
-                authorizes another person (attorney) to act on their behalf. There are different types of powers of
-                attorney (general, enduring, specific), each of which is used in differing circumstances.
-              </p>
-              <p>
-                A power of attorney gives the attorney authority to make decisions on behalf of the donor when they are
-                unable to act for themselves. Specific powers of attorney are most commonly used to assist in the
-                purchase or sale of property, or even for purchasing and/or leasing vehicles. Enduring powers of
-                attorney are most commonly discussed in conjunction with other personal planning documents with older
-                adults. A power of attorney can be revoked or changed at any time.
-              </p>
-            </article>
-          </div>
-          <div id="service-5" class="tab/item">
-            <article class="max-width:800px markup">
-              {{ partial "services/personal-planning-documents.md" | markdownify }}
-            </article>
-          </div>
-          <div id="service-6" class="tab/item">
-            <article class="max-width:800px markup">
-              <h3 class="font-weight:regular">Notarizations</h3>
-              <p class="margin-bottom:u2">
-                When we notarize a document, we are administering an oath, affirmation, or declaration over it.
-              </p>
-              <p>We notarize a variety of personal documents, including but not limited to:</p>
-              <ul>
-                <li>Statutory declarations</li>
-                <li>Insurance loss declarations</li>
-                <li>Certified true copies of documents</li>
-                <li>Notarizations and attestations of signatures</li>
-                <li>Execution or authentications of international documents</li>
-                <li>Letters of invitation for foreign travel</li>
-                <li>Authorizations of minor child travel</li>
-                <li>Proof of identity for travel purposes</li>
-                <li>Passport application documentation</li>
-                <li>Identity documents required for your notarization appointment</li>
-              </ul>
+              {{ .Content }}
             </article>
           </div>
         </div>

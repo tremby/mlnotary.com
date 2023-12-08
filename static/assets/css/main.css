@@ -19,7 +19,6 @@
   font-weight: 300;
 }
 :root {
-  --radius: 8px;
   --border: 1px solid var(--border-color);
   --transition: all 0.2s;
   --shadow: 0 3px 6px 2px rgba(0, 60, 200, 0.1);
@@ -83,7 +82,6 @@
   --default-color: var(--grey-d4);
   --border-color: var(--grey-l4);
   --tab-bg: var(--white);
-  --tab-radius: var(--radius);
   --tab-item-padding: var(--u3) var(--u4);
   --tab-content-padding: var(--u4);
   --line-weight: 1px;
@@ -340,8 +338,6 @@ blockquote p {
 .tab\/header .tab\/item {
   position: relative;
   padding: var(--tab-item-padding);
-  border-top-left-radius: var(--tab-radius);
-  border-top-right-radius: var(--tab-radius);
   list-style: none;
   cursor: pointer;
 }
@@ -364,32 +360,12 @@ blockquote p {
   right: 1px;
   background: #fff;
 }
-.tab\/content {
-  padding: var(--tab-content-padding);
-  background: var(--tab-bg);
-  box-shadow: inset 0 0 0 1px var(--border-color);
-}
-.tab\/content .tab\/item {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.5s 0.1s;
-}
-.tab\/content .tab\/item.is-active {
-  height: auto;
-  opacity: 1;
-}
 .tab-position\:left {
   display: flex;
 }
 .tab-position\:left .tab\/header {
   flex-direction: column;
   flex: none;
-}
-.tab-position\:left .tab\/header .tab\/item {
-  border-radius: 0;
-  border-top-left-radius: var(--tab-radius);
-  border-bottom-left-radius: var(--tab-radius);
 }
 .tab-position\:left .tab\/header .tab\/item.is-active {
   box-shadow: inset 0 0 0 1px var(--border-color);
@@ -408,14 +384,9 @@ blockquote p {
 }
 .tab\:reset .tab\/header .tab\/item {
   padding: 0;
-  border-radius: 0;
 }
 .tab\:reset .tab\/header .tab\/item.is-active {
   box-shadow: none;
-}
-.tab\:reset .tab\/content {
-  box-shadow: none;
-  padding: 0;
 }
 .tab\:reset .tab\/content .tab\/item {
   padding: 0;

@@ -1,3 +1,10 @@
++++
+layout = "services"
+menu = "services"
+weight = 10
+title = "Real Estate Purchase and Sale"
++++
+
 ### Real Estate Purchase and Sale
 
 Purchasing and selling your property is one of the biggest decisions and financial investments of your life.

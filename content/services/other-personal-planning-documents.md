@@ -1,3 +1,10 @@
++++
+layout = "services"
+menu = "services"
+weight = 50
+title = "Other Personal Planning Documents"
++++
+
 ### Other Personal Planning Documents
 
 > Although B.C. doesn’t use “living wills,” advance directives and substitute decision-making agreements

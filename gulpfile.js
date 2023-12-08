@@ -14,7 +14,7 @@ gulp.watch - watch files and folders for changes
 gulp.task("js", function () {
   console.log("gulp js started");
   return gulp
-    .src(["src/js/components/tab.js", "src/js/components/slidemenu.js", "src/js/main.js"])
+    .src(["src/js/components/slidemenu.js", "src/js/main.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("generated/assets/js"));
 });
