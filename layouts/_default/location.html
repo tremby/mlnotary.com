@@ -10,24 +10,8 @@
     </div>
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
       <div class="row margin-bottom:10">
-        <div class="column:12 column@sm:8">
-          <h6 class="margin-bottom:u2 font-weight:medium">Transit</h6>
-          <p>
-            We are conveniently located within walking distance of the Marine Drive Canada Line station and its bus
-            loop.
-          </p>
-
-          <h6 class="margin-bottom:u2 font-weight:medium">Parking</h6>
-          <p>
-            If arriving by vehicle, there is free street parking along Lord Street. Please be mindful of the parking
-            restrictions in the area.
-          </p>
-          <p>
-            A paid parking lot is also located in the complex (which is named “Northwest”) on parking level P1. To
-            access the parking lot, please follow the signs along the building and enter the residential entrance via
-            Lord Street. All stalls marked as a retail spot are available for parking. An elevator will then take you up
-            to the ground floor.
-          </p>
+        <div class="column:12 column@sm:8 markup">
+          {{ .Content | markdownify }}
         </div>
       </div>
     </div>
@@ -69,6 +53,4 @@
       "
     ></div>
   </section>
-
-  {{ .Content }}
 {{ end }}

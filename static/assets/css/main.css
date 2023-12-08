@@ -729,6 +729,9 @@ blockquote p {
 .markup h3 {
   margin-bottom: var(--u6);
 }
+.markup h6 {
+  margin-bottom: var(--u4);
+}
 .markup ul {
   margin: 0;
   margin-left: var(--u5);

@@ -6,8 +6,8 @@
       </h1>
     </div>
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh font-size:h6">
-      <div class="max-width:900px">
-        {{ .Params.about | markdownify }}
+      <div class="max-width:900px markup">
+        {{ .Content | markdownify }}
       </div>
     </div>
   </section>
