@@ -1,6 +1,6 @@
 [context.production.environment]
   HUGO_VERSION = "0.120.4"
 [[redirects]]
-  from = "/services/"
-  to = "/services/real-estate-purchase-and-sale/"
+  from = "/services"
+  to = "/services/real-estate-purchase-and-sale"
   status = 307
