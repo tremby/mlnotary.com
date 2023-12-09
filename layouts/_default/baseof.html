@@ -6,13 +6,13 @@
     <title>{{ with .Page.Title }}{{ . }} – {{ end }}{{ .Site.Data.meta.title }}</title>
     <!-- Page Meta -->
     <meta charset="utf-8" />
-    <meta name="description" content="{{ .Site.Data.meta.description }}" />
+    <meta name="description" content="{{ default .Site.Data.meta.description .Page.Params.description }}" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
     <!-- Social Media Open Graph -->
     <meta property="og:title" content="{{ default .Site.Data.meta.title .Page.Title }}" />
     <meta property="og:site_name" content="{{ .Site.Data.meta.title }}" />
-    <meta property="og:description" content="{{ .Site.Data.meta.description }}" />
+    <meta property="og:description" content="{{ default .Site.Data.meta.description .Page.Params.description }}" />
     <meta property="og:image" content="{{ absURL "/assets/images/office-02.jpg" }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:card" content="summary_large_image" />

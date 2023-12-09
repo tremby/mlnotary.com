@@ -3,6 +3,7 @@ layout = "services"
 menu = "services"
 weight = 20
 title = "Mortgage Refinancing"
+description = "We can assist in mortgage refinancing for Lower Mainland homeowners, helping you leverage home equity for your important life decisions."
 +++
 
 ### Mortgage Refinancing

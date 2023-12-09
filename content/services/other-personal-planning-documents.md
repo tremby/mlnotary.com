@@ -3,6 +3,7 @@ layout = "services"
 menu = "services"
 weight = 50
 title = "Other Personal Planning Documents"
+description = "Alongside your will, we can assist with other personal planning documents, including representation agreements, advance directives and related paperwork."
 +++
 
 ### Other Personal Planning Documents

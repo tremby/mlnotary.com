@@ -3,6 +3,7 @@ layout = "services"
 menu = "services"
 weight = 10
 title = "Real Estate Purchase and Sale"
+description = "We facilitate seamless property transactions in BC, covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates for homes and businesses."
 +++
 
 ### Real Estate Purchase and Sale

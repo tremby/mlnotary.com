@@ -3,6 +3,7 @@ layout = "services"
 menu = "services"
 weight = 30
 title = "Wills"
+description = "Crucial if you own assets or have dependents, we can craft you a personalized will under BC's Wills, Estates, and Succession Act."
 +++
 
 ### Wills

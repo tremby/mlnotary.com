@@ -3,6 +3,7 @@ layout = "services"
 menu = "services"
 weight = 40
 title = "Powers of Attorney"
+description = "We offer legal help for managing powers of attorney, which can authorize someone to act on your behalf, whether enduring or for specific circumstances."
 +++
 
 ### Powers of Attorney

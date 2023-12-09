@@ -1,6 +1,7 @@
 +++
 layout = "location"
 title = "Location"
+description = "We are easily accessible via car, bus, and train, at 509 SW Marine Drive, Vancouver, at the intersection of Cambie Street and Southwest Marine Drive."
 headline = "Located in South Vancouver, we are situated at the intersection of Cambie Street and Southwest Marine Drive — easily accessible to the surrounding communities in Vancouver and Richmond."
 service_text = "At Marine Landing Notary Public,  we want to provide the best services to our clients and community. Here is how we can help and support your needs."
 about_text = "We strive to serve all our customers in the highest regard. We want customers to leave with confidence that their documents and plans are cared for, delivering the highest quality of service to our community."
