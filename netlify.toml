@@ -1,4 +1,4 @@
-[context.production.environment]
+[build.environment]
   HUGO_VERSION = "0.120.4"
 [[redirects]]
   from = "/services/"
