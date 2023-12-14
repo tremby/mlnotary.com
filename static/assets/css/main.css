@@ -336,11 +336,9 @@ blockquote p {
   border-radius: 20px;
 }
 .slidemenu\/close:before {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .slidemenu\/close:after {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .tab\/header {
