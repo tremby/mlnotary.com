@@ -267,9 +267,22 @@ blockquote p {
   visibility: hidden;
   overflow-x: hidden;
 }
+.slidemenu.is-active {
+  visibility: visible;
+}
+.slidemenu.is-active .slidemenu\/overlay {
+  background: rgba(0,0,0,.2);
+}
+.slidemenu.is-active .slidemenu\/content {
+  left: 0;
+}
 .slidemenu-direction\:right .slidemenu\/content {
   left: auto;
   right: -100%;
+}
+.slidemenu-direction\:right.is-active .slidemenu\/content {
+  left: auto;
+  right: 0;
 }
 .slidemenu\/overlay {
   content: "";
