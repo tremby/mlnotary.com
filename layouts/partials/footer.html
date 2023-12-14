@@ -6,8 +6,8 @@
         jwong@mlnotary.com
       </a>
       <div class="margin-top:u6">
-        T {{ .Site.Data.meta.phone }}<br />
-        F {{ .Site.Data.meta.fax }}
+        <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">T {{ .Site.Data.meta.phone }}</a><br />
+        <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">F {{ .Site.Data.meta.fax }}</a>
       </div>
     </div>
 
