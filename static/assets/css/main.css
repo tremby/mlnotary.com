@@ -488,6 +488,9 @@ blockquote p {
 .margin-top\:u10 {
   margin-top: var(--u10) !important;
 }
+.margin-top\:u8 {
+  margin-top: var(--u8) !important;
+}
 .margin-top\:u6 {
   margin-top: var(--u6) !important;
 }
