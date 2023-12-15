@@ -7,7 +7,6 @@
     let defaults = {
       element: ".slidemenu",
       toggleClass: ".js-hamburger",
-      closeClass: ".slidemenu\\/close",
     };
 
     // Override defaults
@@ -19,7 +18,6 @@
 
     let slidemenuClass = this.options.element;
     let toggleClass = this.options.toggleClass;
-    let closeClass = this.options.closeClass;
     let overlayClass = ".slidemenu\\/overlay";
 
     let allSlidemenu = document.querySelectorAll(slidemenuClass);
@@ -29,7 +27,6 @@
     for (let i = 0; i < allSlidemenu.length; i++) {
       let slidemenu = allSlidemenu[i];
       let allToggle = document.querySelectorAll(toggleClass);
-      let allClose = slidemenu.querySelectorAll(closeClass);
       let allOverlay = slidemenu.querySelectorAll(overlayClass);
 
       for (let i = 0; i < allToggle.length; i++) {
@@ -37,16 +34,6 @@
 
         /* add click event */
         toggle.addEventListener("click", function (e) {
-          e.preventDefault();
-          activate(slidemenu);
-        });
-      }
-
-      for (let i = 0; i < allToggle.length; i++) {
-        let close = allClose[i];
-
-        /* add click event */
-        close.addEventListener("click", function (e) {
           e.preventDefault();
           activate(slidemenu);
         });
@@ -65,7 +52,19 @@
 
     /* Activates the chosen accordion and deactivates the rest */
     function activate(slidemenu) {
-      slidemenu.classList.toggle(activeClass);
+      const newState = slidemenu.classList.toggle(activeClass);
+      for (const button of document.querySelectorAll(toggleClass)) {
+        button.setAttribute("aria-expanded", newState ? "true" : "false");
+      }
+      if (newState) {
+        setTimeout(() => {
+          // Focus the toggle inside the menu
+          slidemenu.querySelector(toggleClass).focus();
+        }, 50);
+      } else {
+        // Focus the first toggle on the page (the one in the header)
+        document.querySelector(toggleClass).focus();
+      }
     }
   };
 
