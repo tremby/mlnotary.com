@@ -346,6 +346,8 @@ blockquote p {
   display: flex;
   position: relative;
   margin: 0;
+  gap: 1em;
+  line-height: 1.2;
 }
 .tab\/header .tab\/item {
   position: relative;
