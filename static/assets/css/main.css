@@ -290,7 +290,7 @@ blockquote p {
   z-index: 2;
   overflow: auto;
   transition: all 0.4s;
-  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .slidemenu\/header {
   display: flex;
