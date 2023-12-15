@@ -3,7 +3,7 @@
   <head>
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    <title>Marine Landing Notary Public | {{ .Page.Title }}</title>
+    <title>{{ with .Page.Title }}{{ . }} – {{ end }}{{ .Site.Data.meta.title }}</title>
     <!-- Page Meta -->
     <meta charset="utf-8" />
     <meta name="description" content="{{ .Site.Data.meta.description }}" />
