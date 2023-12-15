@@ -1,15 +1,14 @@
 <section class="padding-y:5vh fill:footer">
   <div class="wrap align:center">
-    <div class="font-size:h6 color:white margin-bottom:u6">
-      {{ .Site.Data.meta.address_1 }}, {{ .Site.Data.meta.address_2 }}<br />
-      Email: <a href="mailto:jwong@mlnotary.com" class="color:white">
-        jwong@mlnotary.com
-      </a>
+    <address class="font-size:h6 color:white margin-bottom:u6">
+      {{ .Site.Data.meta.address_1 }}<br />
+      {{ .Site.Data.meta.address_2 }}
       <div class="margin-top:u6">
+        Email: <a href="mailto:jwong@mlnotary.com" class="color:white">jwong@mlnotary.com</a><br />
         Phone: <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">{{ .Site.Data.meta.phone }}</a><br />
         Fax: <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">{{ .Site.Data.meta.fax }}</a>
       </div>
-    </div>
+    </address>
 
     <p class="color:white margin-bottom:u6 margin-top:u6">
       Marine Landing Notary Public is operated by Jonathan Wong Notary Corporation.
