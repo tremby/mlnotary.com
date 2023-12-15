@@ -242,22 +242,6 @@ blockquote p {
 .flex {
   display: flex;
 }
-.list {
-  list-style: none;
-}
-.list,
-.list\/item {
-  margin: 0;
-  padding: 0;
-}
-.list\/item {
-  display: flex;
-  align-items: center;
-}
-.list\/item,
-.list\/item:hover {
-  text-decoration: none;
-}
 .slidemenu {
   position: fixed;
   top: 0;
@@ -838,4 +822,10 @@ blockquote p {
 }
 .text-decoration\:none {
   text-decoration: none;
+}
+.flex-direction\:column {
+  flex-direction: column;
+}
+.gap\:u4 {
+  gap: var(--u4) !important;
 }

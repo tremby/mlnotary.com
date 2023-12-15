@@ -6,27 +6,27 @@
     </div>
 
     <div class="padding-top:3">
-      <ul class="list list-gutter:2 margin-bottom:10vh">
-        <li class="list/item justify-content:center align:center padding-x:u4 margin-top:u4 margin-bottom:u4">
+      <ul class="padding-x:u4 flex flex-direction:column align-items:center gap:u4">
+        <li>
           <a href="/services/" class="font font-size:h4 color:black text-decoration:none">
             Our Services
           </a>
         </li>
-        <li class="list/item justify-content:center align-content padding-x:u4 padding-x@lg:4 margin-top:u4 margin-bottom:u4">
+        <li>
           <a href="/about/" class="font font-size:h4 color:black text-decoration:none">
             About Us
           </a>
         </li>
-        <li class="list/item justify-content:center align-content padding-x:u4 padding-x@lg:4 margin-top:u4 margin-bottom:u4">
+        <li>
           <a href="/location/" class="font font-size:h4 color:black text-decoration:none">
             Our Location
           </a>
         </li>
       </ul>
 
-      <div class="padding:u4">
-        <span class="line line:short margin-bottom:5vh margin:auto margin-bottom:10vh"></span>
-        <address class="font font-size:tiny font-leading:2 font-weight:regular align:center margin-bottom:10vh">
+      <div class="padding-x:u4">
+        <span class="line line:short margin:auto margin-top:u8 margin-bottom:u8"></span>
+        <address class="font font-size:tiny font-leading:2 font-weight:regular align:center">
           {{ .Site.Data.meta.address_1 }}<br />
           {{ .Site.Data.meta.address_2 }}
           <div class="margin-top:u6">
@@ -35,7 +35,7 @@
             Fax: <a href="fax:{{ .Site.Data.meta.fax_intl }}">{{ .Site.Data.meta.fax }}</a>
           </div>
         </address>
-        <div class="flex justify-content:center">
+        <div class="flex justify-content:center margin-top:u8">
           <a href="/">
             <img src="/assets/images/logo-ol.svg" style="width:70px" />
           </a>
