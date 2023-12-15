@@ -523,6 +523,10 @@ blockquote p {
   padding-left: var(--u6) !important;
   padding-right: var(--u6) !important;
 }
+.padding-x\:u8 {
+  padding-left: var(--u8) !important;
+  padding-right: var(--u8) !important;
+}
 .padding-y\:u6 {
   padding-top: var(--u6) !important;
   padding-bottom: var(--u6) !important;
