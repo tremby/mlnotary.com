@@ -2,12 +2,12 @@
   <div class="wrap align:center">
     <div class="font-size:h6 color:white margin-bottom:u6">
       {{ .Site.Data.meta.address_1 }}, {{ .Site.Data.meta.address_2 }}<br />
-      <a href="mailto:jwong@mlnotary.com" class="color:white">
+      Email: <a href="mailto:jwong@mlnotary.com" class="color:white">
         jwong@mlnotary.com
       </a>
       <div class="margin-top:u6">
-        <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">T {{ .Site.Data.meta.phone }}</a><br />
-        <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">F {{ .Site.Data.meta.fax }}</a>
+        Phone: <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">{{ .Site.Data.meta.phone }}</a><br />
+        Fax: <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">{{ .Site.Data.meta.fax }}</a>
       </div>
     </div>
 
