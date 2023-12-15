@@ -836,3 +836,18 @@ blockquote p {
 .gap\:u4 {
   gap: var(--u4) !important;
 }
+#skip-link {
+  position: fixed;
+  z-index: 100;
+  top: -50rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: var(--white);
+  color: var(--black);
+  display: block;
+  transition-property: none;
+}
+#skip-link:focus-visible {
+  top: 1rem;
+}
