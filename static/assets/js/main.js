@@ -17,8 +17,8 @@ overlay.addEventListener("click", (e) => {
   toggleMenu();
 });
 
-function toggleMenu() {
-  const newState = menu.classList.toggle("is-active");
+function toggleMenu(open) {
+  const newState = menu.classList.toggle("is-active", open);
   for (const button of menuToggles)
     button.setAttribute("aria-expanded", newState ? "true" : "false");
   if (newState) {
@@ -31,3 +31,10 @@ function toggleMenu() {
     document.querySelector(toggleClass).focus();
   }
 }
+
+// Close menu if we resize to a non-hamburger width
+// Note this mq should match that in the CSS
+const mq = window.matchMedia("(min-width: 960px)");
+mq.addEventListener("change", (e) => {
+  if (e.matches) toggleMenu(false);
+});

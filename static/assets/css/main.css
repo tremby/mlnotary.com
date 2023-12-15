@@ -718,6 +718,8 @@ blockquote p {
 .markup ul {
   list-style-type: disc;
 }
+
+/* If this width changes, also update mq in JS */
 @media (min-width: 960px) {
   html {
     font-size: 88%;
