@@ -355,24 +355,32 @@ blockquote p {
   list-style: none;
   cursor: pointer;
 }
+.tab\/header .tab\/item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  left: -12px;
+  top: 0;
+  height: 100%;
+  background-color: transparent;
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+  transform: scaleY(80%);
+}
+.tab\/header .tab\/item.is-active::before {
+  background-color: var(--primary-l1);
+  transform: scaleY(100%);
+}
+.tab\/header .tab\/item:not(.is-active):hover::before {
+  transition-duration: 0.1s;
+  background-color: var(--primary-l3);
+  transform: scaleY(100%);
+}
 .tab\/header .tab\/item,
 .tab\/header .tab\/item:hover {
   color: inherit;
   text-decoration: none;
-}
-.tab\/header .tab\/item.is-active {
-  box-shadow: inset 0 0 0 1px var(--border-color);
-  background: var(--tab-bg);
-}
-.tab\/header .tab\/item.is-active:before {
-  display: block;
-  position: absolute;
-  content: "";
-  height: 2px;
-  bottom: -1px;
-  left: 1px;
-  right: 1px;
-  background: #fff;
 }
 .tab-position\:left {
   display: flex;
@@ -383,18 +391,6 @@ blockquote p {
 }
 .tab-position\:left .tab\/header .tab\/item.is-active {
   box-shadow: inset 0 0 0 1px var(--border-color);
-}
-.tab-position\:left .tab\/header .tab\/item.is-active:before {
-  width: auto;
-  height: auto;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  width: 2px;
-  right: -1px;
-  top: 1px;
-  bottom: 1px;
 }
 .tab\:reset .tab\/header .tab\/item {
   padding: 0;
@@ -698,13 +694,6 @@ blockquote p {
 }
 .fill\:footer {
   background: #231e28;
-}
-.tab\:services .tab\/header .tab\/item {
-  opacity: 0.3;
-}
-.tab\:services .tab\/header .tab\/item.is-active {
-  opacity: 1;
-  background: transparent;
 }
 .markup p,
 .markup ul {
