@@ -3,17 +3,10 @@
   "version": "1.0.0",
   "description": "Marine Landing Notary Public website",
   "scripts": {
-    "build:assets": "gulp",
-    "build:pages": "hugo",
-    "build": "npm run build:assets && npm run build:pages",
+    "build": "hugo",
     "format": "prettier *.js layouts src static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jin Park, Bart Nagel",
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-concat": "^2.6.1"
-  }
+  "license": "UNLICENSED"
 }
