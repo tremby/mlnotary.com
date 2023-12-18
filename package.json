@@ -4,7 +4,6 @@
   "description": "Marine Landing Notary Public website",
   "scripts": {
     "build": "hugo",
-    "format": "prettier *.js layouts src static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jin Park, Bart Nagel",

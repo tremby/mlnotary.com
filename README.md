@@ -19,12 +19,6 @@ Local dev
 
 `npm run build`
 
-### Format code
-
-`npm run format`,
-but you probably want to pass Prettier a task
-with `npm run format -- --write` or `npm run format -- --check`.
-
 Deploy
 ------
 
