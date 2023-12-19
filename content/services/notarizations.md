@@ -3,7 +3,7 @@ layout = "services"
 menu = "services"
 weight = 60
 title = "Notarizations"
-description = "We notarize diverse personal documents, such as statutory declarations, insurance loss declarations, certified copies, and proofs of identity."
+description = "We notarize diverse personal documents, such as statutory declarations, insurance loss declarations, certified copies, proofs of identity, and affidavits."
 +++
 
 ### Notarizations
