@@ -12,6 +12,7 @@ export default async function checkHours() {
   try {
     const data = await getHours();
     const newJson = JSON.stringify(data);
+    console.log("Hours taken from API:", newJson);
     if (newJson === oldJson) {
       console.log("Hours haven't changed; do nothing.");
       return;
