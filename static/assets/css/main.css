@@ -2,16 +2,19 @@
   font-family: Theinhardt Web;
   font-weight: 400;
   src: url(../fonts/theinhardt/Theinhardt-Regular.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: Theinhardt Web;
   font-weight: 700;
   src: url(../fonts/theinhardt/Theinhardt-Bold.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: Theinhardt Web;
   font-weight: 300;
   src: url(../fonts/theinhardt/Theinhardt-Light.woff2) format("woff2");
+  font-display: swap;
 }
 :root {
   --border: 1px solid var(--border-color);
