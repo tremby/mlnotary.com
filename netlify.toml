@@ -1,2 +1,4 @@
+[context.branch-deploy]
+  command = "hugo"
 [context.production.environment]
   HUGO_VERSION = "0.51"
