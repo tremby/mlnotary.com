@@ -696,7 +696,7 @@ blockquote p {
 }
 .markup h3 {
   margin-top: var(--u11);
-  font-weight: 400;
+  font-weight: var(--regular);
 }
 .markup h3 {
   margin-bottom: var(--u6);
