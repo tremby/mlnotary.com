@@ -668,7 +668,6 @@ blockquote p {
 .hero\:services {
   position: relative;
   background-color: var(--primary);
-  background-image: url(/assets/images/office-04.jpg);
   background-size: cover;
   background-position: 50%;
 }
