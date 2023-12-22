@@ -37,6 +37,7 @@
   --micro: 13px;
   --grey: #5c789c;
   --primary: #453a60;
+  --accent: #c29244;
   --white: #fff;
   --black: #000;
   --grey-l1: #7d93b0;
@@ -161,7 +162,7 @@ body {
   box-sizing: inherit;
 }
 ::selection {
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
 }
 h1,
