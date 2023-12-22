@@ -637,9 +637,10 @@ blockquote p {
 .header\/item:last-child {
   padding-right: 0;
 }
-.header\/logo {
+.header\/logo img {
   display: block;
   width: 40px;
+  height: auto;
 }
 .header\/hamburger {
   display: flex;
@@ -793,7 +794,6 @@ blockquote p {
   }
   .header\/logo img {
     width: 60px;
-    height: auto;
   }
   .hero\/content {
     padding: var(--u10);
