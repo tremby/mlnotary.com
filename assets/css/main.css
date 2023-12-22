@@ -639,7 +639,7 @@ blockquote p {
 }
 .header\/logo img {
   display: block;
-  width: 40px;
+  width: 180px;
   height: auto;
 }
 .header\/hamburger {
@@ -722,6 +722,12 @@ blockquote p {
   flex-direction: column;
 }
 
+@media (min-width: 512px) {
+  .header\/logo img {
+    width: 269px;
+  }
+}
+
 /* If this width changes, also update mq in JS */
 @media (min-width: 960px) {
   html {
@@ -791,9 +797,6 @@ blockquote p {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  .header\/logo img {
-    width: 60px;
   }
   .hero\/content {
     padding: var(--u10);
