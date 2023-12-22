@@ -791,8 +791,9 @@ blockquote p {
     justify-content: flex-end;
     align-items: center;
   }
-  .header\/logo {
+  .header\/logo img {
     width: 60px;
+    height: auto;
   }
   .hero\/content {
     padding: var(--u10);
