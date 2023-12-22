@@ -160,15 +160,7 @@ body {
 :before {
   box-sizing: inherit;
 }
-::-moz-selection {
-  background: var(--primary);
-  color: #fff;
-}
 ::selection {
-  background: var(--primary);
-  color: #fff;
-}
-::-moz-selection {
   background: var(--primary);
   color: #fff;
 }
