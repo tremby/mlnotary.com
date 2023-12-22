@@ -1,9 +1,32 @@
-<section class="row">
-  <div class="column:12 position:relative" style="height:500px; min-height: 300px;">
-    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Marine%20Landing%20Notary%20Public%2C%20509%20SW%20Marine%20Drive%2C%20Vancouver%2C%20BC%20V6P%200G8&amp;destination_place_id=ChIJsQix7el2hlQRT_e6qJ1x46I" aria-label="Get directionsto Marine Landing Notary Public" target="_blank" rel="noreferrer noopener">
-      {{- with resources.Get "images/map-long.png" -}}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="width:100% height:100%" style="object-fit: cover;" alt="Map of South Vancouver, showing a pin with the Marine Landing Notary Public logo at the northwest corner of the intersection of SW Marine Drive and Cambie Street." />
+<section class="position:relative margin:auto">
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Marine%20Landing%20Notary%20Public%2C%20509%20SW%20Marine%20Drive%2C%20Vancouver%2C%20BC%20V6P%200G8&amp;destination_place_id=ChIJsQix7el2hlQRT_e6qJ1x46I" aria-label="Get directionsto Marine Landing Notary Public" target="_blank" rel="noreferrer noopener">
+    <picture>
+      {{- $widths := slice 1280 1024 768 480 390 -}}
+      {{- range $widths -}}
+        {{- $width := . -}}
+        {{- $path1x := printf "images/map/map-%dw.png" $width -}}
+        {{- $path2x := printf "images/map/map-%dw-2x.png" $width -}}
+        {{- $png1x := resources.Get $path1x -}}
+        {{- $png2x := resources.Get $path2x -}}
+        {{- $webp1x := $png1x.Process "webp" -}}
+        {{- $webp2x := $png2x.Process "webp" -}}
+        <source media="(min-width: {{ sub $width 200 }}px)" type="image/webp" srcset="{{ $webp1x.RelPermalink }} {{ $webp1x.Width }}w, {{ $webp2x.RelPermalink }} {{ $webp2x.Width }}w" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
+        <source media="(min-width: {{ sub $width 200 }}px)" type="image/png" srcset="{{ $png1x.RelPermalink }} {{ $png1x.Width }}w, {{ $png2x.RelPermalink }} {{ $png2x.Width }}w" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
       {{- end -}}
-    </a>
-  </div>
+      {{- $png1x := resources.Get "images/map/map-360w.png" -}}
+      {{- $png2x := resources.Get "images/map/map-360w-2x.png" -}}
+      {{- $webp1x := $png1x.Process "webp" -}}
+      {{- $webp2x := $png2x.Process "webp" -}}
+      <source type="image/webp" srcset="{{ $webp1x.RelPermalink }} {{ $webp1x.Width }}w, {{ $webp2x.RelPermalink }} {{ $webp2x.Width }}w" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
+      <source type="image/png" srcset="{{ $png1x.RelPermalink }} {{ $png1x.Width }}w, {{ $png2x.RelPermalink }} {{ $png2x.Width }}w" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
+      <img src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" class="height:100%" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location at the northwest corner of the intersection of SW Marine Drive and Cambie Street.">
+    </picture>
+    <div class="map-pin">
+      <div class="map-pin__bubble">
+        {{- with resources.Get "images/map/pin.svg" -}}
+          <img src="{{ .RelPermalink }}" width="64" height="78" alt="Marine Landing Notary Public's location">
+        {{- end -}}
+      </div>
+    </div>
+  </a>
 </section>

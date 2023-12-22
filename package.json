@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "hugo --watch server",
     "get-hours": "node get-hours.mjs",
+    "get-maps": "node get-maps.mjs",
     "build": "hugo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -27,6 +27,11 @@ First get the data with `npm run get-hours`.
 Then for watch mode for development, `npm run dev`, or to produce a
 single static build, `npm run build`.
 
+### Update map images
+
+Very infrequently the map images should be updated with `npm run get-maps`.
+This requires a Mapbox key; see [the readme where the maps are stored](/assets/images/map).
+
 Deploy
 ------
 
