@@ -1,10 +1,10 @@
 {{ define "main" }}
   <section class="row fill:white">
     <div class="column:12 padding-x:u4 padding-y:6vh hero:services" style="background-image: url('{{ with resources.Get "images/office-04.jpg" }}{{ .RelPermalink }}{{ end }}')">
-      <div class="margin:auto max-width:1000px align:center padding-x:3 padding-y:5vh position:relative">
+      <div class="margin:auto align:center padding-x:3 padding-y:5vh position:relative">
         <p class="color:white margin-bottom:3">Our Services</p>
 
-        <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
+        <h2 class="max-width:prose margin:auto text-wrap:balance font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 color:white margin-bottom:u10">
           At Marine Landing Notary Public, we emphasize a personable client relationship, while maintaining the highest integrity of services performed.
         </h2>
         <span class="line line:short fill:white margin:auto"></span>
@@ -24,7 +24,7 @@
 
         <div class="column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12">
           <div class="tab/item">
-            <article class="max-width:800px markup">
+            <article class="max-width:prose markup">
               {{ .Content }}
             </article>
           </div>

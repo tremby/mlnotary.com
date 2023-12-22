@@ -1,10 +1,8 @@
 {{ define "main" }}
   <section class="row fill:primary-l5">
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
-      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:700px margin:auto">
+      <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
         {{ .Params.headline }}
-
-
         <span class="line line:short margin-top:u10"></span>
       </h2>
     </div>
@@ -31,7 +29,7 @@
     <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
       <div>
         <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Services</h4>
-        <p class="font-size:tiny max-width:400px margin-bottom:u12">
+        <p class="font-size:tiny max-width:prose margin-bottom:u12">
           {{ .Params.service_text }}
         </p>
         <a href="/services/" class="font-size:body color:black font-weight:bold">Learn more</a>
@@ -48,7 +46,7 @@
     <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh flex align-items:center">
       <div>
         <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">About Us</h4>
-        <p class="font-size:tiny max-width:400px margin-bottom:u12">
+        <p class="font-size:tiny max-width:prose margin-bottom:u12">
           {{ .Params.about_text }}
         </p>
         <a href="/about/" class="font-size:body color:black font-weight:bold">Learn more</a>
