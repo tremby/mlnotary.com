@@ -2,7 +2,9 @@
   <div class="header/content header/content:left">
     <div class="header/item">
       <a href="/" class="header/logo" aria-label="Go to home page">
-        <img src="/assets/images/logo-ol.svg" alt="Marine Landing Notary Public logo" />
+        {{- with resources.Get "images/logo-ol.svg" -}}
+          <img src="{{ .RelPermalink }}" alt="Marine Landing Notary Public logo" />
+        {{- end -}}
       </a>
     </div>
     <div class="header/item display:flex display@sm:none">

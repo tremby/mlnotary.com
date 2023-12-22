@@ -25,10 +25,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/iPhone-6-Plus.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    {{ with resources.Get "css/main.css" -}}
+      <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" />
+    {{- end }}
 
     <!-- Scripts -->
-    <script src="/assets/js/main.js" defer></script>
+    {{ with resources.Get "js/main.js" -}}
+      <script src="{{ .RelPermalink }}" defer></script>
+    {{- end }}
   </head>
   <body>
     <a id="skip-link" href="#main">Skip to main content</a>

@@ -33,7 +33,7 @@
       </div>
       <div
         class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-        style="background-image:url('/assets/images/office-01.jpg"
+        style="background-image:url('{{ with resources.Get "images/office-01.jpg" }}{{ .RelPermalink }}{{ end }}')"
       ></div>
     </div>
   </section>
@@ -51,7 +51,7 @@
     <div
       class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
       style="
-        background-image: url('/assets/images/office-02.jpg');
+        background-image: url('{{ with resources.Get "images/office-02.jpg" }}{{ .RelPermalink }}{{ end }}');
         background-size: cover;
         background-position: bottom center !important;
       "
@@ -67,7 +67,7 @@
     </div>
     <div
       class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-      style="background-image: url('/assets/images/office-03.jpg');"
+      style="background-image: url('{{ with resources.Get "images/office-03.jpg" }}{{ .RelPermalink }}{{ end }}');"
     ></div>
   </section>
 

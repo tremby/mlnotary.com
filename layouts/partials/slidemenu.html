@@ -42,7 +42,9 @@
         </address>
         <div class="flex justify-content:center margin-top:u8">
           <a href="/" aria-label="Go to home page">
-            <img src="/assets/images/logo-ol.svg" style="width:70px" alt="Marine Landing Notary Public logo" />
+            {{- with resources.Get "images/logo-ol.svg" -}}
+              <img src="{{ .RelPermalink }}" style="width:70px" alt="Marine Landing Notary Public logo" />
+            {{- end -}}
           </a>
         </div>
       </div>
