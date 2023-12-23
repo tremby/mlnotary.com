@@ -25,12 +25,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/iPhone-6-Plus.png" />
 
     <!-- Styles -->
-    {{ with resources.Get "css/main.css" -}}
+    {{ with resources.Get "css/main.css" | resources.Minify -}}
       <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}" />
     {{- end }}
 
     <!-- Scripts -->
-    {{ with resources.Get "js/main.js" -}}
+    {{ with resources.Get "js/main.js" | resources.Minify -}}
       <script src="{{ .RelPermalink }}" defer></script>
     {{- end }}
 
