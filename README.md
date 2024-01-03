@@ -8,7 +8,10 @@ Website originally by Jin Park.
 Configure
 ---------
 
-Set the environment variable `GOOGLE_MAPS_API_KEY`.
+Set environment variables:
+
+- `GOOGLE_MAPS_API_KEY`
+- `REBUILD_HOOK`: full URL to Netlify rebuild hook
 
 Local dev
 ---------
@@ -48,4 +51,4 @@ This function fetches hours data from the Google API and compares
 against what was written to file during `npm run get-hours` at build
 time.
 If the data hasn't changed, nothing happens.
-But if it has changed, a redeployment webhook is called.
+But if it has changed, a redeployment webhook is called (`REBULID_HOOK` env var).

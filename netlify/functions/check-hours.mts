@@ -3,7 +3,8 @@ import type { Config } from "@netlify/functions";
 import hours from "../../generated/hours.json";
 import { getHours } from "../../lib/hours.mjs";
 
-const REBUILD_HOOK = "https://api.netlify.com/build_hooks/657c3b29699ce1006c7650fc";
+if (!process.env.REBUILD_HOOK)
+  throw new Error("Expected REBUILD_HOOK to be set");
 
 export default async function checkHours() {
   const oldJson = JSON.stringify(hours);
@@ -19,7 +20,7 @@ export default async function checkHours() {
     }
     console.log("Hours have changed; trigger redeployment.");
     try {
-      const response = await fetch(REBUILD_HOOK, { method: "POST" });
+      const response = await fetch(process.env.REBUILD_HOOK, { method: "POST" });
       if (!response.ok) {
         console.error("Netlify hook call returned error:", response.status, response.statusText, await response.text());
         return;
