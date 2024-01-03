@@ -12,9 +12,7 @@
       </address>
 
       <ul class="color:white">
-        {{ range .Site.Data.hours.result.opening_hours.weekday_text }}
-          <li>{{ . }}</li>
-        {{ end }}
+        {{ partial "hours" . }}
       </ul>
     </div>
 

@@ -14,9 +14,7 @@
           </div>
           <h6 class="margin-top:u6 margin-bottom:u4">Opening hours</h6>
           <ul class="list">
-            {{ range .Site.Data.hours.result.opening_hours.weekday_text }}
-              <li>{{ . }}</li>
-            {{ end }}
+            {{ partial "hours" . }}
           </ul>
         </div>
       </div>
