@@ -1,3 +1,9 @@
-{{ range .Site.Data.hours.result.opening_hours.weekday_text }}
-  <li>{{ . }}</li>
+{{ range .Site.Data.hours }}
+  <li>
+    {{ if (and (isset . "usual") (not (eq .current .usual))) }}
+      <strong>{{ .current }}</strong>
+    {{ else }}
+      {{ .current }}
+    {{ end }}
+  </li>
 {{ end }}
