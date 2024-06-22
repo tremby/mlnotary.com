@@ -593,27 +593,17 @@ blockquote p {
 .header {
   position: relative;
   z-index: 3;
+  gap: var(--u10);
+  padding: var(--u8) 0;
 }
 .header,
 .header\/content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header\/content {
-  width: 100%;
-}
-.header\/content\:left {
-  padding: var(--u6);
-}
-.header\/content\:right {
-  display: none;
-}
-.header\/content\:right,
-.header\/item {
-  padding-right: var(--u10);
-}
-.header\/item:last-child {
-  padding-right: 0;
+  gap: var(--u6);
 }
 .header\/logo img {
   display: block;
@@ -640,7 +630,6 @@ blockquote p {
 }
 .hero\/content {
   position: relative;
-  padding: var(--u8);
   padding-top: 24vh;
   padding-bottom: var(--u10);
 }
@@ -777,7 +766,6 @@ blockquote p {
     align-items: center;
   }
   .hero\/content {
-    padding: var(--u10);
     padding-top: 9vh;
     padding-bottom: 18vh;
   }
