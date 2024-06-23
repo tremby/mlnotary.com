@@ -1,36 +1,38 @@
-<header class="wrap header fill:white">
-  <div class="header/content">
-    <div class="header/item">
-      <a href="/" class="header/logo" aria-label="Go to home page">
-        {{- with resources.Get "images/logo-brand.svg" -}}
-          <img src="{{ .RelPermalink }}" width="233" height="52" alt="Marine Landing Notary Public" />
-        {{- end -}}
-      </a>
+<div class="wrap">
+  <header class="header fill:white">
+    <div class="header/content grow">
+      <div class="header/item">
+        <a href="/" class="header/logo" aria-label="Go to home page">
+          {{- with resources.Get "images/logo-brand.svg" -}}
+            <img src="{{ .RelPermalink }}" width="233" height="52" alt="Marine Landing Notary Public" />
+          {{- end -}}
+        </a>
+      </div>
+      <div class="header/item display:flex display@sm:none">
+        <button type="button" class="header/hamburger js-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
-    <div class="header/item display:flex display@sm:none">
-      <button type="button" class="header/hamburger js-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
 
-  <nav class="header/content" aria-label="Main navigation">
-    <div class="header/item">
-      <a href="/services/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-        Our Services
-      </a>
-    </div>
-    <div class="header/item">
-      <a href="/about/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-        About Us
-      </a>
-    </div>
-    <div class="header/item">
-      <a href="/location/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-        Our Location
-      </a>
-    </div>
-  </nav>
-</header>
+    <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
+      <div class="header/item">
+        <a href="/services/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
+          Our Services
+        </a>
+      </div>
+      <div class="header/item">
+        <a href="/about/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
+          About Us
+        </a>
+      </div>
+      <div class="header/item">
+        <a href="/location/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
+          Our Location
+        </a>
+      </div>
+    </nav>
+  </header>
+</div>

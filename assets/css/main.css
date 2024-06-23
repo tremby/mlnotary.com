@@ -240,6 +240,9 @@ blockquote p {
 .flex {
   display: flex;
 }
+.grow {
+  flex-grow: 1;
+}
 .slidemenu {
   position: fixed;
   top: 0;
@@ -402,6 +405,9 @@ blockquote p {
 }
 .display {
   display: block !important;
+}
+.display\:none {
+  display: none !important;
 }
 .display\:flex {
   display: flex !important;
@@ -727,6 +733,9 @@ blockquote p {
   }
   .display\@sm\:none {
     display: none !important;
+  }
+  .display\@sm\:flex {
+    display: flex !important;
   }
   .align\@sm\:start {
     text-align: start !important;
