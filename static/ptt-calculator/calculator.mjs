@@ -192,7 +192,7 @@ export default class Calculator {
             </td>
           </tr>
         `).join("")}
-        ${modifiers.map(({ description, additionalInfo, amount, overruled }) => `
+        ${modifiers.map(({ description, additionalInfo, amount, overruled }, i) => `
           <tr>
             <th scope="row" colspan="3">
               ${overruled ? "<s>" : ""}
@@ -201,9 +201,15 @@ export default class Calculator {
             </th>
             <td>
               ${overruled ? "<s>" : ""}
-              ${additionalInfo != null ? `<span title="${additionalInfo}" style="cursor: help">` : ""}
               ${dollarFormatter.format(amount)}
-              ${additionalInfo != null ? " ℹ️</span>" : ""}
+              ${additionalInfo != null ? `
+                <span class="position:relative">
+                  <button type="button" class="popover-trigger" id="breakdown-popover-${i}-trigger" popovertarget="breakdown-popover-${i}">ℹ️</button>
+                  <div id="breakdown-popover-${i}" popover anchor="breakdown-popover-${i}-trigger">
+                    <p>${additionalInfo}</p>
+                  </div>
+                </span>
+              ` : ""}
               ${overruled ? "</s>" : ""}
             </td>
           </tr>

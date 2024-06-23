@@ -1001,6 +1001,9 @@ blockquote p {
 .ptt-calculator .total-tax-breakdown-container span {
   white-space: nowrap;
 }
+.ptt-calculator .total-tax-breakdown-container div {
+  white-space: initial;
+}
 .ptt-calculator .total-tax-breakdown-container table {
   width: 100%;
   min-width: 420px;
@@ -1026,4 +1029,19 @@ blockquote p {
   stroke: currentColor;
   stroke-width: 1.5;
   display: block;
+}
+
+.popover-trigger {
+  cursor: help;
+}
+[popover] {
+  font-family: var(--font-family);
+  font-size: var(--tiny);
+  line-height: var(--line-height);
+  background: var(--primary-d4);
+  color: var(--white);
+  border-radius: var(--u2);
+  padding: var(--u4);
+  max-width: min(var(--prose), calc(100vw - var(--u8)));
+  margin: auto;
 }
