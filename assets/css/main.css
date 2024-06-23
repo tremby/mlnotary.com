@@ -83,6 +83,7 @@
   --tab-item-padding: var(--u3) var(--u4);
   --tab-content-padding: var(--u4);
   --line-weight: 1px;
+  --prose: 75ch;
 }
 a,
 address,
@@ -540,7 +541,7 @@ blockquote p {
   max-width: 100% !important;
 }
 .max-width\:prose {
-  max-width: 75ch;
+  max-width: var(--prose);
 }
 .max-width\:max-content {
   max-width: max-content !important;
