@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section class="wrap padding-y:u12">
+    <header>
+      <h1 class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance align:center">
+        {{ .Params.headline }}
+      </h1>
+    </header>
+
+    <div class="max-width:prose markup margin:auto margin-top:u12">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}
