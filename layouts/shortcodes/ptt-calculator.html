@@ -1,0 +1,101 @@
+<script type="module" defer>
+  import Calculator from "/ptt-calculator/calculator.mjs";
+  const calculator = new Calculator();
+  calculator.initUi(document.querySelector("#ptt-calculator"));
+</script>
+
+<form id="ptt-calculator" class="ptt-calculator {{ .Get "class" }}">
+  <header>BC property transfer tax calculator</header>
+  <div class="input">
+    <fieldset>
+      <legend id="fair-market-value-label">Fair market value</legend>
+      <div class="input-and-hint">
+        <div class="fair-market-value-input-wrapper">
+          <span>$</span>
+          <input id="fair-market-value" name="fair-market-value" aria-labelledby="fair-market-value-label" type="text" inputmode="numeric" pattern="\d+(,\d+)*(\.\d{2})?">
+          <div class="input-spinner" data-delta="10000" aria-hidden="true">
+            <button type="button" data-sign="+" aria-label="Increment by $10,000" title="Increment by $10,000" tabindex="-1">
+              <svg width="14" height="14" viewBox="0 0 12 12"><path d="m 2,8 4,-4 4,4" /></svg>
+            </button>
+            <button type="button" data-sign="-" aria-label="Decrement by $10,000" title="Decrement by $10,000" tabindex="-1">
+              <svg width="14" height="14" viewBox="0 0 12 12"><path d="m 2,4 4,4 4,-4" /></svg>
+            </button>
+          </div>
+          <div class="input-spinner" data-delta="100000" aria-hidden="true">
+            <button type="button" data-sign="+" aria-label="Increment by $100,000" title="Increment by $100,000" tabindex="-1">
+              <svg width="14" height="14" viewBox="0 0 12 12"><path d="m 2,10 4,-4 4,4 M 2,6 l 4,-4 4,4" /></svg>
+            </button>
+            <button type="button" data-sign="-" aria-label="Decrement by $100,000" title="Decrement by $100,000" tabindex="-1">
+              <svg width="14" height="14" viewBox="0 0 12 12"><path d="m 2,2 4,4 4,-4 M 2,6 l 4,4 4,-4" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="hint">
+          <p>
+            The price which would be paid for the property in the open market.
+            <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax#fmv" rel="noopener noreferrer" target="_blank">See the Government of BC’s website for further details</a>.
+          </p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fthbp">
+      <legend>Do you qualify for the first time home buyers’ program?</legend>
+      <div class="input-and-hint">
+        <div class="yesno">
+          <label>
+            <input type="radio" name="fthbp" value="no" id="fthbp-no" checked>
+            No
+          </label>
+          <label>
+            <input type="radio" name="fthbp" value="yes" id="fthbp-yes">
+            Yes
+          </label>
+        </div>
+        <div class="hint">
+          <p>If unsure, <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers" rel="noopener noreferrer" target="_blank">see the Government of BC’s information page</a> or <a href="tel:{{ .Site.Data.meta.phone_intl }}">give us a call</a> to discuss your specific situation.</p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="nbhe">
+      <legend>Do you qualify for the newly-built home exemption?</legend>
+      <div class="input-and-hint">
+        <div class="yesno">
+          <label>
+            <input type="radio" name="nbhe" value="no" id="nbhe-no" checked>
+            No
+          </label>
+          <label>
+            <input type="radio" name="nbhe" value="yes" id="nbhe-yes">
+            Yes
+          </label>
+        </div>
+        <div class="hint">
+          <p>If unsure, <a href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption" rel="noopener noreferrer" target="_blank">see the Government of BC’s information page</a> or <a href="tel:{{ .Site.Data.meta.phone_intl }}">give us a call</a> to discuss your specific situation.</p>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="output">
+    <div class="total-tax">
+      <h3>Property transfer tax after exemptions</h3>
+      <output class="total-tax-output" for="fair-market-value fthbp-no fthbp-yes nbhe-no nbhe-yes">$…</output>
+    </div>
+    <aside class="total-tax-breakdown-container">
+      <h4>Details</h4>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Amount taxable</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Tax amount</th>
+          </tr>
+        </thead>
+        <tbody class="total-tax-breakdown">
+        </tbody>
+      </table>
+    </aside>
+  </div>
+</form>

@@ -37,6 +37,7 @@
   --micro: 13px;
   --grey: #5c789c;
   --primary: #453a60;
+  --red: #b32d2d;
   --accent: #c29244;
   --white: #fff;
   --black: #000;
@@ -465,6 +466,9 @@ blockquote p {
 .margin\:auto {
   margin: auto !important;
 }
+.margin-top\:u12 {
+  margin-top: var(--u12) !important;
+}
 .margin-top\:u10 {
   margin-top: var(--u10) !important;
 }
@@ -501,6 +505,10 @@ blockquote p {
 .margin-bottom\:5vh {
   margin-bottom: 5vh !important;
 }
+.margin-y\:u8 {
+  margin-top: var(--u8) !important;
+  margin-bottom: var(--u8) !important;
+}
 .padding\:u8 {
   padding: var(--u8) !important;
 }
@@ -528,6 +536,10 @@ blockquote p {
 .padding-y\:u6 {
   padding-top: var(--u6) !important;
   padding-bottom: var(--u6) !important;
+}
+.padding-y\:u12 {
+  padding-top: var(--u12) !important;
+  padding-bottom: var(--u12) !important;
 }
 .padding-y\:10vh {
   padding-top: 10vh !important;
@@ -848,4 +860,170 @@ blockquote p {
 .map-pin__bubble img {
   width: revert;
   height: revert;
+}
+
+.ptt-calculator {
+  font-size: var(--h4);
+  background-color: var(--primary-l4);
+  border-radius: var(--u4);
+}
+.ptt-calculator fieldset {
+  margin: 2rem 0;
+  padding: 0;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: var(--primary-l3);
+}
+.ptt-calculator fieldset:first-child {
+  margin-top: 0;
+}
+.ptt-calculator fieldset:last-child {
+  margin-bottom: 0;
+  border-bottom-style: none;
+}
+.ptt-calculator legend {
+  padding: 0;
+  color: var(--black);
+  line-height: 1.25;
+  font-size: var(--h3);
+}
+.ptt-calculator .fair-market-value-input-wrapper {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5rem;
+  border-radius: var(--u2);
+  background-color: var(--white);
+  margin: var(--u4) 0;
+  gap: var(--u1);
+  padding: var(--u2);
+}
+.ptt-calculator .fair-market-value-input-wrapper:has(:focus-visible, :active) {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.ptt-calculator .fair-market-value-input-wrapper:has(:invalid) {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+.ptt-calculator .fair-market-value-input-wrapper input {
+  font-size: 2.25rem;
+  border: none;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.1em 0;
+}
+.ptt-calculator .fair-market-value-input-wrapper input:is(:focus, :focus-visible) {
+  outline: none;
+}
+.ptt-calculator .input-and-hint {
+  display: grid;
+}
+@media (min-width: 512px) {
+  .ptt-calculator .input-and-hint {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--u8);
+  }
+}
+.ptt-calculator .hint {
+  color: var(--grey-d2);
+  margin: var(--u4) 0;
+  position: relative;
+  font-size: var(--tiny);
+}
+.ptt-calculator .hint > :first-child::before {
+  content: "ℹ️ ";
+}
+.ptt-calculator .hint a {
+  color: inherit;
+  font-size: var(--body);
+}
+.ptt-calculator .yesno {
+  display: flex;
+  justify-content: center;
+  gap: var(--u8);
+  margin: var(--u2) 0;
+}
+.ptt-calculator .yesno input[type="radio"] {
+  width: 1.5em;
+  height: 1.5em;
+}
+.ptt-calculator table {
+  font-size: var(--body);
+}
+.ptt-calculator th {
+  font-weight: normal;
+}
+.ptt-calculator thead th {
+  font-weight: bold;
+}
+.ptt-calculator tr.total :is(th, td) {
+  font-weight: bold;
+}
+.ptt-calculator th, td {
+  text-align: start;
+  padding: 0.1em 0.5em;
+}
+.ptt-calculator tr :is(th, td):first-child {
+  padding-left: 0;
+}
+.ptt-calculator tr :is(th, td):last-child {
+  padding-right: 0;
+}
+.ptt-calculator :is(header, .input, .total-tax, .total-tax-breakdown-container) {
+  padding: var(--u4);
+}
+.ptt-calculator header {
+  background-color: var(--primary);
+  color: var(--white);
+  border-top-left-radius: var(--u4);
+  border-top-right-radius: var(--u4);
+}
+.ptt-calculator .total-tax {
+  text-align: center;
+  padding: var(--u4);
+  background-color: var(--primary);
+  color: var(--white);
+}
+.ptt-calculator .total-tax h3 {
+  color: inherit;
+  margin: 0;
+  font-size: var(--body);
+}
+.ptt-calculator .total-tax-output {
+  font-weight: bold;
+  font-size: var(--h2);
+}
+.ptt-calculator .total-tax-breakdown-container {
+  overflow: auto;
+}
+.ptt-calculator .total-tax-breakdown-container span {
+  white-space: nowrap;
+}
+.ptt-calculator .total-tax-breakdown-container table {
+  width: 100%;
+  min-width: 420px;
+}
+
+.input-spinner {
+  display: grid;
+  gap: var(--u1);
+  font-size: var(--micro);
+  align-self: center;
+}
+.input-spinner button {
+  color: var(--primary-l1);
+}
+.input-spinner button:hover {
+  color: var(--primary);
+}
+.input-spinner button:active {
+  color: var(--accent);
+}
+.input-spinner svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  display: block;
 }
