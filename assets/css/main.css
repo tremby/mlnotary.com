@@ -84,6 +84,8 @@
   --tab-content-padding: var(--u4);
   --line-weight: 1px;
   --prose: 75ch;
+
+  accent-color: var(--primary);
 }
 a,
 address,
