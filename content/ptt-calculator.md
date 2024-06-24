@@ -42,7 +42,7 @@ Or you can [give us a call](tel:{{< phone-intl >}}) to discuss the specifics of 
 
 ### My situation is more complicated!
 
-This calculator is designed only to cover only simpler cases.
+This calculator is designed to cover only simpler cases.
 
 Things get more tricky if, for example,
 only some of a group of buyers qualifies for an exemption,
