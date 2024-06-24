@@ -156,9 +156,14 @@ export default class Calculator {
   }
 
   adjustValue(delta) {
-    const value = this.getFairMarketValue();
-    if (value == null) return;
-    const newValue = Math.max(0, value + delta);
+    let newValue;
+    if (this.fairMarketValueInput.value === "" && delta > 0) {
+      newValue = delta;
+    } else {
+      const value = this.getFairMarketValue();
+      if (value == null) return;
+      newValue = Math.max(0, value + delta);
+    }
     this.fairMarketValueInput.value = dollarNoSymbolFormatter.format(newValue);
     this.updateCalculator();
   }
