@@ -56,7 +56,9 @@ export default class Calculator {
 
   setErrorState(value) {
     this.errorState = value;
-    this.outputContainer.hidden = value;
+    const populated = this.outputContainer.classList.contains("is-populated");
+    this.outputContainer.style.opacity = value ? 0.5 : "";
+    this.outputContainer.hidden = populated ? false : value;
   }
 
   initEventListeners() {
@@ -179,9 +181,9 @@ export default class Calculator {
     if (value == null || value === 0) {
       this.setErrorState(true);
       return;
-    } else {
-      this.setErrorState(false);
     }
+    this.setErrorState(false);
+    this.outputContainer.classList.add("is-populated");
     const { totalTax, breakdown, modifiers, finalTotal } = this.calculateTax(value, this.getFthbpQualified(), this.getNbheQualified());
     if (breakdown.length === 0) {
       this.totalTaxOutput.innerHTML = "$…";
