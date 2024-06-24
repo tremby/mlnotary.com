@@ -897,6 +897,13 @@ blockquote p {
   gap: var(--u2);
   padding: var(--u2);
 }
+/**
+ * Work around https://bugs.webkit.org/show_bug.cgi?id=142968
+ */
+_::-webkit-full-page-media, _:future,
+:root .ptt-calculator .fair-market-value-input-wrapper {
+  align-items: center;
+}
 .ptt-calculator .fair-market-value-input-wrapper:has(:focus-visible, :active) {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
