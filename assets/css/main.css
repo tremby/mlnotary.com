@@ -139,9 +139,6 @@ blockquote:before {
   content: "";
   content: none;
 }
-html {
-  font-size: 88%;
-}
 body,
 html {
   width: 100%;
@@ -151,7 +148,6 @@ body {
   box-sizing: border-box;
   background: var(--background-color);
   font-family: var(--font-family);
-  font-size: 14px;
   font-weight: var(--regular);
   line-height: var(--line-height);
   color: var(--default-color);
@@ -706,12 +702,6 @@ blockquote p {
 
 /* If this width changes, also update mq in JS */
 @media (min-width: 960px) {
-  html {
-    font-size: 88%;
-  }
-  body {
-    font-size: 15px;
-  }
   .wrap {
     padding-left: var(--u12);
     padding-right: var(--u12);
