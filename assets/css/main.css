@@ -927,17 +927,10 @@ blockquote p {
   }
 }
 .ptt-calculator .hint {
-  color: var(--grey-d2);
+  color: var(--grey-d3);
   margin: var(--u4) 0;
   position: relative;
   font-size: var(--tiny);
-}
-.ptt-calculator .hint > :first-child::before {
-  content: "ℹ️ ";
-}
-.ptt-calculator .hint a {
-  color: inherit;
-  font-size: var(--body);
 }
 .ptt-calculator .yesno {
   display: flex;
