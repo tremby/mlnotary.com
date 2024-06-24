@@ -217,12 +217,13 @@ blockquote p {
   font-size: var(--font-size);
 }
 .wrap {
+  --wrap-gutter: var(--u6);
   position: relative;
   width: 100%;
   max-width: var(--wrap-width);
   margin: auto;
-  padding-left: var(--u6);
-  padding-right: var(--u6);
+  padding-left: var(--wrap-gutter);
+  padding-right: var(--wrap-gutter);
 }
 .row {
   clear: both;
@@ -866,6 +867,14 @@ blockquote p {
   font-size: var(--h4);
   background-color: var(--primary-l4);
   border-radius: var(--u4);
+  margin-left: calc(-1 * var(--wrap-gutter));
+  margin-right: calc(-1 * var(--wrap-gutter));
+}
+@media (min-width: 512px) {
+  .ptt-calculator {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .ptt-calculator fieldset {
   margin: 2rem 0;
