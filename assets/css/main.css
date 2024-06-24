@@ -959,7 +959,7 @@ _::-webkit-full-page-media, _:future,
   width: 1.5em;
   height: 1.5em;
 }
-.ptt-calculator :is(header, .input, .total-tax, .total-tax-breakdown-container) {
+.ptt-calculator :is(header, .input, .total-tax) {
   padding: var(--u4);
 }
 .ptt-calculator header {
@@ -984,15 +984,29 @@ _::-webkit-full-page-media, _:future,
   font-weight: bold;
   font-size: var(--h2);
 }
-.ptt-calculator .total-tax-breakdown-container {
+.total-tax-breakdown-container {
+  padding: var(--u4) 0;
+}
+.ptt-calculator .breakdown-table-container {
   overflow: auto;
+  padding-bottom: var(--u2); /* Space from scrollbar */
+}
+@media (min-width: 512px) {
+  /* Shouldn't be a scrollbar */
+  .ptt-calculator .breakdown-table-container {
+    padding-bottom: 0;
+  }
+}
+.ptt-calculator :is(#breakdown-table-label, .breakdown-table) {
+  padding: 0 var(--u4);
 }
 .ptt-calculator .breakdown-table {
   margin-top: var(--u4);
   --column-gap: var(--u4);
   --row-gap: var(--u2);
   font-size: var(--font-size);
-  min-width: 420px;
+  min-width: 28rem;
+  box-sizing: content-box;
   display: grid;
   column-gap: var(--column-gap);
   row-gap: var(--row-gap);
