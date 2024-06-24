@@ -885,7 +885,7 @@ blockquote p {
   padding: 0;
   color: var(--black);
   line-height: 1.25;
-  font-size: var(--h3);
+  font-size: var(--h4);
 }
 .ptt-calculator .fair-market-value-input-wrapper {
   display: flex;
@@ -894,7 +894,7 @@ blockquote p {
   border-radius: var(--u2);
   background-color: var(--white);
   margin: var(--u4) 0;
-  gap: var(--u1);
+  gap: var(--u2);
   padding: var(--u2);
 }
 .ptt-calculator .fair-market-value-input-wrapper:has(:focus-visible, :active) {
@@ -912,6 +912,7 @@ blockquote p {
   width: 100%;
   background-color: transparent;
   padding: 0.1em 0;
+  color: var(--primary-d2);
 }
 .ptt-calculator .fair-market-value-input-wrapper input:is(:focus, :focus-visible) {
   outline: none;
@@ -960,6 +961,7 @@ blockquote p {
 .ptt-calculator .total-tax h3 {
   color: inherit;
   margin: 0;
+  font-weight: normal;
   font-size: var(--body);
 }
 .ptt-calculator .total-tax-output {
