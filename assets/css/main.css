@@ -983,7 +983,7 @@ _::-webkit-full-page-media, _:future,
   --column-gap: var(--u4);
   --row-gap: var(--u2);
   font-size: var(--font-size);
-  /* min-width: 420px; */
+  min-width: 420px;
   display: grid;
   column-gap: var(--column-gap);
   row-gap: var(--row-gap);
