@@ -662,32 +662,29 @@ blockquote p {
 .fill\:footer {
   background: #231e28;
 }
-.markup p,
-.markup ul {
+.markup > :is(p, ul) {
   font-size: var(--h6);
 }
-.markup h3:first-child {
+.markup > h3:first-child {
   margin-top: 0;
 }
-.markup h3 {
+.markup > h3 {
   margin-top: var(--u11);
+  margin-bottom: var(--u6);
   font-weight: var(--regular);
 }
-.markup h3 {
-  margin-bottom: var(--u6);
-}
-.markup h6 {
+.markup > h6 {
   margin-bottom: var(--u4);
 }
-.markup ul {
+.markup > ul {
   margin: 0;
   margin-left: var(--u5);
   margin-bottom: var(--u6);
 }
-.markup li {
+.markup > li {
   padding-left: var(--u0);
 }
-.markup ul {
+.markup > ul {
   list-style-type: disc;
 }
 .flex-direction\:column {
