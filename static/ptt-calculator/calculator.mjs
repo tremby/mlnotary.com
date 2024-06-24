@@ -16,6 +16,16 @@ const NBHE_FULL_EXEMPTION = 20e3;
 const NBHE_FULL_EXEMPTION_UNTIL = 1.1e6;
 const NBHE_NO_MORE_EXEMPTION_AT = 1.15e6;
 
+function splitNumber(number) {
+  const formatted = dollarFormatter.format(number);
+  const decimalPos = formatted.indexOf(".");
+  const parts = decimalPos === -1 ? [formatted, ""] : [formatted.substring(0, decimalPos), formatted.substring(decimalPos)];
+  return [
+    `<span class="num-whole">${parts[0]}</span>`,
+    `<span class="num-fraction">${parts[1]}</span>`,
+  ].join("");
+}
+
 export default class Calculator {
   errorState = false;
 
@@ -60,6 +70,7 @@ export default class Calculator {
     for (const spinner of this.el.querySelectorAll(".input-spinner button")) {
       spinner.addEventListener("click", this.handleSpinnerClick.bind(this));
     }
+    this.totalTaxBreakdown.addEventListener("click", this.handleBreakdownClick.bind(this));
   }
 
   getFairMarketValue() {
@@ -150,6 +161,19 @@ export default class Calculator {
     this.updateCalculator();
   }
 
+  handleBreakdownClick(event) {
+    const detailsTrigger = event.target.closest(".details-trigger");
+    if (detailsTrigger == null) return;
+    event.stopPropagation();
+    const targetId = detailsTrigger.getAttribute("aria-controls");
+    if (targetId == null) return false;
+    const target = document.getElementById(targetId);
+    if (target == null) return false;
+    const newExpanded = target.hidden;
+    detailsTrigger.setAttribute("aria-expanded", newExpanded ? "true" : "false");
+    target.hidden = !newExpanded;
+  }
+
   updateCalculator() {
     const value = this.getFairMarketValue();
     if (value == null || value === 0) {
@@ -166,58 +190,64 @@ export default class Calculator {
       this.totalTaxOutput.innerHTML = dollarFormatter.format(finalTotal);
       this.totalTaxBreakdownContainer.hidden = false;
       this.totalTaxBreakdown.innerHTML = `
-        <tr>
-          <th scope="row">Total fair market value</th>
-          <td>${dollarFormatter.format(value)}</td>
-          <td></td>
-          <td></td>
-        </tr>
+        <div role="row">
+          <div role="rowheader">Fair market value</div>
+          <div role="cell" class="numberspan">${splitNumber(value)}</div>
+        </div>
         ${breakdown.map(({ min, max, rate, taxableAmount, taxAmount }) => `
-          <tr>
-            <th scope="row">
+          <div role="row">
+            <div role="rowheader">
               Amount ${
                 max === Infinity
                   ? `over ${dollarFormatter.format(min)}`
                   : `between ${dollarFormatter.format(min)} and ${dollarFormatter.format(max)}`
                 }
-            </th>
-            <td>
-              ${dollarFormatter.format(taxableAmount)}
-            </td>
-            <td>
+            </div>
+            <div role="cell" class="numberspan">
+              ${splitNumber(taxableAmount)}
+            </div>
+            <div role="cell">
               ${percentFormatter.format(rate)}
-            </td>
-            <td>
-              ${dollarFormatter.format(taxAmount)}
-            </td>
-          </tr>
+            </div>
+            <div role="cell" class="numberspan">
+              ${splitNumber(taxAmount)}
+            </div>
+          </div>
         `).join("")}
+        ${modifiers.length > 0 ? `
+          <div role="row" class="total rule-above rule-below">
+            <div role="rowheader" class="span-4">Pre-exemption tax amount</div>
+            <div role="cell" class="numberspan">
+              ${splitNumber(breakdown.reduce((acc, { taxAmount }) => acc + taxAmount, 0))}
+            </div>
+          </div>
+        ` : ""}
         ${modifiers.map(({ description, additionalInfo, amount, overruled }, i) => `
-          <tr>
-            <th scope="row" colspan="3">
-              ${overruled ? "<s>" : ""}
+          <div role="row">
+            <div role="rowheader" class="span-4 ${overruled ? "overruled" : ""}">
               ${description}
-              ${overruled ? "</s>" : ""}
-            </th>
-            <td>
-              ${overruled ? "<s>" : ""}
-              ${dollarFormatter.format(amount)}
-              ${additionalInfo != null ? `
-                <span class="position:relative">
-                  <button type="button" class="popover-trigger" id="breakdown-popover-${i}-trigger" popovertarget="breakdown-popover-${i}">ℹ️</button>
-                  <div id="breakdown-popover-${i}" popover anchor="breakdown-popover-${i}-trigger">
-                    <p>${additionalInfo}</p>
-                  </div>
-                </span>
-              ` : ""}
-              ${overruled ? "</s>" : ""}
-            </td>
-          </tr>
+            </div>
+            <div role="cell" class="numberspan ${overruled ? "overruled" : ""}">
+              ${splitNumber(amount)}
+            </div>
+            ${additionalInfo != null ? `
+              <div role="cell">
+                <button type="button" class="details-trigger" aria-controls="breakdown-details-${i}" aria-expanded="false" title="Toggle details" aria-label="Toggle details">
+                  ℹ️
+                </button>
+              </div>
+              <div role="cell" class="breakdown-details" id="breakdown-details-${i}" hidden>
+                <p>${additionalInfo}</p>
+              </div>
+            ` : ""}
+          </div>
         `).join("")}
-        <tr class="total">
-          <th scope="row" colspan="3">Total</th>
-          <td>${dollarFormatter.format(finalTotal)}</td>
-        </tr>
+        <div role="row" class="total rule-above">
+          <div role="rowheader" class="span-4">Total</div>
+          <div role="cell" class="numberspan">
+            ${splitNumber(finalTotal)}
+          </div>
+        </div>
       `;
     }
   }

@@ -942,28 +942,6 @@ blockquote p {
   width: 1.5em;
   height: 1.5em;
 }
-.ptt-calculator table {
-  font-size: var(--body);
-}
-.ptt-calculator th {
-  font-weight: normal;
-}
-.ptt-calculator thead th {
-  font-weight: bold;
-}
-.ptt-calculator tr.total :is(th, td) {
-  font-weight: bold;
-}
-.ptt-calculator th, td {
-  text-align: start;
-  padding: 0.1em 0.5em;
-}
-.ptt-calculator tr :is(th, td):first-child {
-  padding-left: 0;
-}
-.ptt-calculator tr :is(th, td):last-child {
-  padding-right: 0;
-}
 .ptt-calculator :is(header, .input, .total-tax, .total-tax-breakdown-container) {
   padding: var(--u4);
 }
@@ -991,15 +969,89 @@ blockquote p {
 .ptt-calculator .total-tax-breakdown-container {
   overflow: auto;
 }
-.ptt-calculator .total-tax-breakdown-container span {
-  white-space: nowrap;
+.ptt-calculator .breakdown-table {
+  margin-top: var(--u4);
+  --column-gap: var(--u4);
+  --row-gap: var(--u2);
+  font-size: var(--font-size);
+  /* min-width: 420px; */
+  display: grid;
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+  grid-template-columns: [start descr-start] 1fr [descr-end taxable-start] auto [taxable-mid] min-content [taxable-end rate-start] auto [rate-end amount-start] auto [amount-mid] min-content [amount-end info-start] auto [info-end end];
 }
-.ptt-calculator .total-tax-breakdown-container div {
-  white-space: initial;
+.ptt-calculator .breakdown-table [role="rowgroup"] {
+  display: contents;
 }
-.ptt-calculator .total-tax-breakdown-container table {
-  width: 100%;
-  min-width: 420px;
+.ptt-calculator .breakdown-table [role="row"] {
+  grid-column: start / end;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.ptt-calculator .breakdown-table [role="row"]:is(.rule-below, .rule-above) {
+  --outset: var(--u1);
+  padding: 0 var(--outset);
+  margin: 0 calc(-1 * var(--outset));
+}
+.ptt-calculator .breakdown-table [role="row"].rule-below {
+  border-bottom: 1px solid var(--primary-l3);
+}
+.ptt-calculator .breakdown-table [role="row"].rule-above {
+  border-top: 1px solid var(--primary-l3);
+}
+.ptt-calculator .breakdown-table [role="columnheader"] {
+  font-weight: bold;
+}
+.ptt-calculator .breakdown-table .total {
+  font-weight: bold;
+}
+.ptt-calculator .breakdown-table .numberspan {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.ptt-calculator .num-whole {
+  justify-self: end;
+  margin-right: calc(-1 * var(--column-gap));
+}
+.ptt-calculator .num-fraction {
+  justify-self: start;
+}
+.ptt-calculator .breakdown-table .breakdown-details {
+  grid-column: start / end;
+  color: var(--grey-d2);
+  font-size: var(--tiny);
+}
+.ptt-calculator .breakdown-table [role="row"]:has(.breakdown-details:not([hidden])) {
+  --outset-x: var(--u1);
+  padding: 0 var(--outset-x);
+  margin: 0 calc(-1 * var(--outset-x));
+  border-radius: var(--u1);
+  background-color: color-mix(in srgb, transparent 50%, white);
+}
+.ptt-calculator .breakdown-table .span-2 {
+  grid-column: span 2;
+}
+.ptt-calculator .breakdown-table .span-4 {
+  grid-column: span 4;
+}
+.ptt-calculator .breakdown-table .overruled {
+  text-decoration: line-through;
+}
+.ptt-calculator .breakdown-table .overruled::before,
+.ptt-calculator .breakdown-table .overruled::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.ptt-calculator .breakdown-table .overruled::before {
+  content: " [start of stricken text] ";
+}
+.ptt-calculator .breakdown-table .overruled::after {
+  content: " [end of stricken text] ";
 }
 
 .input-spinner {
@@ -1022,19 +1074,4 @@ blockquote p {
   stroke: currentColor;
   stroke-width: 1.5;
   display: block;
-}
-
-.popover-trigger {
-  cursor: help;
-}
-[popover] {
-  font-family: var(--font-family);
-  font-size: var(--tiny);
-  line-height: var(--line-height);
-  background: var(--primary-d4);
-  color: var(--white);
-  border-radius: var(--u2);
-  padding: var(--u4);
-  max-width: min(var(--prose), calc(100vw - var(--u8)));
-  margin: auto;
 }
