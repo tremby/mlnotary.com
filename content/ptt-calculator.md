@@ -35,8 +35,8 @@ No, this calculator covers only residential property.
 
 The Government of BC website is the best place to look.
 
-- [Property transfer tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax)
-- [Exemptions](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions)
+- [Property transfer tax][govbc-ptt]
+- [Exemptions][govbc-exemptions]
 
 Or you can [give us a call](tel:{{< phone-intl >}}) to discuss the specifics of your situation.
 
@@ -47,7 +47,10 @@ This calculator is designed to cover only simpler cases.
 Things get more tricky if, for example,
 only some of a group of buyers qualifies for an exemption,
 or if the property is not residential,
-or if other exemptions not covered by the calculator apply.
+or if [other exemptions][govbc-exemptions] not covered by the calculator apply.
 
 Please [call us](tel:{{< phone-intl >}}) to discuss the specifics of your situation,
 and we'll do our best to make it less complicated!
+
+[govbc-ptt]: https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax
+[govbc-exemptions]: https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions
