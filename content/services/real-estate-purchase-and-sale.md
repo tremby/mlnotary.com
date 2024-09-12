@@ -30,7 +30,7 @@ assist you with the following:
 - **Mortgage**: preparation of the required land title forms and lender forms necessary to complete the
   mortgage of the property.
 - **Property transfer tax**: preparation of the necessary forms and remitting the tax to the Ministry of
-  Finance on your behalf.
+  Finance on your behalf. You can use [our PTT calculator](/ptt-calculator/) to get a quick estimate.
 - **Statement of adjustments**: in any transaction whether buyer or seller, there is a statement of adjustments
   which reflect the credits and debits in your transactions. Any adjustments such as property taxes and
   strata maintenance fees are reflected on this document.
