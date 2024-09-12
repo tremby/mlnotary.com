@@ -26,14 +26,14 @@ Land ownership in British Columbia is recorded in the Land Title Office. As your
 assist you with the following:
 
 - **Transfer**: preparation of the legal forms needed to transfer property from the transferor to the
-  transferee
+  transferee.
 - **Mortgage**: preparation of the required land title forms and lender forms necessary to complete the
-  mortgage of the property
+  mortgage of the property.
 - **Property transfer tax**: preparation of the necessary forms and remitting the tax to the Ministry of
-  Finance on your behalf
+  Finance on your behalf.
 - **Statement of adjustments**: in any transaction whether buyer or seller, there is a statement of adjustments
   which reflect the credits and debits in your transactions. Any adjustments such as property taxes and
-  strata maintenance fees are reflected on this document
+  strata maintenance fees are reflected on this document.
 - **Strata property management forms**: we assist you in obtaining the strata forms necessary to
   complete your transaction and ensure all strata fees are paid for.
 - **State of title certificate**: at the end of your transaction, we will obtain a state of title certificate from
