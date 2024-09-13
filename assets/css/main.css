@@ -642,6 +642,14 @@ blockquote p {
   margin: 2px 0;
   background: var(--primary);
 }
+.header-extra-shown-when-wide {
+  display: none;
+}
+@media (min-width: 1008px) {
+  .header-extra-shown-when-wide {
+    display: inline;
+  }
+}
 .hero {
   position: relative;
   height: auto;
