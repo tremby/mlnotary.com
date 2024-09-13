@@ -1,11 +1,39 @@
 {{ define "main" }}
-  <section class="row fill:white padding-y:10vh padding-y@sm:none">
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh">
+  <section class="row fill:white">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
       <h1 class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
         {{ .Params.headline }}
       </h1>
+      <span class="line line:short margin-top:u8"></span>
+      {{ with resources.Get "images/herafilms_studiosession_jonathan-1.jpg" }}
+        {{ $crop := .Crop (print .Width "x" .Width " Top") }}
+        {{ $i296 := $crop.Resize "296x" }}
+        {{ $i400 := $crop.Resize "400x" }}
+        {{ $i460 := $crop.Resize "460x" }}
+        {{ $i592 := $crop.Resize "592x" }}
+        {{ $i800 := $crop.Resize "800x" }}
+        {{ $i920 := $crop.Resize "920x" }}
+        <figure class="margin-top:u8 margin-x:auto" style="max-width: 460px">
+          <img
+            src="{{ $i296.RelPermalink }}"
+            width="{{ $crop.Width }}"
+            height="{{ $crop.Height }}"
+            alt="An Asian man with glasses smiles at the camera. He wears a grey suit with a dark striped shirt and a purple tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
+            sizes="(min-width: 1140px) 460px, (min-width: 960px) 40vw, (min-width: 536px) 460px, 79vw"
+            srcset="
+              {{ $i296.RelPermalink }} {{ $i296.Width }}w,
+              {{ $i400.RelPermalink }} {{ $i400.Width }}w,
+              {{ $i460.RelPermalink }} {{ $i460.Width }}w,
+              {{ $i592.RelPermalink }} {{ $i592.Width }}w,
+              {{ $i800.RelPermalink }} {{ $i800.Width }}w,
+              {{ $i920.RelPermalink }} {{ $i920.Width }}w,
+            "
+          >
+          <figcaption>Jonathan Wong</figcaption>
+        </figure>
+      {{ end }}
     </div>
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-bottom@sm:10vh font-size:h6">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
       <div class="max-width:prose markup">
         {{ .Content }}
       </div>
