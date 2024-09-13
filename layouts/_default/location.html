@@ -3,8 +3,34 @@
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
       <h2 class="font font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
         {{ .Params.headline }}
-        <span class="line line:short margin-top:u10"></span>
       </h2>
+      <span class="line line:short margin-top:u8"></span>
+      {{ with resources.Get "images/northwest-building.jpg" }}
+        {{ $i296 := .Resize "296x" }}
+        {{ $i400 := .Resize "400x" }}
+        {{ $i560 := .Resize "560x" }}
+        {{ $i592 := .Resize "592x" }}
+        {{ $i800 := .Resize "800x" }}
+        {{ $i1120 := .Resize "1120x" }}
+        <figure class="margin-top:u8 margin-x:auto" style="max-width: 560px">
+          <img
+            src="{{ $i296.RelPermalink }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            alt="A modern building constructed of glass and concrete. It has two towers: a smaller one on the left and a larger one on the right, which are connected by a low-rise section with a rooftop garden. The building is at the corner of two major roads."
+            sizes="(min-width: 1332px) 560px, (min-width: 960px) 40vw, (min-width: 640px) 560px, 79vw"
+            srcset="
+              {{ $i296.RelPermalink }} {{ $i296.Width }}w,
+              {{ $i400.RelPermalink }} {{ $i400.Width }}w,
+              {{ $i560.RelPermalink }} {{ $i560.Width }}w,
+              {{ $i592.RelPermalink }} {{ $i592.Width }}w,
+              {{ $i800.RelPermalink }} {{ $i800.Width }}w,
+              {{ $i1120.RelPermalink }} {{ $i1120.Width }}w,
+            "
+          >
+          <figcaption>Our premises are in the “Northwest” building, at the corner of SW Marine Drive and Cambie Street.</figcaption>
+        </figure>
+      {{ end }}
     </div>
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
       <div class="row margin-bottom:10">

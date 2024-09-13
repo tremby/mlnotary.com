@@ -217,6 +217,15 @@ blockquote p {
   margin: 0;
   font-size: var(--font-size);
 }
+figure {
+  margin: 0;
+}
+figcaption {
+  text-align: center;
+}
+* + figcaption {
+  margin-top: 0.25em;
+}
 .wrap {
   --wrap-gutter: var(--u6);
   position: relative;
@@ -467,6 +476,10 @@ blockquote p {
 }
 .margin\:auto {
   margin: auto !important;
+}
+.margin-x\:auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .margin-top\:u12 {
   margin-top: var(--u12) !important;
