@@ -2,7 +2,7 @@
   <li>
     {{ if (and (isset . "usual") (not (eq .current .usual))) }}
       <strong>{{ .current }}</strong>
-      <small style="font-size: inherit; opacity: 0.5;">(holiday hours)</small>
+      <small style="font-size: inherit; opacity: 0.75;">(holiday hours)</small>
     {{ else }}
       {{ .current }}
     {{ end }}
