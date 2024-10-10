@@ -1,17 +1,17 @@
 @font-face {
-  font-family: Theinhardt Web;
+  font-family: "Theinhardt Web";
   font-weight: 400;
   src: url(/fonts/theinhardt/Theinhardt-Regular.woff2) format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: Theinhardt Web;
+  font-family: "Theinhardt Web";
   font-weight: 700;
   src: url(/fonts/theinhardt/Theinhardt-Bold.woff2) format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: Theinhardt Web;
+  font-family: "Theinhardt Web";
   font-weight: 300;
   src: url(/fonts/theinhardt/Theinhardt-Light.woff2) format("woff2");
   font-display: swap;
@@ -344,16 +344,16 @@ figcaption {
   background-color: transparent;
   transition-property: background-color, transform;
   transition-duration: 0.3s;
-  transform: scaleY(80%);
+  transform: scaleY(0.8);
 }
 .tab\/header .tab\/item.is-active::before {
   background-color: var(--primary-l1);
-  transform: scaleY(100%);
+  transform: scaleY(1);
 }
 .tab\/header .tab\/item:not(.is-active):hover::before {
   transition-duration: 0.1s;
   background-color: var(--primary-l3);
-  transform: scaleY(100%);
+  transform: scaleY(1);
 }
 .tab\/header .tab\/item,
 .tab\/header .tab\/item:hover {
