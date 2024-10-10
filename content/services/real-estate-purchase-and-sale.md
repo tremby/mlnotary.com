@@ -6,35 +6,38 @@ title = "Real Estate Purchase and Sale"
 description = "We facilitate seamless property transactions in BC, covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates for homes and businesses."
 +++
 
-### Real Estate Purchase and Sale
+### Real estate purchase and sale services
 
-Purchasing and selling your property is one of the biggest decisions and financial investments of your life.
-We are here to help you through the process — also known as conveyance — from when property is
-conveyed from one party to the other, i.e., the seller (vendor) to the buyer (purchaser). We will support
-you with the necessary legal documents to make the transition to/from home ownership as smooth as
-possible.
+Buying or selling a property is one of the most important decisions and financial investments you'll make.
+At Marine Landing Notary Public, we guide you through the real estate conveyancing process, ensuring a seamless transfer of property ownership from seller (vendor) to buyer (purchaser).
+We handle all necessary legal documents to make your transition to or from homeownership as smooth as possible.
 
-We also assist clients with commercial purchases, private transactions, and family transfers of real estate
-property.
+Our services extend beyond residential transactions --
+we also assist with commercial property purchases, private real estate transactions, and family transfers of property.
 
-Other real estate services with which we can assist you include changing your name on a title, transmission of a joint
-tenant, and changing the address on a title.
+Additional real estate notary services include:
+
+- Changing the name or address on a property title
+- Transmission of a joint tenant
+- Other title updates as required
 
 ### How it works
 
-Land ownership in British Columbia is recorded in the Land Title Office. As your notary public, we will
-assist you with the following:
+Land ownership in British Columbia is recorded in the Land Title Office.
+As your notary public, we will assist you with the following:
 
-- **Transfer**: preparation of the legal forms needed to transfer property from the transferor to the
-  transferee.
-- **Mortgage**: preparation of the required land title forms and lender forms necessary to complete the
-  mortgage of the property.
-- **Property transfer tax**: preparation of the necessary forms and remitting the tax to the Ministry of
-  Finance on your behalf. You can use [our PTT calculator](/ptt-calculator/) to get a quick estimate.
-- **Statement of adjustments**: in any transaction whether buyer or seller, there is a statement of adjustments
-  which reflect the credits and debits in your transactions. Any adjustments such as property taxes and
-  strata maintenance fees are reflected on this document.
-- **Strata property management forms**: we assist you in obtaining the strata forms necessary to
-  complete your transaction and ensure all strata fees are paid for.
-- **State of title certificate**: at the end of your transaction, we will obtain a state of title certificate from
-  the Land Title Office which proves that you are the registered owner of the property.
+- **Transfer of property**:
+  We prepare the legal forms required to transfer property ownership from the transferor to the transferee.
+- **Mortgage documentation**:
+  We handle the necessary land title forms and lender documents to complete your mortgage transaction.
+- **Property transfer tax (PTT)**:
+  We prepare the PTT forms and remit the tax to the Ministry of Finance on your behalf.
+  Use [our PTT calculator](/ptt-calculator/) for a quick estimate.
+- **Statement of adjustments**:
+  Whether you're buying or selling, we prepare a statement that details the credits and debits,
+  including property taxes and strata maintenance fees.
+- **Strata property management forms**:
+  We assist in obtaining the necessary strata forms to ensure all strata fees are up to date.
+- **State of title certificate**:
+  Upon completion, we will obtain a state of title certificate from the Land Title Office,
+  confirming your status as the registered owner.
