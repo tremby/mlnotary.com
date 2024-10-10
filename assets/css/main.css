@@ -338,7 +338,7 @@ figcaption {
   display: flex;
   position: relative;
   margin: 0;
-  gap: 1em;
+  gap: 1.25em;
   line-height: 1.2;
 }
 .tab\/header .tab\/item {
