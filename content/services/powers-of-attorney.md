@@ -1,12 +1,14 @@
 +++
 layout = "services"
-menu = "services"
 weight = 40
-title = "Powers of Attorney"
+title = "Powers of attorney services"
 description = "We offer legal help for managing powers of attorney, which can authorize someone to act on your behalf, whether enduring or for specific circumstances."
+[menus]
+  [menus.services]
+    name = "Powers of attorney"
 +++
 
-### Powers of Attorney
+# Powers of attorney services
 
 A power of attorney (also known in its shortened form as POA) is a personal planning document which
 authorizes another person (attorney) to act on their behalf. There are different types of powers of

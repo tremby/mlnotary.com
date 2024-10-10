@@ -1,12 +1,14 @@
 +++
 layout = "services"
-menu = "services"
 weight = 10
-title = "Real Estate Purchase and Sale"
+title = "Real estate purchase and sale services"
 description = "We facilitate seamless property transactions in BC, covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates for homes and businesses."
+[menus]
+  [menus.services]
+    name = "Real estate purchase and sale"
 +++
 
-### Real estate purchase and sale services
+# Real estate purchase and sale services
 
 Buying or selling a property is one of the most important decisions and financial investments you'll make.
 At Marine Landing Notary Public, we guide you through the real estate conveyancing process, ensuring a seamless transfer of property ownership from seller (vendor) to buyer (purchaser).
@@ -21,7 +23,7 @@ Additional real estate notary services include:
 - Transmission of a joint tenant
 - Other title updates as required
 
-### How it works
+## How it works
 
 Land ownership in British Columbia is recorded in the Land Title Office.
 As your notary public, we will assist you with the following:

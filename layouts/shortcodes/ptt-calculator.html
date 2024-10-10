@@ -5,7 +5,9 @@
 </script>
 
 <form id="ptt-calculator" class="ptt-calculator {{ .Get "class" }}">
-  <header>BC property transfer tax calculator</header>
+  <header>
+    <h2>BC property transfer tax calculator</h2>
+  </header>
   <div class="input">
     <fieldset>
       <legend id="fair-market-value-label">Fair market value</legend>
@@ -83,7 +85,7 @@
       <output class="total-tax-output" for="fair-market-value fthbp-no fthbp-yes nbhe-no nbhe-yes">$…</output>
     </div>
     <aside class="total-tax-breakdown-container">
-      <h4 id="breakdown-table-label">Details</h4>
+      <h3 id="breakdown-table-label">Details</h3>
       <div class="breakdown-table-container">
         <div class="breakdown-table" role="table" aria-labelledby="breakdown-table-label">
           <div role="row" class="rule-below">

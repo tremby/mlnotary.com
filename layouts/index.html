@@ -1,10 +1,14 @@
 {{ define "main" }}
+  {{ if not (len (findRE `<h1.*?>` .Content 1)) }}
+    <h1 class="visually-hidden">{{ .Site.Data.meta.title }}</h1>
+  {{ end }}
+
   <section class="hero">
     <div class="hero/content align:left align@sm:center">
       <div class="wrap">
-        <h1 class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin:auto max-width:prose text-wrap:balance">
+        <p class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin:auto max-width:prose text-wrap:balance">
           {{ .Params.hero_title }}
-        </h1>
+        </p>
       </div>
     </div>
   </section>
@@ -20,9 +24,9 @@
       <div class="column:12 column@md:6 padding-y:10vh padding-x:u8 fill:primary">
         <div class="align:center padding-y:5vh">
           <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
-          <h3 class="margin:auto max-width:prose text-wrap:balance font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8">
+          <blockquote class="margin:auto max-width:prose text-wrap:balance font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8">
             {{ .Params.quote }}
-          </h3>
+          </blockquote>
 
           <p class="color:white">
             Jonathan Wong<br />
@@ -37,16 +41,16 @@
     </div>
   </section>
 
-  <section class="row fill:white">
-    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+  <nav class="row fill:white" aria-label="Other pages">
+    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
       <div>
-        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Services</h4>
+        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">Our services</h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.service_text }}
         </p>
         <a href="/services/" class="font-size:body color:black font-weight:bold">Learn more</a>
       </div>
-    </div>
+    </article>
     <div
       class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
       style="
@@ -55,20 +59,20 @@
         background-position: bottom center !important;
       "
     ></div>
-    <div class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
       <div>
-        <h4 class="font-weight:regular font-leading:1 margin-bottom:u4">Our Location</h4>
+        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">Our location</h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.location_text }}
         </p>
         <a href="/location/" class="font-size:body color:black font-weight:bold">Learn more</a>
       </div>
-    </div>
+    </article>
     <div
       class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
       style="background-image: url('{{ with resources.Get "images/office-03.jpg" }}{{ .RelPermalink }}{{ end }}');"
     ></div>
-  </section>
+  </nav>
 
   {{ partial "map" . }}
 {{ end }}

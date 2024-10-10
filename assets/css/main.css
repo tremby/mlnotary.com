@@ -206,20 +206,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-blockquote {
-  margin-top: var(--u7);
-  margin-bottom: var(--u7);
-  padding: var(--u4) var(--u7);
-  background: var(--grey-l4);
-  box-shadow: inset 4px 0 0 0 var(--primary);
-}
-blockquote p {
-  margin: 0;
-  font-size: var(--font-size);
-}
-blockquote p + p {
-  margin-top: 1em;
-}
 figure {
   margin: 0;
 }
@@ -712,16 +698,24 @@ figcaption {
 .markup > :is(p, ul) {
   font-size: var(--h6);
 }
-.markup > h3:first-child {
-  margin-top: 0;
-}
-.markup > h3 {
-  margin-top: var(--u11);
+.markup > h1 {
   margin-bottom: var(--u6);
   font-weight: var(--regular);
+  font-size: var(--h2);
 }
-.markup > h6 {
+.markup > h2 {
+  margin-top: var(--u8);
   margin-bottom: var(--u4);
+  font-weight: var(--regular);
+  font-size: var(--h3);
+}
+.markup > h3 {
+  margin-top: var(--u6);
+  margin-bottom: var(--u2);
+  font-size: var(--h4);
+}
+.markup > :first-child {
+  margin-top: 0;
 }
 .markup > ul {
   margin: 0;
@@ -733,6 +727,20 @@ figcaption {
 }
 .markup > ul {
   list-style-type: disc;
+}
+.markup > blockquote {
+  margin-top: var(--u7);
+  margin-bottom: var(--u7);
+  padding: var(--u4) var(--u7);
+  background: var(--grey-l4);
+  box-shadow: inset 4px 0 0 0 var(--primary);
+}
+.markup > blockquote p {
+  margin: 0;
+  font-size: var(--font-size);
+}
+.markup > blockquote p + p {
+  margin-top: 1em;
 }
 .flex-direction\:column {
   flex-direction: column;
@@ -913,6 +921,11 @@ figcaption {
     margin-left: 0;
     margin-right: 0;
   }
+}
+.ptt-calculator h2 {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 .ptt-calculator fieldset {
   margin: 2rem 0;
@@ -1144,4 +1157,12 @@ _::-webkit-full-page-media, _:future,
   stroke: currentColor;
   stroke-width: 1.5;
   display: block;
+}
+.visually-hidden {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }

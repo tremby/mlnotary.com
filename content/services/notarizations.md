@@ -1,12 +1,14 @@
 +++
 layout = "services"
-menu = "services"
 weight = 60
-title = "Notarizations"
+title = "Notarization services"
 description = "We notarize diverse personal documents, such as statutory declarations, insurance loss declarations, certified copies, proofs of identity, and affidavits."
+[menus]
+  [menus.services]
+    name = "Notarizations"
 +++
 
-### Notarizations
+# Notarization services
 
 When we notarize a document, we are administering an oath, affirmation, or declaration over it.
 

@@ -1,12 +1,14 @@
 +++
 layout = "services"
-menu = "services"
 weight = 50
-title = "Other Personal Planning Documents"
+title = "Other personal planning documents"
 description = "Alongside your will, we can assist with other personal planning documents, including representation agreements, advance directives, and related paperwork."
+[menus]
+  [menus.services]
+    name = "Other personal planning documents"
 +++
 
-### Other Personal Planning Documents
+# Other personal planning documents
 
 > Although B.C. doesn’t use “living wills,” advance directives and substitute decision-making agreements
 > like representation agreements can serve a similar purpose. In a medical crisis, these documents will

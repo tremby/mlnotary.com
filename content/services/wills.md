@@ -1,12 +1,14 @@
 +++
 layout = "services"
-menu = "services"
 weight = 30
-title = "Wills"
+title = "Wills and estate planning services"
 description = "Crucial if you own assets or have dependents, we can craft you a personalized will under BC's Wills, Estates, and Succession Act."
+[menus]
+  [menus.services]
+    name = "Wills and estate planning"
 +++
 
-### Wills and estate planning services
+# Wills and estate planning services
 
 > Making a will is an important part of planning for your family's future.
 > If you die without a will, your property will be divided according to BC law, and the costs to administer your estate will increase.
@@ -22,7 +24,7 @@ At Marine Landing Notary Public, we assist in the preparation and witnessing of 
 We help you define key roles, including your executor, the guardian for your children, and the distribution of your estate.
 These decisions should be made with careful consideration and in complete trust.
 
-### Who should have a will?
+## Who should have a will?
 
 If you're an adult in BC who falls into any of the following categories,
 you should strongly consider having a will:
@@ -35,7 +37,7 @@ We will prepare a will that fits your needs at a reasonable cost.
 If you own assets in British Columbia as well as around the world,
 it is possible to have a will that relates only to your BC assets.
 
-### Our wills process
+## Our wills process
 
 To begin preparing your will, [contact our office](mailto:{{< email-address >}}) to schedule an initial consultation.
 During this meeting, we will discuss your wishes and address any other important considerations.

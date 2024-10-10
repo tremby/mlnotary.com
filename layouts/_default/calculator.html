@@ -1,12 +1,10 @@
 {{ define "main" }}
-  <section class="wrap padding-y:u12">
-    <header>
-      <h1 class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance align:center">
-        {{ .Params.headline }}
-      </h1>
-    </header>
+  {{ if not (len (findRE `<h1.*?>` .Content 1)) }}
+    <h1 class="visually-hidden">{{ .Params.title }}</h1>
+  {{ end }}
 
-    <div class="max-width:prose markup margin:auto margin-top:u12">
+  <section class="wrap padding-y:u12">
+    <div class="max-width:prose markup margin:auto">
       {{ .Content }}
     </div>
   </section>
