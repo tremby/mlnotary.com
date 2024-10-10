@@ -8,10 +8,11 @@ description = "Crucial if you own assets or have dependents, we can craft you a 
 
 ### Wills
 
-> Making a will is an important part of planning for your family’s future. If you die without a will, your
-> property will be divided according to B.C. law, and the costs to administer your estate will increase.
-> You’ll also be giving up the right to appoint the guardian of your choice for any children in your care. <br><br><a href="https://www2.gov.bc.ca/gov/content/family-social-
-> supports/seniors/financial-legal-matters/wills-and-estate-planning">– BC Provincial Government</a>
+> Making a will is an important part of planning for your family's future.
+> If you die without a will, your property will be divided according to BC law, and the costs to administer your estate will increase.
+> You'll also be giving up the right to appoint the guardian of your choice for any children in your care.
+>
+> [– BC Provincial Government](https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/financial-legal-matters/wills-and-estate-planning)
 
 Under the provincial Wills, Estates and Succession Act (WESA), a will is a legal document that provides
 instructions which one must follow upon a person’s death regarding the handling of their estate.
