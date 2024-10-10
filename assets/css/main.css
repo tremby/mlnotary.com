@@ -788,6 +788,9 @@ figcaption {
   .font-size\@sm\:h5 {
     font-size: var(--h5) !important;
   }
+  .font-size\@sm\:default {
+    font-size: 1rem !important;
+  }
   .font-weight\@sm\:light {
     font-weight: var(--light) !important;
   }
