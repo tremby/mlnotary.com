@@ -4,7 +4,7 @@
   {{ end }}
 
   <section class="row fill:white">
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:u12">
       <p class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
         {{ .Params.headline }}
       </p>
@@ -23,7 +23,7 @@
             width="{{ $crop.Width }}"
             height="{{ $crop.Height }}"
             alt="An Asian man with glasses smiles at the camera. He wears a grey suit with a dark striped shirt and a purple tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
-            sizes="(min-width: 1140px) 460px, (min-width: 960px) 40vw, (min-width: 536px) 460px, 79vw"
+            sizes="(min-width: 1140px) 460px, (min-width: 768px) 40vw, (min-width: 536px) 460px, 79vw"
             srcset="
               {{ $i296.RelPermalink }} {{ $i296.Width }}w,
               {{ $i400.RelPermalink }} {{ $i400.Width }}w,
@@ -37,7 +37,7 @@
         </figure>
       {{ end }}
     </div>
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:u12 font-size:h6">
       <div class="max-width:prose markup">
         {{ .Content }}
       </div>

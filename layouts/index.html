@@ -4,7 +4,7 @@
   {{ end }}
 
   <section class="hero">
-    <div class="hero/content align:left align@sm:center">
+    <div class="hero/content align:left align:center">
       <div class="wrap">
         <p class="font-weight:regular font-weight@sm:light font-size:h4 font-size@sm:h2 font-height:1.1 margin:auto max-width:prose text-wrap:balance">
           {{ .Params.hero_title }}
@@ -16,14 +16,14 @@
   <section>
     <div class="row fill:white">
       <div
-        class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+        class="display:none display@md:block column:12 column@md:3 padding-y:u10 fill-size:cover fill-position:center-center"
         style="
           background-image: url('https://images.unsplash.com/photo-1504355080015-bba52674577b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=090323df2e679b3b5df56edc7f2629cb&auto=format&fit=crop&w=800&q=60');
         "
       ></div>
-      <div class="column:12 column@md:6 padding-y:10vh padding-x:u8 fill:primary">
-        <div class="align:center padding-y:5vh">
-          <span class="line line:short margin-bottom:5vh fill:white margin:auto"></span>
+      <div class="column:12 column@md:6 padding-y:u8 padding-y@sm:u12 padding-x:u8 fill:primary">
+        <div class="align:center padding-y:u6">
+          <span class="line line:short margin-bottom:u6 fill:white margin:auto"></span>
           <blockquote class="margin:auto max-width:prose text-wrap:balance font-size:h5 font-size@sm:h3 font-weight:regular font-leading:2 color:white margin-bottom:u8">
             {{ .Params.quote }}
           </blockquote>
@@ -35,42 +35,55 @@
         </div>
       </div>
       <div
-        class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+        class="display:none display@md:block column:12 column@md:3 padding-y:u12 fill-size:cover fill-position:center-center"
         style="background-image:url('{{ with resources.Get "images/office-01.jpg" }}{{ .RelPermalink }}{{ end }}')"
       ></div>
     </div>
   </section>
 
-  <nav class="row fill:white" aria-label="Other pages">
-    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+  <nav class="two-links fill:white" aria-label="Other pages">
+    <article class="two-links__text two-links__1 padding:u8 padding@md:u10">
       <div>
         <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">Our services</h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.service_text }}
         </p>
-        <a href="/services/" class="font-size:body color:black font-weight:bold">Learn more</a>
+        <a
+          href="/services/"
+          class="font-size:body color:black font-weight:bold"
+        >
+          Learn more
+        </a>
       </div>
     </article>
     <div
-      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      class="two-links__image two-links__1 padding-y:u12 fill-size:cover fill-position:center-center"
       style="
         background-image: url('{{ with resources.Get "images/office-02.jpg" }}{{ .RelPermalink }}{{ end }}');
-        background-size: cover;
         background-position: bottom center !important;
       "
     ></div>
-    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+    <article class="two-links__text two-links__2 padding:u8 padding@md:u10">
       <div>
-        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">Our location</h2>
+        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">
+          Our location
+        </h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.location_text }}
         </p>
-        <a href="/location/" class="font-size:body color:black font-weight:bold">Learn more</a>
+        <a
+          href="/location/"
+          class="font-size:body color:black font-weight:bold"
+        >
+          Learn more
+        </a>
       </div>
     </article>
     <div
-      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
-      style="background-image: url('{{ with resources.Get "images/office-03.jpg" }}{{ .RelPermalink }}{{ end }}');"
+      class="two-links__image two-links__2 padding-y:u12 fill-size:cover fill-position:center-center"
+      style="
+        background-image: url('{{ with resources.Get "images/office-03.jpg" }}{{ .RelPermalink }}{{ end }}');
+      "
     ></div>
   </nav>
 

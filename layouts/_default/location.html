@@ -3,8 +3,8 @@
     <h1 class="visually-hidden">{{ .Params.title }}</h1>
   {{ end }}
 
-  <section class="row fill:primary-l5">
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh">
+  <section class="row fill:white">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:u12">
       <p class="font-weight:light font-leading:1 font-size:h3 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
         {{ .Params.headline }}
       </p>
@@ -22,7 +22,7 @@
             width="{{ .Width }}"
             height="{{ .Height }}"
             alt="A modern building constructed of glass and concrete. It has two towers: a smaller one on the left and a larger one on the right, which are connected by a low-rise section with a rooftop garden. The building is at the corner of two major roads."
-            sizes="(min-width: 1332px) 560px, (min-width: 960px) 40vw, (min-width: 640px) 560px, 79vw"
+            sizes="(min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
             srcset="
               {{ $i296.RelPermalink }} {{ $i296.Width }}w,
               {{ $i400.RelPermalink }} {{ $i400.Width }}w,
@@ -36,7 +36,7 @@
         </figure>
       {{ end }}
     </div>
-    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
+    <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:u12 font-size:h6">
       <div class="row margin-bottom:10">
         <div class="column:12 column@sm:8">
           <div class="markup">
@@ -53,35 +53,46 @@
 
   {{ partial "map" . }}
 
-  <nav class="row fill:white" aria-label="Other pages">
-    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+  <nav class="two-links fill:white" aria-label="Other pages">
+    <article class="two-links__text two-links__1 padding:u8 padding@md:u10">
       <div>
         <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">Our services</h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.service_text }}
         </p>
-        <a href="/services/" class="font-size:body color:black font-weight:bold">Learn more</a>
+        <a
+          href="/services/"
+          class="font-size:body color:black font-weight:bold"
+        >
+          Learn more
+        </a>
       </div>
     </article>
     <div
-      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      class="two-links__image two-links__1 padding-y:u12 fill-size:cover fill-position:center-center"
       style="
         background-image: url('https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98b1cd2ea86a7b4796275ef13aadafbf&auto=format&fit=crop&w=800&q=60');
-        background-size: cover;
         background-position: bottom center !important;
       "
     ></div>
-    <article class="column:12 column@md:3 padding:u8 padding@md:u10 padding-y:5vh">
+    <article class="two-links__text two-links__2 padding:u8 padding@md:u10">
       <div>
-        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">About us</h2>
+        <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">
+          About us
+        </h2>
         <p class="font-size:body max-width:prose margin-bottom:u8">
           {{ .Params.about_text }}
         </p>
-        <a href="/about/" class="font-size:body color:black font-weight:bold">Learn more</a>
+        <a
+          href="/about/"
+          class="font-size:body color:black font-weight:bold"
+        >
+          Learn more
+        </a>
       </div>
     </article>
     <div
-      class="column:12 column@md:3 padding-y:10vh fill-size:cover fill-position:center-center"
+      class="two-links__image two-links__2 padding-y:u12 fill-size:cover fill-position:center-center"
       style="
         background-image: url('https://images.unsplash.com/photo-1520931674431-de5b4b2cc562?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf892a06a8141d8d0823c4b4c6cce613&auto=format&fit=crop&w=800&q=60');
       "

@@ -470,12 +470,6 @@ figcaption {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.margin-top\:u12 {
-  margin-top: var(--u12) !important;
-}
-.margin-top\:u10 {
-  margin-top: var(--u10) !important;
-}
 .margin-top\:u8 {
   margin-top: var(--u8) !important;
 }
@@ -484,9 +478,6 @@ figcaption {
 }
 .margin-top\:u4 {
   margin-top: var(--u4) !important;
-}
-.margin-bottom\:u12 {
-  margin-bottom: var(--u12) !important;
 }
 .margin-bottom\:u10 {
   margin-bottom: var(--u10) !important;
@@ -500,24 +491,12 @@ figcaption {
 .margin-bottom\:u4 {
   margin-bottom: var(--u4) !important;
 }
-.margin-bottom\:u2 {
-  margin-bottom: var(--u2) !important;
-}
-.margin-bottom\:10vh {
-  margin-bottom: 10vh !important;
-}
-.margin-bottom\:5vh {
-  margin-bottom: 5vh !important;
-}
 .margin-y\:u8 {
   margin-top: var(--u8) !important;
   margin-bottom: var(--u8) !important;
 }
 .padding\:u8 {
   padding: var(--u8) !important;
-}
-.padding\:u4 {
-  padding: var(--u4) !important;
 }
 .padding-right\:u0 {
   padding-right: var(--u0) !important;
@@ -541,21 +520,9 @@ figcaption {
   padding-top: var(--u6) !important;
   padding-bottom: var(--u6) !important;
 }
-.padding-y\:u12 {
-  padding-top: var(--u12) !important;
-  padding-bottom: var(--u12) !important;
-}
-.padding-y\:10vh {
-  padding-top: 10vh !important;
-  padding-bottom: 10vh !important;
-}
-.padding-y\:6vh {
-  padding-top: 6vh !important;
-  padding-bottom: 6vh !important;
-}
-.padding-y\:5vh {
-  padding-top: 5vh !important;
-  padding-bottom: 5vh !important;
+.padding-y\:u8 {
+  padding-top: var(--u8) !important;
+  padding-bottom: var(--u8) !important;
 }
 .max-width\:100\% {
   max-width: 100% !important;
@@ -617,14 +584,11 @@ figcaption {
 .font-leading\:1{
   line-height:1.2;
 }
-.font-leading\:0 {
-  line-height:1;
-}
 .header {
   position: relative;
   z-index: 3;
   gap: var(--u10);
-  padding: var(--u8) 0;
+  padding-top: var(--u8);
 }
 .header,
 .header\/content {
@@ -687,8 +651,8 @@ figcaption {
 }
 .hero\/content {
   position: relative;
-  padding-top: 24vh;
-  padding-bottom: var(--u10);
+  padding-top: var(--u12);
+  padding-bottom: var(--u12);
 }
 .hero\:services {
   position: relative;
@@ -772,7 +736,7 @@ figcaption {
 }
 
 /* If this width changes, also update mq in JS */
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .wrap {
     padding-left: var(--u12);
     padding-right: var(--u12);
@@ -801,22 +765,12 @@ figcaption {
   .align\@sm\:start {
     text-align: start !important;
   }
-  .align\@sm\:center {
-    text-align: center !important;
-  }
   .padding\@sm\:u10 {
     padding: var(--u10) !important;
   }
-  .padding-bottom\@sm\:10vh {
-    padding-bottom: 10vh !important;
-  }
-  .padding-y\@sm\:10vh {
-    padding-top: 10vh !important;
-    padding-bottom: 10vh !important;
-  }
-  .padding-y\@sm\:5vh {
-    padding-top: 5vh !important;
-    padding-bottom: 5vh !important;
+  .padding-y\@sm\:u12 {
+    padding-top: var(--u12) !important;
+    padding-bottom: var(--u12) !important;
   }
   .font-size\@sm\:h2 {
     font-size: var(--h2) !important;
@@ -830,9 +784,6 @@ figcaption {
   .font-size\@sm\:default {
     font-size: 1rem !important;
   }
-  .font-weight\@sm\:light {
-    font-weight: var(--light) !important;
-  }
   .header\/content\:left {
     padding: var(--u8) var(--u10);
   }
@@ -840,10 +791,6 @@ figcaption {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  .hero\/content {
-    padding-top: 9vh;
-    padding-bottom: 18vh;
   }
   .line\:short {
     width: 80px;
@@ -873,6 +820,9 @@ figcaption {
   }
   .padding\@md\:u10 {
     padding: var(--u10) !important;
+  }
+  .display\@md\:block {
+    display: block !important;
   }
 }
 @media (min-width: 1600px) {
@@ -1184,4 +1134,40 @@ _::-webkit-full-page-media, _:future,
   overflow: hidden;
   position: absolute;
   width: 1px;
+}
+
+.two-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text1"
+    "image1"
+    "text2"
+    "image2";
+}
+@media (min-width: 768px) {
+  .two-links {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text1  image1"
+      "image2 text2";
+  }
+}
+@media (min-width: 1140px) {
+  .two-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "text1 image1 text2 image2";
+  }
+}
+.two-links__text.two-links__1 { grid-area: text1; }
+.two-links__image.two-links__1 { grid-area: image1; }
+.two-links__text.two-links__2 { grid-area: text2; }
+.two-links__image.two-links__2 { grid-area: image2; }
+.two-links__image {
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 768px) {
+  .two-links__image {
+    aspect-ratio: auto;
+  }
 }
