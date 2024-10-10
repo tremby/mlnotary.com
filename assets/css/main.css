@@ -665,7 +665,7 @@ figcaption {
 .header-extra-shown-when-wide {
   display: none;
 }
-@media (min-width: 876px) {
+@media (min-width: 1024px) {
   .header-extra-shown-when-wide {
     display: inline;
   }
@@ -1207,4 +1207,17 @@ _::-webkit-full-page-media, _:future,
   .two-links__image {
     aspect-ratio: auto;
   }
+}
+
+.button {
+  border-radius: 9999px;
+  background-color: var(--accent);
+  padding: 0.1em 0.75em;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: var(--bold);
+  color: var(--primary-d1);
+}
+.button:not(:disabled):hover {
+  border-color: var(--primary-l2);
 }
