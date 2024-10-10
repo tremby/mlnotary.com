@@ -495,6 +495,12 @@ figcaption {
   margin-top: var(--u8) !important;
   margin-bottom: var(--u8) !important;
 }
+.padding\:u12 {
+  padding: var(--u12) !important;
+}
+.padding\:u10 {
+  padding: var(--u10) !important;
+}
 .padding\:u8 {
   padding: var(--u8) !important;
 }
@@ -520,9 +526,26 @@ figcaption {
   padding-top: var(--u6) !important;
   padding-bottom: var(--u6) !important;
 }
-.padding-y\:u8 {
+.padding-y\:u10 {
+  padding-top: var(--u10) !important;
+  padding-bottom: var(--u10) !important;
+}
+.padding-y\:u12 {
+  padding-top: var(--u12) !important;
+  padding-bottom: var(--u12) !important;
+}
+.padding-y\:u13 {
+  padding-top: var(--u13) !important;
+  padding-bottom: var(--u13) !important;
+}
+.padding-top\:u10 {
+  padding-top: var(--u10) !important;
+}
+.padding-top\:u8 {
   padding-top: var(--u8) !important;
-  padding-bottom: var(--u8) !important;
+}
+.padding-bottom\:u12 {
+  padding-bottom: var(--u12) !important;
 }
 .max-width\:100\% {
   max-width: 100% !important;
@@ -589,6 +612,7 @@ figcaption {
   z-index: 3;
   gap: var(--u10);
   padding-top: var(--u8);
+  padding-bottom: var(--u8);
 }
 .header,
 .header\/content {
@@ -651,8 +675,6 @@ figcaption {
 }
 .hero\/content {
   position: relative;
-  padding-top: var(--u12);
-  padding-bottom: var(--u12);
 }
 .hero\:services {
   position: relative;
@@ -687,14 +709,15 @@ figcaption {
   font-size: var(--h2);
 }
 .markup > h2 {
-  margin-top: var(--u8);
-  margin-bottom: var(--u4);
+  margin-top: var(--u10);
+  margin-bottom: var(--u6);
   font-weight: var(--regular);
   font-size: var(--h3);
 }
 .markup > h3 {
-  margin-top: var(--u6);
-  margin-bottom: var(--u2);
+  margin-top: var(--u8);
+  margin-bottom: var(--u4);
+  font-weight: var(--regular);
   font-size: var(--h4);
 }
 .markup > :first-child {
@@ -772,11 +795,18 @@ figcaption {
     padding-top: var(--u12) !important;
     padding-bottom: var(--u12) !important;
   }
+  .padding-y\@sm\:u13 {
+    padding-top: var(--u13) !important;
+    padding-bottom: var(--u13) !important;
+  }
   .font-size\@sm\:h2 {
     font-size: var(--h2) !important;
   }
   .font-size\@sm\:h3 {
     font-size: var(--h3) !important;
+  }
+  .font-size\@sm\:h4 {
+    font-size: var(--h4) !important;
   }
   .font-size\@sm\:h5 {
     font-size: var(--h5) !important;
@@ -820,6 +850,12 @@ figcaption {
   }
   .padding\@md\:u10 {
     padding: var(--u10) !important;
+  }
+  .padding-top\@md\:u12 {
+    padding-top: var(--u12) !important;
+  }
+  .padding-bottom\@md\:u13 {
+    padding-bottom: var(--u13) !important;
   }
   .display\@md\:block {
     display: block !important;

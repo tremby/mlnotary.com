@@ -19,6 +19,8 @@ Depending on the value of the home this can save you a lot of money!
 
 {{< ptt-calculator class="margin-y:u8" >}}
 
+## FAQ
+
 ### Is this up to date for the 2024 changes?
 
 Yes,
