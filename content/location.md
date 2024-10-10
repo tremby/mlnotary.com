@@ -3,7 +3,7 @@ layout = "location"
 title = "Location"
 description = "We are easily accessible via car, bus, and train, at 509 SW Marine Drive, Vancouver, at the intersection of Cambie Street and Southwest Marine Drive."
 headline = "Located in South Vancouver, we are situated at the intersection of Cambie Street and Southwest Marine Drive — easily accessible to the surrounding communities in Vancouver and Richmond."
-service_text = "At Marine Landing Notary Public,  we want to provide the best services to our clients and community. Here is how we can help and support your needs."
+service_text = "As a full-service notary public practice, we offer comprehensive notary services for real estate transactions, personal estate planning, and general notarization needs. Whether you need help with property transfers, wills, powers of attorney, or other legal documents, our experienced team is here to support all your notary requirements."
 about_text = "We strive to serve all our customers in the highest regard. We want customers to leave with confidence that their documents and plans are cared for, delivering the highest quality of service to our community."
 +++
 
@@ -13,10 +13,10 @@ We are conveniently located within walking distance of the Marine Drive Canada L
 
 ###### Parking
 
-If arriving by vehicle, there is free street parking along Lord Street.
-Please be mindful of the parking restrictions in the area.
+If you're arriving by vehicle, free street parking is available along Lord Street.
+Please be aware of local parking restrictions.
 
-A paid parking lot is also located in the complex (which is named “Northwest”) on parking level P1.
-To access the parking lot, please follow the signs along the building and enter the residential entrance via Lord Street.
-All stalls marked as a retail spot are available for parking.
-An elevator will then take you up to the ground floor.
+For paid parking, a lot is available on parking level P1 of the complex.
+To access it, follow the signs along the building and enter the residential entrance via Lord Street.
+Parking is available in any stall marked for retail.
+An elevator will take you to the ground floor.
