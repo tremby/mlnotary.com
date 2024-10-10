@@ -38,7 +38,7 @@
   --grey: #5c789c;
   --primary: #453a60;
   --red: #b32d2d;
-  --accent: #c29244;
+  --accent: #fad85c;
   --white: #fff;
   --black: #000;
   --grey-l1: #7d93b0;
@@ -163,7 +163,7 @@ body {
 }
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: #000;
 }
 h1,
 h2,
