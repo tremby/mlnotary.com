@@ -7,6 +7,16 @@ service_text = "As a full-service notary public practice, we offer comprehensive
 about_text = "We strive to serve all our customers in the highest regard. We want customers to leave with confidence that their documents and plans are cared for, delivering the highest quality of service to our community."
 +++
 
+### Our address
+
+<p>
+  <address>
+    {{< address >}}
+  </address>
+</p>
+
+[Get directions via Google Maps]({{< directions-url >}})
+
 ### Transit
 
 We are conveniently located within walking distance of the Marine Drive Canada Line station and its bus loop.
