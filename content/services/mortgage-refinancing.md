@@ -4,6 +4,8 @@ weight = 20
 title = "Mortgage refinancing services"
 description = "We can assist in mortgage refinancing for Lower Mainland homeowners, helping you leverage home equity for your important life decisions."
 [menus]
+  [menus.main]
+    parent = "services"
   [menus.services]
     name = "Mortgage refinancing"
 +++

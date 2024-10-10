@@ -4,6 +4,8 @@ weight = 60
 title = "Notarization services"
 description = "We notarize diverse personal documents, such as statutory declarations, insurance loss declarations, certified copies, proofs of identity, and affidavits."
 [menus]
+  [menus.main]
+    parent = "services"
   [menus.services]
     name = "Notarizations"
 +++

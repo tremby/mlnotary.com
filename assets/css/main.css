@@ -654,6 +654,25 @@ figcaption {
   margin: 2px 0;
   background: var(--primary);
 }
+.main-menu-item {
+  position: relative;
+  display: block;
+}
+.main-menu-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.main-menu-item.has-active::before {
+  background-color: var(--primary-l3);
+}
+.main-menu-item.is-active::before {
+  background-color: var(--primary-l1);
+}
 .header-extra-shown-when-wide {
   display: none;
 }

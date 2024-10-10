@@ -4,6 +4,8 @@ weight = 30
 title = "Wills and estate planning services"
 description = "Crucial if you own assets or have dependents, we can craft you a personalized will under BC's Wills, Estates, and Succession Act."
 [menus]
+  [menus.main]
+    parent = "services"
   [menus.services]
     name = "Wills and estate planning"
 +++

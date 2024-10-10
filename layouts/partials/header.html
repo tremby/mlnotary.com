@@ -18,9 +18,23 @@
     </div>
 
     <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
+      {{ $page := .Page }}
       {{ range site.Menus.main }}
         {{ if not (eq .URL "/") }}
-          <a href="{{ .URL }}" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
+          <a
+            href="{{ .URL }}"
+            class="
+              main-menu-item
+              font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none
+              {{ if $page.HasMenuCurrent .Menu . }}has-active{{ end }}
+              {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}
+            "
+            {{ if $page.HasMenuCurrent .Menu . }}
+              aria-current="true"
+            {{ else if $page.IsMenuCurrent .Menu . }}
+              aria-current="page"
+            {{ end }}
+          >
             {{ if .Pre }}
               <span class="header-extra-shown-when-wide">
                 {{ .Pre }}

@@ -7,9 +7,23 @@
 
     <div class="padding-top:3">
       <ul class="flex flex-direction:column align-items:center gap:u4">
+        {{ $page := .Page }}
         {{ range site.Menus.main }}
           <li>
-            <a href="{{ .URL }}" class="font-size:h4 color:black text-decoration:none">
+            <a
+              href="{{ .URL }}"
+              class="
+                main-menu-item
+                font-size:h4 text-decoration:none
+                {{ if $page.HasMenuCurrent .Menu . }}has-active{{ end }}
+                {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}
+              "
+              {{ if $page.HasMenuCurrent .Menu . }}
+                aria-current="true"
+              {{ else if $page.IsMenuCurrent .Menu . }}
+                aria-current="page"
+              {{ end }}
+            >
               {{ .Pre }}
               {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
               {{ .Post }}

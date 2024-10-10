@@ -4,6 +4,8 @@ weight = 10
 title = "Real estate purchase and sale services"
 description = "We facilitate seamless property transactions in BC, covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates for homes and businesses."
 [menus]
+  [menus.main]
+    parent = "services"
   [menus.services]
     name = "Real estate purchase and sale"
 +++

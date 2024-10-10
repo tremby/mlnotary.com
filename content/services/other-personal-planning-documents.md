@@ -4,6 +4,8 @@ weight = 50
 title = "Other personal planning documents"
 description = "Alongside your will, we can assist with other personal planning documents, including representation agreements, advance directives, and related paperwork."
 [menus]
+  [menus.main]
+    parent = "services"
   [menus.services]
     name = "Other personal planning documents"
 +++
