@@ -5,11 +5,12 @@ description = "Marine Landing Notary Public, led by Jonathan Wong, has provided 
 headline = "At Marine Landing Notary Public, we want all our clients to be confident that their legal needs are met while being delivered at the highest quality."
 +++
 
-Based in South Vancouver, Marine Landing Notary Public was founded by Jonathan Wong in 2017 with a vision to provide access to affordable legal services while maintaining the profession’s ideology of impeccable integrity and practising in a tradition of trust.
+### About Marine Landing Notary Public
 
-Prior to opening his own firm, Jonathan spent more than a decade working in the legal industry as a legal assistant and paralegal alongside his father, George Wong.
-After graduating with a Bachelor of Legal Studies (Paralegal) degree from Capilano University and a Master of Arts (Applied Legal Studies) from Simon Fraser University, Jonathan was commissioned as a notary public by the Supreme Court of British Columbia in 2017.
+Founded in 2017 by Jonathan Wong, Marine Landing Notary Public is committed to offering affordable legal services in South Vancouver while upholding the highest standards of integrity and trust.
 
-Since 2017, Marine Landing Notary Public has helped thousands of clients with their legal needs relating to real estate, personal planning, and notarizations.
+Jonathan Wong brings over a decade of experience in the legal industry, having worked as a legal assistant and paralegal alongside his father. He holds a Bachelor of Legal Studies (Paralegal) from Capilano University and a Master of Arts (Applied Legal Studies) from Simon Fraser University. In 2017, Jonathan was commissioned as a notary public by the Supreme Court of British Columbia.
+
+Since its founding, Marine Landing Notary Public has assisted thousands of clients with legal services in real estate transactions, personal planning, and notarizations.
 
 Marine Landing Notary Public is operated by Jonathan Wong Notary Corporation.
