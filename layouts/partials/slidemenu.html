@@ -7,31 +7,15 @@
 
     <div class="padding-top:3">
       <ul class="flex flex-direction:column align-items:center gap:u4">
-        <li>
-          <a href="/" class="font-size:h4 color:black text-decoration:none">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="/services/" class="font-size:h4 color:black text-decoration:none">
-            Our Services
-          </a>
-        </li>
-        <li>
-          <a href="/about/" class="font-size:h4 color:black text-decoration:none">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="/location/" class="font-size:h4 color:black text-decoration:none">
-            Our Location
-          </a>
-        </li>
-        <li>
-          <a href="/ptt-calculator/" class="font-size:h4 color:black text-decoration:none">
-            <abbr title="Property transfer tax" style="text-decoration: none">PTT</abbr> Calculator
-          </a>
-        </li>
+        {{ range site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}" class="font-size:h4 color:black text-decoration:none">
+              {{ .Pre }}
+              {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
+              {{ .Post }}
+            </a>
+          </li>
+        {{ end }}
       </ul>
 
       <div class="padding-x:u4">

@@ -18,26 +18,23 @@
     </div>
 
     <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
-      <div>
-        <a href="/services/" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <span class="header-extra-shown-when-wide">Our</span> Services
-        </a>
-      </div>
-      <div>
-        <a href="/about/" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          About <span class="header-extra-shown-when-wide">Us</span>
-        </a>
-      </div>
-      <div>
-        <a href="/location/" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <span class="header-extra-shown-when-wide">Our</span> Location
-        </a>
-      </div>
-      <div>
-        <a href="/ptt-calculator/" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <abbr title="Property transfer tax" style="text-decoration: none">PTT</abbr> Calculator
-        </a>
-      </div>
+      {{ range site.Menus.main }}
+        {{ if not (eq .URL "/") }}
+          <a href="{{ .URL }}" class="font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
+            {{ if .Pre }}
+              <span class="header-extra-shown-when-wide">
+                {{ .Pre }}
+              </span>
+            {{ end }}
+            {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
+            {{ if .Post }}
+              <span class="header-extra-shown-when-wide">
+                {{ .Post }}
+              </span>
+            {{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
     </nav>
   </header>
 </div>
