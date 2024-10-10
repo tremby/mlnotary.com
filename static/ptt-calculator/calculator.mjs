@@ -38,7 +38,7 @@ export default class Calculator {
 
     this.fairMarketValueInput = this.getChildElOrThrow("input[name='fair-market-value']");
     this.outputContainer = this.getChildElOrThrow(".output");
-    this.totalTaxOutput = this.getChildElOrThrow(".total-tax-output");
+    this.totalTaxOutput = this.getChildElOrThrow("#total-tax-output");
     this.totalTaxBreakdownContainer = this.getChildElOrThrow(".total-tax-breakdown-container");
     this.totalTaxBreakdown = this.getChildElOrThrow(".total-tax-breakdown");
     this.fthbpContainer = this.getChildElOrThrow(".fthbp");

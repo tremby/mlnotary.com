@@ -1031,13 +1031,14 @@ _::-webkit-full-page-media, _:future,
   background-color: var(--primary);
   color: var(--white);
 }
-.ptt-calculator .total-tax h3 {
+.ptt-calculator .total-tax label {
+  display: block;
   color: inherit;
   margin: 0;
   font-weight: normal;
   font-size: var(--body);
 }
-.ptt-calculator .total-tax-output {
+.ptt-calculator #total-tax-output {
   font-weight: bold;
   font-size: var(--h2);
 }

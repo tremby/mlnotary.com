@@ -17,12 +17,16 @@
   <section>
     <div class="wrap max-width:100% overflow:hidden padding-left:u0 padding-right:u0">
       <div class="tab-position:left tab:reset tab:services row">
-        <div class="tab/header column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12">
-          {{ $page := .Page }}
-          {{ range site.Menus.services }}
-            <a href="{{ .URL }}" class="tab/item font-size:h5 font-size@sm:h4 {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}">{{ .Name }}</a>
-          {{ end }}
-        </div>
+        <nav aria-label="Services navigation" class="column:12 column@sm:4 fill:grey-l5 padding:u8 padding@sm:u10 padding@md:u12">
+          <ul class="tab/header">
+            {{ $page := .Page }}
+            {{ range site.Menus.services }}
+              <li>
+                <a href="{{ .URL }}" class="tab/item font-size:h5 font-size@sm:h4 {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
 
         <div class="column:12 column@sm:8 fill:white padding:u8 padding@sm:u10 padding@md:u12">
           <div class="tab/item">
