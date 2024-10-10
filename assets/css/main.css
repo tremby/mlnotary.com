@@ -400,7 +400,7 @@ figcaption {
   height: var(--line-weight);
   background-color: var(--border-color);
 }
-.display {
+.display\:block {
   display: block !important;
 }
 .display\:none {
