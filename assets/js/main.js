@@ -34,7 +34,7 @@ function toggleMenu(open) {
 
 // Close menu if we resize to a non-hamburger width
 // Note this mq should match that in the CSS
-const mq = window.matchMedia("(min-width: 960px)");
+const mq = window.matchMedia("(min-width: 768px)");
 mq.addEventListener("change", (e) => {
   if (e.matches) toggleMenu(false);
 });

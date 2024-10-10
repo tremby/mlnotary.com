@@ -2,8 +2,13 @@
 layout = "calculator"
 title = "Property transfer tax calculator"
 description = "Find out how much tax will be due on your property transfer, taking into account 2024’s updated first-time home buyer and newly-built home exemptions."
-headline = "Property transfer tax calculator"
+weight = 50
+[menus]
+  [menus.main]
+    name = "PTT Calculator"
 +++
+
+# Property transfer tax calculator
 
 Use this calculator to find out
 how much transfer tax will be payable when you buy your home.
@@ -13,6 +18,8 @@ you might qualify for an exemption.
 Depending on the value of the home this can save you a lot of money!
 
 {{< ptt-calculator class="margin-y:u8" >}}
+
+## FAQ
 
 ### Is this up to date for the 2024 changes?
 

@@ -38,7 +38,7 @@
   --grey: #5c789c;
   --primary: #453a60;
   --red: #b32d2d;
-  --accent: #c29244;
+  --accent: #fad85c;
   --white: #fff;
   --black: #000;
   --grey-l1: #7d93b0;
@@ -163,7 +163,7 @@ body {
 }
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: #000;
 }
 h1,
 h2,
@@ -205,17 +205,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-blockquote {
-  margin-top: var(--u7);
-  margin-bottom: var(--u7);
-  padding: var(--u4) var(--u7);
-  background: var(--grey-l4);
-  box-shadow: inset 4px 0 0 0 var(--primary);
-}
-blockquote p {
-  margin: 0;
-  font-size: var(--font-size);
 }
 figure {
   margin: 0;
@@ -335,7 +324,7 @@ figcaption {
   display: flex;
   position: relative;
   margin: 0;
-  gap: 1em;
+  gap: 1.25em;
   line-height: 1.2;
 }
 .tab\/header .tab\/item {
@@ -481,12 +470,6 @@ figcaption {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.margin-top\:u12 {
-  margin-top: var(--u12) !important;
-}
-.margin-top\:u10 {
-  margin-top: var(--u10) !important;
-}
 .margin-top\:u8 {
   margin-top: var(--u8) !important;
 }
@@ -495,9 +478,6 @@ figcaption {
 }
 .margin-top\:u4 {
   margin-top: var(--u4) !important;
-}
-.margin-bottom\:u12 {
-  margin-bottom: var(--u12) !important;
 }
 .margin-bottom\:u10 {
   margin-bottom: var(--u10) !important;
@@ -511,24 +491,18 @@ figcaption {
 .margin-bottom\:u4 {
   margin-bottom: var(--u4) !important;
 }
-.margin-bottom\:u2 {
-  margin-bottom: var(--u2) !important;
-}
-.margin-bottom\:10vh {
-  margin-bottom: 10vh !important;
-}
-.margin-bottom\:5vh {
-  margin-bottom: 5vh !important;
-}
 .margin-y\:u8 {
   margin-top: var(--u8) !important;
   margin-bottom: var(--u8) !important;
 }
+.padding\:u12 {
+  padding: var(--u12) !important;
+}
+.padding\:u10 {
+  padding: var(--u10) !important;
+}
 .padding\:u8 {
   padding: var(--u8) !important;
-}
-.padding\:u4 {
-  padding: var(--u4) !important;
 }
 .padding-right\:u0 {
   padding-right: var(--u0) !important;
@@ -552,21 +526,26 @@ figcaption {
   padding-top: var(--u6) !important;
   padding-bottom: var(--u6) !important;
 }
+.padding-y\:u10 {
+  padding-top: var(--u10) !important;
+  padding-bottom: var(--u10) !important;
+}
 .padding-y\:u12 {
   padding-top: var(--u12) !important;
   padding-bottom: var(--u12) !important;
 }
-.padding-y\:10vh {
-  padding-top: 10vh !important;
-  padding-bottom: 10vh !important;
+.padding-y\:u13 {
+  padding-top: var(--u13) !important;
+  padding-bottom: var(--u13) !important;
 }
-.padding-y\:6vh {
-  padding-top: 6vh !important;
-  padding-bottom: 6vh !important;
+.padding-top\:u10 {
+  padding-top: var(--u10) !important;
 }
-.padding-y\:5vh {
-  padding-top: 5vh !important;
-  padding-bottom: 5vh !important;
+.padding-top\:u8 {
+  padding-top: var(--u8) !important;
+}
+.padding-bottom\:u12 {
+  padding-bottom: var(--u12) !important;
 }
 .max-width\:100\% {
   max-width: 100% !important;
@@ -622,11 +601,18 @@ figcaption {
 .font-height\:1\.1 {
   line-height: 1.1 !important;
 }
+.font-leading\:2 {
+  line-height:1.4;
+}
+.font-leading\:1{
+  line-height:1.2;
+}
 .header {
   position: relative;
   z-index: 3;
   gap: var(--u10);
-  padding: var(--u8) 0;
+  padding-top: var(--u8);
+  padding-bottom: var(--u8);
 }
 .header,
 .header\/content {
@@ -656,6 +642,25 @@ figcaption {
   margin: 2px 0;
   background: var(--primary);
 }
+.main-menu-item {
+  position: relative;
+  display: block;
+}
+.main-menu-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.main-menu-item.has-active::before {
+  background-color: var(--primary-l3);
+}
+.main-menu-item.is-active::before {
+  background-color: var(--primary-l1);
+}
 .header-extra-shown-when-wide {
   display: none;
 }
@@ -670,8 +675,6 @@ figcaption {
 }
 .hero\/content {
   position: relative;
-  padding-top: 24vh;
-  padding-bottom: var(--u10);
 }
 .hero\:services {
   position: relative;
@@ -700,16 +703,25 @@ figcaption {
 .markup > :is(p, ul) {
   font-size: var(--h6);
 }
-.markup > h3:first-child {
-  margin-top: 0;
-}
-.markup > h3 {
-  margin-top: var(--u11);
+.markup > h1 {
   margin-bottom: var(--u6);
   font-weight: var(--regular);
+  font-size: var(--h2);
 }
-.markup > h6 {
+.markup > h2 {
+  margin-top: var(--u10);
+  margin-bottom: var(--u6);
+  font-weight: var(--regular);
+  font-size: var(--h3);
+}
+.markup > h3 {
+  margin-top: var(--u8);
   margin-bottom: var(--u4);
+  font-weight: var(--regular);
+  font-size: var(--h4);
+}
+.markup > :first-child {
+  margin-top: 0;
 }
 .markup > ul {
   margin: 0;
@@ -722,6 +734,20 @@ figcaption {
 .markup > ul {
   list-style-type: disc;
 }
+.markup > blockquote {
+  margin-top: var(--u7);
+  margin-bottom: var(--u7);
+  padding: var(--u4) var(--u7);
+  background: var(--grey-l4);
+  box-shadow: inset 4px 0 0 0 var(--primary);
+}
+.markup > blockquote p {
+  margin: 0;
+  font-size: var(--font-size);
+}
+.markup > blockquote p + p {
+  margin-top: 1em;
+}
 .flex-direction\:column {
   flex-direction: column;
 }
@@ -733,7 +759,7 @@ figcaption {
 }
 
 /* If this width changes, also update mq in JS */
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .wrap {
     padding-left: var(--u12);
     padding-right: var(--u12);
@@ -762,22 +788,16 @@ figcaption {
   .align\@sm\:start {
     text-align: start !important;
   }
-  .align\@sm\:center {
-    text-align: center !important;
-  }
   .padding\@sm\:u10 {
     padding: var(--u10) !important;
   }
-  .padding-bottom\@sm\:10vh {
-    padding-bottom: 10vh !important;
+  .padding-y\@sm\:u12 {
+    padding-top: var(--u12) !important;
+    padding-bottom: var(--u12) !important;
   }
-  .padding-y\@sm\:10vh {
-    padding-top: 10vh !important;
-    padding-bottom: 10vh !important;
-  }
-  .padding-y\@sm\:5vh {
-    padding-top: 5vh !important;
-    padding-bottom: 5vh !important;
+  .padding-y\@sm\:u13 {
+    padding-top: var(--u13) !important;
+    padding-bottom: var(--u13) !important;
   }
   .font-size\@sm\:h2 {
     font-size: var(--h2) !important;
@@ -785,11 +805,14 @@ figcaption {
   .font-size\@sm\:h3 {
     font-size: var(--h3) !important;
   }
+  .font-size\@sm\:h4 {
+    font-size: var(--h4) !important;
+  }
   .font-size\@sm\:h5 {
     font-size: var(--h5) !important;
   }
-  .font-weight\@sm\:light {
-    font-weight: var(--light) !important;
+  .font-size\@sm\:default {
+    font-size: 1rem !important;
   }
   .header\/content\:left {
     padding: var(--u8) var(--u10);
@@ -798,10 +821,6 @@ figcaption {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  .hero\/content {
-    padding-top: 9vh;
-    padding-bottom: 18vh;
   }
   .line\:short {
     width: 80px;
@@ -831,6 +850,15 @@ figcaption {
   }
   .padding\@md\:u10 {
     padding: var(--u10) !important;
+  }
+  .padding-top\@md\:u12 {
+    padding-top: var(--u12) !important;
+  }
+  .padding-bottom\@md\:u13 {
+    padding-bottom: var(--u13) !important;
+  }
+  .display\@md\:block {
+    display: block !important;
   }
 }
 @media (min-width: 1600px) {
@@ -898,6 +926,11 @@ figcaption {
     margin-left: 0;
     margin-right: 0;
   }
+}
+.ptt-calculator h2 {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 .ptt-calculator fieldset {
   margin: 2rem 0;
@@ -1129,4 +1162,48 @@ _::-webkit-full-page-media, _:future,
   stroke: currentColor;
   stroke-width: 1.5;
   display: block;
+}
+.visually-hidden {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.two-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text1"
+    "image1"
+    "text2"
+    "image2";
+}
+@media (min-width: 768px) {
+  .two-links {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text1  image1"
+      "image2 text2";
+  }
+}
+@media (min-width: 1140px) {
+  .two-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "text1 image1 text2 image2";
+  }
+}
+.two-links__text.two-links__1 { grid-area: text1; }
+.two-links__image.two-links__1 { grid-area: image1; }
+.two-links__text.two-links__2 { grid-area: text2; }
+.two-links__image.two-links__2 { grid-area: image2; }
+.two-links__image {
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 768px) {
+  .two-links__image {
+    aspect-ratio: auto;
+  }
 }

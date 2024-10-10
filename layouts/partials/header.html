@@ -18,26 +18,37 @@
     </div>
 
     <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
-      <div>
-        <a href="/services/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <span class="header-extra-shown-when-wide">Our</span> Services
-        </a>
-      </div>
-      <div>
-        <a href="/about/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          About <span class="header-extra-shown-when-wide">Us</span>
-        </a>
-      </div>
-      <div>
-        <a href="/location/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <span class="header-extra-shown-when-wide">Our</span> Location
-        </a>
-      </div>
-      <div>
-        <a href="/ptt-calculator/" class="font font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none">
-          <abbr title="Property transfer tax" style="text-decoration: none">PTT</abbr> Calculator
-        </a>
-      </div>
+      {{ $page := .Page }}
+      {{ range site.Menus.main }}
+        {{ if not (eq .URL "/") }}
+          <a
+            href="{{ .URL }}"
+            class="
+              main-menu-item
+              font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none
+              {{ if $page.HasMenuCurrent .Menu . }}has-active{{ end }}
+              {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}
+            "
+            {{ if $page.HasMenuCurrent .Menu . }}
+              aria-current="true"
+            {{ else if $page.IsMenuCurrent .Menu . }}
+              aria-current="page"
+            {{ end }}
+          >
+            {{ if .Pre }}
+              <span class="header-extra-shown-when-wide">
+                {{ .Pre }}
+              </span>
+            {{ end }}
+            {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
+            {{ if .Post }}
+              <span class="header-extra-shown-when-wide">
+                {{ .Post }}
+              </span>
+            {{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
     </nav>
   </header>
 </div>
