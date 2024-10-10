@@ -5,7 +5,7 @@
         {{ .Site.Data.meta.address_1 }}<br />
         {{ .Site.Data.meta.address_2 }}
         <div class="margin-top:u4">
-          Email: <a href="mailto:jwong@mlnotary.com" class="color:white">jwong@mlnotary.com</a><br />
+          Email: <a href="mailto:{{ .Site.Data.meta.email }}" class="color:white">{{ .Site.Data.meta.email }}</a><br />
           Phone: <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">{{ .Site.Data.meta.phone }}</a><br />
           Fax: <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">{{ .Site.Data.meta.fax }}</a>
         </div>
