@@ -610,9 +610,10 @@ figcaption {
 .header {
   position: relative;
   z-index: 3;
-  gap: var(--u10);
-  padding-top: var(--u8);
-  padding-bottom: var(--u8);
+  gap: var(--u8);
+  padding: var(--u6);
+  max-width: var(--wrap-width);
+  margin: 0 auto;
 }
 .header,
 .header\/content {
@@ -664,7 +665,7 @@ figcaption {
 .header-extra-shown-when-wide {
   display: none;
 }
-@media (min-width: 1008px) {
+@media (min-width: 876px) {
   .header-extra-shown-when-wide {
     display: inline;
   }
@@ -751,15 +752,24 @@ figcaption {
 .flex-direction\:column {
   flex-direction: column;
 }
+.nowrap {
+  white-space: nowrap;
+}
 
-@media (min-width: 512px) {
+@media (min-width: 450px) {
   .header\/logo img {
-    width: 269px;
+    width: 224px;
   }
 }
 
 /* If this width changes, also update mq in JS */
 @media (min-width: 768px) {
+  .header {
+    padding: var(--u8);
+  }
+  .header\/logo img {
+    width: 269px;
+  }
   .wrap {
     padding-left: var(--u12);
     padding-right: var(--u12);

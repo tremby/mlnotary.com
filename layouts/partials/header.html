@@ -1,54 +1,52 @@
-<div class="wrap">
-  <header class="header fill:white">
-    <div class="header/content grow">
-      <div class="header/item">
-        <a href="/" class="header/logo" aria-label="Go to home page">
-          {{- with resources.Get "images/logo-brand.svg" -}}
-            <img src="{{ .RelPermalink }}" width="233" height="52" alt="Marine Landing Notary Public" />
-          {{- end -}}
-        </a>
-      </div>
-      <div class="header/item display:flex display@sm:none">
-        <button type="button" class="header/hamburger js-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+<header class="header fill:white">
+  <div class="header/content grow">
+    <div class="header/item">
+      <a href="/" class="header/logo" aria-label="Go to home page">
+        {{- with resources.Get "images/logo-brand.svg" -}}
+          <img src="{{ .RelPermalink }}" width="233" height="52" alt="Marine Landing Notary Public" />
+        {{- end -}}
+      </a>
     </div>
+    <div class="header/item display:flex display@sm:none">
+      <button type="button" class="header/hamburger js-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
 
-    <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
-      {{ $page := .Page }}
-      {{ range site.Menus.main }}
-        {{ if not (eq .URL "/") }}
-          <a
-            href="{{ .URL }}"
-            class="
-              main-menu-item
-              font-weight:regular font-size:tiny font-size@sm:h5 text-decoration:none
-              {{ if $page.HasMenuCurrent .Menu . }}has-active{{ end }}
-              {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}
-            "
-            {{ if $page.HasMenuCurrent .Menu . }}
-              aria-current="true"
-            {{ else if $page.IsMenuCurrent .Menu . }}
-              aria-current="page"
-            {{ end }}
-          >
-            {{ if .Pre }}
-              <span class="header-extra-shown-when-wide">
-                {{ .Pre }}
-              </span>
-            {{ end }}
-            {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
-            {{ if .Post }}
-              <span class="header-extra-shown-when-wide">
-                {{ .Post }}
-              </span>
-            {{ end }}
-          </a>
-        {{ end }}
+  <nav class="header/content display:none display@sm:flex" aria-label="Main navigation">
+    {{ $page := .Page }}
+    {{ range site.Menus.main }}
+      {{ if not (eq .URL "/") }}
+        <a
+          href="{{ .URL }}"
+          class="
+            main-menu-item
+            font-weight:regular font-size:h4 font-size@sm:h5 text-decoration:none nowrap
+            {{ if $page.HasMenuCurrent .Menu . }}has-active{{ end }}
+            {{ if $page.IsMenuCurrent .Menu . }}is-active{{ end }}
+          "
+          {{ if $page.HasMenuCurrent .Menu . }}
+            aria-current="true"
+          {{ else if $page.IsMenuCurrent .Menu . }}
+            aria-current="page"
+          {{ end }}
+        >
+          {{ if .Pre }}
+            <span class="header-extra-shown-when-wide">
+              {{ .Pre }}
+            </span>
+          {{ end }}
+          {{ safeHTML (replaceRE `\bPTT\b` "<abbr title=\"Property transfer tax\" style=\"text-decoration: none\">PTT</abbr>" (htmlEscape .Name)) }}
+          {{ if .Post }}
+            <span class="header-extra-shown-when-wide">
+              {{ .Post }}
+            </span>
+          {{ end }}
+        </a>
       {{ end }}
-    </nav>
-  </header>
-</div>
+    {{ end }}
+  </nav>
+</header>
