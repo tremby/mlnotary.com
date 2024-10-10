@@ -37,16 +37,14 @@
       {{ end }}
     </div>
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:u12 font-size:h6">
-      <div class="row margin-bottom:10">
-        <div class="column:12 column@sm:8">
-          <div class="markup">
-            {{ .Content }}
-            <h2>Opening hours</h2>
-          </div>
-          <ul class="list">
-            {{ partial "hours" . }}
-          </ul>
+      <div class="margin-bottom:10 max-width:prose">
+        <div class="markup">
+          {{ .Content }}
+          <h2>Opening hours</h2>
         </div>
+        <ul class="list">
+          {{ partial "hours" . }}
+        </ul>
       </div>
     </div>
   </section>
