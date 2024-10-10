@@ -625,6 +625,15 @@ figcaption {
 .font-height\:1\.1 {
   line-height: 1.1 !important;
 }
+.font-leading\:2 {
+  line-height:1.4;
+}
+.font-leading\:1{
+  line-height:1.2;
+}
+.font-leading\:0 {
+  line-height:1;
+}
 .header {
   position: relative;
   z-index: 3;
