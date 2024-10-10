@@ -2,8 +2,7 @@
   <div class="wrap align:center max-width:max-content">
     <div class="flex gap:u4 flex-direction:column flex-direction@sm:row align@sm:start justify-content:space-between">
       <address class="font-size:h6 color:white">
-        {{ .Site.Data.meta.address_1 }}<br />
-        {{ .Site.Data.meta.address_2 }}
+        {{ partial "address" . }}
         <div class="margin-top:u4">
           Email: <a href="mailto:{{ .Site.Data.meta.email }}" class="color:white">{{ .Site.Data.meta.email }}</a><br />
           Phone: <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">{{ .Site.Data.meta.phone }}</a><br />
