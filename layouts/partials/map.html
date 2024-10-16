@@ -24,7 +24,7 @@
     <div class="map-pin">
       <div class="map-pin__bubble">
         {{- with resources.Get "images/map/pin.svg" -}}
-          <img src="{{ .RelPermalink }}" width="64" height="78" alt="Marine Landing Notary Public's location">
+          <img src="{{ .RelPermalink }}" width="64" height="78" alt="Marine Landing Notary Public's location" style="width: clamp(40px, 10vw, 64px)">
         {{- end -}}
       </div>
     </div>
