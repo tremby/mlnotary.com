@@ -19,7 +19,7 @@
       {{- $webp2x := $png2x.Process "webp" -}}
       <source type="image/webp" srcset="{{ $webp1x.RelPermalink }} {{ $webp1x.Width }}w, {{ $webp2x.RelPermalink }} {{ $webp2x.Width }}w" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
       <source type="image/png" srcset="{{ $png1x.RelPermalink }} {{ $png1x.Width }}w, {{ $png2x.RelPermalink }} {{ $png2x.Width }}w" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
-      <img src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" class="width:100% height:100%" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location at the northwest corner of the intersection of SW Marine Drive and Cambie Street.">
+      <img src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" class="width:100% height:100%" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location on Manitoba Street just south of SW Marine Drive.">
     </picture>
     <div class="map-pin">
       <div class="map-pin__bubble">

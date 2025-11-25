@@ -4,8 +4,8 @@ import { Readable } from "node:stream";
 import path from "node:path";
 
 const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
-const CENTER_LATITUDE = 49.2101;
-const CENTER_LONGITUDE = -123.1178;
+const CENTER_LATITUDE = 49.2108;
+const CENTER_LONGITUDE = -123.1092;
 const HEIGHT = 500;
 
 if (!MAPBOX_ACCESS_TOKEN) throw new Error("Expected MAPBOX_ACCESS_TOKEN to be set");
@@ -32,9 +32,9 @@ async function getMaps(width, zoom) {
   ]);
 }
 
-await getMaps(360, 14);
-await getMaps(390, 14);
-await getMaps(480, 15);
-await getMaps(768, 15);
-await getMaps(1024, 16);
-await getMaps(1280, 16);
+await getMaps(360, 13);
+await getMaps(390, 13);
+await getMaps(480, 14);
+await getMaps(768, 14);
+await getMaps(1024, 15);
+await getMaps(1280, 15);

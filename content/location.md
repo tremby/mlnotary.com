@@ -1,8 +1,8 @@
 +++
 layout = "location"
 title = "Our location"
-description = "We are easily accessible via car, bus, and train, at 509 SW Marine Drive, Vancouver, at the intersection of Cambie Street and Southwest Marine Drive."
-headline = "Located in South Vancouver, we are situated at the intersection of Cambie Street and Southwest Marine Drive — easily accessible to the surrounding communities in Vancouver and Richmond."
+description = "We are easily accessible via car, bus, and train, at unit 590 of 8250 Manitoba Street, Vancouver, just south of Southwest Marine Drive."
+headline = "Located in South Vancouver, we are situated on Manitoba Street just south of Southwest Marine Drive — easily accessible to the surrounding communities in Vancouver and Richmond."
 service_text = "As a full-service notary public practice, we offer comprehensive notary services for real estate transactions, personal estate planning, and general notarization needs. Whether you need help with property transfers, wills, powers of attorney, or other legal documents, our experienced team is here to support all your notary requirements."
 about_text = "We strive to serve all our customers in the highest regard. We want customers to leave with confidence that their documents and plans are cared for, delivering the highest quality of service to our community."
 weight = 40
