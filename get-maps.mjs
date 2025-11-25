@@ -15,6 +15,7 @@ async function getMap(width, zoom, x2) {
   const url = new URL(`https://api.mapbox.com/styles/v1/tremby/clqg0fabv007s01r853dpd942/static/${CENTER_LONGITUDE},${CENTER_LATITUDE},${zoom},0/${width}x${HEIGHT}${x2 ? "@2x" : ""}`);
   url.searchParams.set("access_token", MAPBOX_ACCESS_TOKEN);
   url.searchParams.set("logo", "false");
+  url.searchParams.set("fresh", "true");
   const response = await fetch(url);
   if (!response.ok)
     throw new Error("Failed to get map", { width, x2, zoom, accessTokenLength: MAPBOX_ACCESS_TOKEN.length });
