@@ -31,7 +31,11 @@ We are conveniently located within walking distance of the Marine Drive Canada L
 If you're arriving by vehicle, free street parking is available along Lord Street.
 Please be aware of local parking restrictions.
 
-For paid parking, a lot is available on parking level P1 of the complex.
-To access it, follow the signs along the building and enter the residential entrance via Lord Street.
-Parking is available in any stall marked for retail.
-An elevator will take you to the ground floor.
+Visitor parking is available in front of the building.
+Feel free to park in any of the designated visitor spots (marked with numbers), but please avoid the spots marked “loading”.
+There is also street parking along Manitoba Street.
+
+## Finding our office
+
+Use the main door near the middle of the building to enter the lobby.
+You'll find an unlocked door which leads to the elevators – please enter and take the elevator to **5R**.
