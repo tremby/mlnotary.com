@@ -28,9 +28,6 @@ We are conveniently located within walking distance of the Marine Drive Canada L
 
 ## Parking
 
-If you're arriving by vehicle, free street parking is available along Lord Street.
-Please be aware of local parking restrictions.
-
 Visitor parking is available in front of the building.
 Feel free to park in any of the designated visitor spots (marked with numbers), but please avoid the spots marked “loading”.
 There is also street parking along Manitoba Street.
