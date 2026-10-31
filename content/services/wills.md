@@ -43,4 +43,4 @@ it is possible to have a will that relates only to your BC assets.
 
 To begin preparing your will, [contact our office](mailto:{{< email-address >}}) to schedule an initial consultation.
 During this meeting, we will discuss your wishes and address any other important considerations.
-Afterwards, we will draft your will and invite you back for an appointment where we will review and signing the document, finalizing the process.
+Afterwards, we will draft your will and invite you back for an appointment where we will review and sign the document, finalizing the process.
