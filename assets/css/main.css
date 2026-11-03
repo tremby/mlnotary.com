@@ -409,6 +409,9 @@ figcaption {
 .display\:flex {
   display: flex !important;
 }
+.display\:contents {
+  display: contents !important;
+}
 .position\:relative {
   position: relative !important;
 }
@@ -898,21 +901,60 @@ figcaption {
 .text-wrap\:balance {
   text-wrap: balance;
 }
-.map-pin {
+.map {
+  overflow: hidden;
+}
+.map__link {
+  display: flex;
+  justify-content: center;
+}
+.map__center {
+  max-width: none;
+  flex: none;
+}
+.map__side {
+  flex: none;
+  display: none;
+}
+@media screen and (min-width: 1281px) {
+  .map__side--1 {
+    display: block;
+  }
+}
+@media screen and (min-width: 2305px) {
+  .map__side--2 {
+    display: block;
+  }
+}
+@media screen and (min-width: 3329px) {
+  .map__side--3 {
+    display: block;
+  }
+}
+.map__pin {
   position: absolute;
   left: 50%;
   top: 50%;
 }
-.map-pin__bubble {
+.map__pin__bubble {
   position: absolute;
   left: 0;
   bottom: 0;
   transform: translateX(-50%);
 }
-.map-pin__bubble img {
+.map__pin__bubble img {
   width: revert;
   height: revert;
   max-width: none;
+}
+.map__attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(170, 170, 170, 0.5);
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px;
 }
 
 .ptt-calculator {

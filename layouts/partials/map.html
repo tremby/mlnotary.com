@@ -1,9 +1,13 @@
-<section class="position:relative margin:auto">
-  <a href="{{ hugo.Data.meta.directions_url }}" aria-label="Get directions to Marine Landing Notary Public" target="_blank" rel="noreferrer noopener">
+<section class="map position:relative margin:auto">
+  <a href="{{ hugo.Data.meta.directions_url }}" aria-label="Get directions to Marine Landing Notary Public" target="_blank" rel="noreferrer noopener" class="map__link">
+    {{- range (seq 3 1) -}}
+      {{- partial "map-side.html" (dict "side" "l" "index" .) -}}
+    {{- end -}}
+
     <picture>
-      {{- $widths := slice 1280 1024 768 480 390 -}}
-      {{- range $widths -}}
-        {{- $width := . -}}
+      {{- $widths := slice 1280 1024 768 480 390 360 -}}
+      {{- range $i, $width := first (sub (len $widths) 1) $widths -}}
+        {{- $minWidth := add (int (index $widths (add $i 1))) 1 -}}
         {{- $path1x := printf "images/map/map-%dw.png" $width -}}
         {{- $path2x := printf "images/map/map-%dw-2x.png" $width -}}
         {{- $png1x := resources.Get $path1x -}}
@@ -12,9 +16,9 @@
         {{- $webp2x := $png2x.Process "webp" -}}
         {{- $avif1x := $png1x.Process "avif" -}}
         {{- $avif2x := $png2x.Process "avif" -}}
-        <source media="(min-width: {{ sub $width 200 }}px)" type="image/avif" srcset="{{ $avif1x.RelPermalink }} {{ $avif1x.Width }}w, {{ $avif2x.RelPermalink }} {{ $avif2x.Width }}w" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
-        <source media="(min-width: {{ sub $width 200 }}px)" type="image/webp" srcset="{{ $webp1x.RelPermalink }} {{ $webp1x.Width }}w, {{ $webp2x.RelPermalink }} {{ $webp2x.Width }}w" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
-        <source media="(min-width: {{ sub $width 200 }}px)" type="image/png" srcset="{{ $png1x.RelPermalink }} {{ $png1x.Width }}w, {{ $png2x.RelPermalink }} {{ $png2x.Width }}w" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
+        <source media="(min-width: {{ $minWidth }}px)" type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
+        <source media="(min-width: {{ $minWidth }}px)" type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
+        <source media="(min-width: {{ $minWidth }}px)" type="image/png" srcset="{{ $png1x.RelPermalink }}, {{ $png2x.RelPermalink }} 2x" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
       {{- end -}}
       {{- $png1x := resources.Get "images/map/map-360w.png" -}}
       {{- $png2x := resources.Get "images/map/map-360w-2x.png" -}}
@@ -22,17 +26,26 @@
       {{- $webp2x := $png2x.Process "webp" -}}
       {{- $avif1x := $png1x.Process "avif" -}}
       {{- $avif2x := $png2x.Process "avif" -}}
-      <source type="image/avif" srcset="{{ $avif1x.RelPermalink }} {{ $avif1x.Width }}w, {{ $avif2x.RelPermalink }} {{ $avif2x.Width }}w" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
-      <source type="image/webp" srcset="{{ $webp1x.RelPermalink }} {{ $webp1x.Width }}w, {{ $webp2x.RelPermalink }} {{ $webp2x.Width }}w" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
-      <source type="image/png" srcset="{{ $png1x.RelPermalink }} {{ $png1x.Width }}w, {{ $png2x.RelPermalink }} {{ $png2x.Width }}w" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
-      <img src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" class="width:100% height:100%" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location on Manitoba Street just south of SW Marine Drive.">
+      <source type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
+      <source type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
+      <source type="image/png" srcset="{{ $png1x.RelPermalink }}, {{ $png2x.RelPermalink }} 2x" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
+      <img class="map__center" src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location on Manitoba Street just south of SW Marine Drive." loading="lazy">
     </picture>
-    <div class="map-pin">
-      <div class="map-pin__bubble">
+
+    {{- range seq 3 -}}
+      {{- partial "map-side.html" (dict "side" "r" "index" .) -}}
+    {{- end -}}
+
+    <div class="map__pin">
+      <div class="map__pin__bubble">
         {{- with resources.Get "images/map/pin.svg" -}}
           <img src="{{ .RelPermalink }}" width="64" height="78" alt="Marine Landing Notary Public's location" style="width: clamp(40px, 10vw, 64px)">
         {{- end -}}
       </div>
+    </div>
+    <div class="map__attribution">
+      <span class="visually-hidden">Map data and imagery</span>
+      &copy; Mapbox, &copy; OpenStreetMap
     </div>
   </a>
 </section>

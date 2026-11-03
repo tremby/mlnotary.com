@@ -1,0 +1,24 @@
+{{- $side := .side -}}
+{{- $index := .index -}}
+{{- $path1x := printf "images/map/map-1280w-ext-%s-%d.png" $side $index -}}
+{{- $path2x := printf "images/map/map-1280w-ext-%s-%d-2x.png" $side $index -}}
+{{- $png1x := resources.Get $path1x -}}
+{{- $png2x := resources.Get $path2x -}}
+{{- $webp1x := $png1x.Process "webp" -}}
+{{- $webp2x := $png2x.Process "webp" -}}
+{{- $avif1x := $png1x.Process "avif" -}}
+{{- $avif2x := $png2x.Process "avif" -}}
+
+<picture class="display:contents">
+  <source type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x">
+  <source type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x">
+  <img
+    class="map__side map__side--{{ $index }}"
+    src="{{ $png1x.RelPermalink }}"
+    srcset="{{ $png2x.RelPermalink }} 2x"
+    width="{{ $png1x.Width }}"
+    height="{{ $png1x.Height }}"
+    alt=""
+    loading="lazy"
+  >
+</picture>

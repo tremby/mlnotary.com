@@ -10,26 +10,54 @@ const HEIGHT = 500;
 
 if (!MAPBOX_ACCESS_TOKEN) throw new Error("Expected MAPBOX_ACCESS_TOKEN to be set");
 
-async function getMap(width, zoom, x2) {
-  console.log(`Getting map at ${width}×${HEIGHT}${x2 ? "@2x" : ""}`);
-  const url = new URL(`https://api.mapbox.com/styles/v1/tremby/clqg0fabv007s01r853dpd942/static/${CENTER_LONGITUDE},${CENTER_LATITUDE},${zoom},0/${width}x${HEIGHT}${x2 ? "@2x" : ""}`);
+const TILE_WIDTH = 512;
+const SIDE_TILES = 3;
+
+async function getMap(width, zoom, x2, offset = 0, name = null, attribution = true) {
+  const longitudeOffset = offset * 360 / (512 * 2 ** zoom);
+  const longitude = CENTER_LONGITUDE + longitudeOffset;
+
+  console.log(`Getting map ${name ?? "center"}: ${width}×${HEIGHT}${x2 ? "@2x" : ""}`);
+
+  const url = new URL(`https://api.mapbox.com/styles/v1/tremby/clqg0fabv007s01r853dpd942/static/${longitude},${CENTER_LATITUDE},${zoom},0/${width}x${HEIGHT}${x2 ? "@2x" : ""}`);
+
   url.searchParams.set("access_token", MAPBOX_ACCESS_TOKEN);
   url.searchParams.set("logo", "false");
   url.searchParams.set("fresh", "true");
-  const response = await fetch(url);
-  if (!response.ok)
-    throw new Error("Failed to get map", { width, x2, zoom, accessTokenLength: MAPBOX_ACCESS_TOKEN.length });
+  url.searchParams.set("attribution", "false");
 
-  const destination = path.resolve("./assets/images/map", `map-${width}w${x2 ? "-2x" : ""}.png`);
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Failed to get map ${name ?? "center"}: ${response.status} ${await response.text()}`);
+  }
+
+  const suffix = name ? `-ext-${name}` : "";
+  const destination = path.resolve("./assets/images/map", `map-${name ? 1280 : width}w${suffix}${x2 ? "-2x" : ""}.png`);
+
   const fileStream = createWriteStream(destination);
   await finished(Readable.fromWeb(response.body).pipe(fileStream));
 }
 
 async function getMaps(width, zoom) {
-  await Promise.all([
+  const requests = [
     getMap(width, zoom, false),
     getMap(width, zoom, true),
-  ]);
+  ];
+
+  if (width >= 1280) {
+    for (let i = 1; i <= SIDE_TILES; i++) {
+      const offset = 640 + (i - 1) * TILE_WIDTH + TILE_WIDTH / 2;
+      for (const [side, direction] of [["left", -1], ["right", 1]]) {
+        requests.push(
+          getMap(TILE_WIDTH, zoom, false, direction * offset, `${side === "left" ? "l" : "r"}-${i}`, false),
+          getMap(TILE_WIDTH, zoom, true, direction * offset, `${side === "left" ? "l" : "r"}-${i}`, false)
+        );
+      }
+    }
+  }
+
+  await Promise.all(requests);
 }
 
 await getMaps(360, 13);
