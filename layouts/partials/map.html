@@ -12,20 +12,20 @@
         {{- $path2x := printf "images/map/map-%dw-2x.png" $width -}}
         {{- $png1x := resources.Get $path1x -}}
         {{- $png2x := resources.Get $path2x -}}
-        {{- $webp1x := $png1x.Process "webp" -}}
-        {{- $webp2x := $png2x.Process "webp" -}}
-        {{- $avif1x := $png1x.Process "avif" -}}
-        {{- $avif2x := $png2x.Process "avif" -}}
+        {{- $webp1x := $png1x.Process "webp drawing" -}}
+        {{- $webp2x := $png2x.Process "webp drawing" -}}
+        {{- $avif1x := $png1x.Process "avif drawing" -}}
+        {{- $avif2x := $png2x.Process "avif drawing" -}}
         <source media="(min-width: {{ $minWidth }}px)" type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
         <source media="(min-width: {{ $minWidth }}px)" type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
         <source media="(min-width: {{ $minWidth }}px)" type="image/png" srcset="{{ $png1x.RelPermalink }}, {{ $png2x.RelPermalink }} 2x" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
       {{- end -}}
       {{- $png1x := resources.Get "images/map/map-360w.png" -}}
       {{- $png2x := resources.Get "images/map/map-360w-2x.png" -}}
-      {{- $webp1x := $png1x.Process "webp" -}}
-      {{- $webp2x := $png2x.Process "webp" -}}
-      {{- $avif1x := $png1x.Process "avif" -}}
-      {{- $avif2x := $png2x.Process "avif" -}}
+      {{- $webp1x := $png1x.Process "webp drawing" -}}
+      {{- $webp2x := $png2x.Process "webp drawing" -}}
+      {{- $avif1x := $png1x.Process "avif drawing" -}}
+      {{- $avif2x := $png2x.Process "avif drawing" -}}
       <source type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
       <source type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
       <source type="image/png" srcset="{{ $png1x.RelPermalink }}, {{ $png2x.RelPermalink }} 2x" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">

@@ -4,10 +4,10 @@
 {{- $path2x := printf "images/map/map-1280w-ext-%s-%d-2x.png" $side $index -}}
 {{- $png1x := resources.Get $path1x -}}
 {{- $png2x := resources.Get $path2x -}}
-{{- $webp1x := $png1x.Process "webp" -}}
-{{- $webp2x := $png2x.Process "webp" -}}
-{{- $avif1x := $png1x.Process "avif" -}}
-{{- $avif2x := $png2x.Process "avif" -}}
+{{- $webp1x := $png1x.Process "webp drawing" -}}
+{{- $webp2x := $png2x.Process "webp drawing" -}}
+{{- $avif1x := $png1x.Process "avif drawing" -}}
+{{- $avif2x := $png2x.Process "avif drawing" -}}
 
 <picture class="display:contents">
   <source type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x">
