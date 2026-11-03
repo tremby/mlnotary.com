@@ -2,5 +2,7 @@ baseURL = "https://mlnotary.com"
 locale = "en-CA"
 title = "Marine Landing Notary Public"
 
+disableKinds = ["taxonomy", "term"]
+
 [markup.goldmark.renderer]
 unsafe= true
