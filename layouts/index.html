@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ if not (len (findRE `<h1.*?>` .Content 1)) }}
-    <h1 class="visually-hidden">{{ .Site.Data.meta.title }}</h1>
+    <h1 class="visually-hidden">{{ hugo.Data.meta.title }}</h1>
   {{ end }}
 
   <section class="hero">

@@ -4,9 +4,9 @@
       <address class="font-size:h6 color:white">
         {{ partial "address" . }}
         <div class="margin-top:u4">
-          Email: <a href="mailto:{{ .Site.Data.meta.email }}" class="color:white">{{ .Site.Data.meta.email }}</a><br />
-          Phone: <a href="tel:{{ .Site.Data.meta.phone_intl }}" class="color:white">{{ .Site.Data.meta.phone }}</a><br />
-          Fax: <a href="fax:{{ .Site.Data.meta.fax_intl }}" class="color:white">{{ .Site.Data.meta.fax }}</a>
+          Email: <a href="mailto:{{ hugo.Data.meta.email }}" class="color:white">{{ hugo.Data.meta.email }}</a><br />
+          Phone: <a href="tel:{{ hugo.Data.meta.phone_intl }}" class="color:white">{{ hugo.Data.meta.phone }}</a><br />
+          Fax: <a href="fax:{{ hugo.Data.meta.fax_intl }}" class="color:white">{{ hugo.Data.meta.fax }}</a>
         </div>
       </address>
 

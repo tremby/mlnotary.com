@@ -1,4 +1,4 @@
-{{ range .Site.Data.hours }}
+{{ range hugo.Data.hours }}
   <li>
     {{ if (and (isset . "usual") (not (eq .current .usual))) }}
       <strong>{{ .current }}</strong>

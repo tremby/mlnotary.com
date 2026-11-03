@@ -3,16 +3,16 @@
   <head>
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    <title>{{ with .Page.Title }}{{ . }} – {{ end }}{{ .Site.Data.meta.title }}</title>
+    <title>{{ with .Page.Title }}{{ . }} – {{ end }}{{ hugo.Data.meta.title }}</title>
     <!-- Page Meta -->
     <meta charset="utf-8" />
-    <meta name="description" content="{{ default .Site.Data.meta.description .Page.Params.description }}" />
+    <meta name="description" content="{{ default hugo.Data.meta.description .Page.Params.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Social Media Open Graph -->
-    <meta property="og:title" content="{{ default .Site.Data.meta.title .Page.Title }}" />
-    <meta property="og:site_name" content="{{ .Site.Data.meta.title }}" />
-    <meta property="og:description" content="{{ default .Site.Data.meta.description .Page.Params.description }}" />
+    <meta property="og:title" content="{{ default hugo.Data.meta.title .Page.Title }}" />
+    <meta property="og:site_name" content="{{ hugo.Data.meta.title }}" />
+    <meta property="og:description" content="{{ default hugo.Data.meta.description .Page.Params.description }}" />
     <meta property="og:image" content="{{ absURL "/assets/images/office-02.jpg" }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@
       <script src="{{ .RelPermalink }}" defer></script>
     {{- end }}
 
-    {{ with .Site.Data.tracking.gtag }}
+    {{ with hugo.Data.tracking.gtag }}
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
       <script>
