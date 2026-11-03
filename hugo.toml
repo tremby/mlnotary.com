@@ -1,5 +1,5 @@
 baseURL = "https://mlnotary.com"
-languageCode = "en-CA"
+locale = "en-CA"
 title = "Marine Landing Notary Public"
 
 [markup.goldmark.renderer]
