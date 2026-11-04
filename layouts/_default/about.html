@@ -9,8 +9,9 @@
         {{ .Params.headline }}
       </p>
       <span class="line line:short margin-top:u8"></span>
-      {{ with resources.Get "images/herafilms_studiosession_jonathan-1.jpg" }}
-        {{ $crop := .Crop (print .Width "x" .Width " Top") }}
+      {{ with resources.Get "images/261022-MLNotary-Final-6144px-0012.jpg" }}
+        {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 102) (sub .Height 264)) }}
+        {{ $crop := $tmpCrop.Crop "3994x3994 TopLeft" }}
         {{ $i296 := $crop.Resize "296x" }}
         {{ $i400 := $crop.Resize "400x" }}
         {{ $i460 := $crop.Resize "460x" }}
@@ -22,7 +23,7 @@
             src="{{ $i296.RelPermalink }}"
             width="{{ $crop.Width }}"
             height="{{ $crop.Height }}"
-            alt="An Asian man with glasses smiles at the camera. He wears a grey suit with a dark striped shirt and a purple tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
+            alt="An Asian man with glasses smiles at the camera. He wears a blue suit with a white shirt and a blue tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
             sizes="(min-width: 1140px) 460px, (min-width: 768px) 40vw, (min-width: 536px) 460px, 79vw"
             srcset="
               {{ $i296.RelPermalink }} {{ $i296.Width }}w,
@@ -32,7 +33,6 @@
               {{ $i800.RelPermalink }} {{ $i800.Width }}w,
               {{ $i920.RelPermalink }} {{ $i920.Width }}w,
             "
-            style="filter: hue-rotate(-5deg) saturate(150%) sepia(5%)"
           >
           <figcaption>Jonathan Wong</figcaption>
         </figure>
