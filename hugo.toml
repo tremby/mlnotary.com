@@ -6,3 +6,12 @@ disableKinds = ["taxonomy", "term"]
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[[module.mounts]]
+source = "data"
+target = "data"
+
+[[module.mounts]]
+source = "generated"
+target = "data"
+files = ["hours.json"]
