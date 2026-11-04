@@ -11,29 +11,72 @@
       <span class="line line:short margin-top:u8"></span>
       {{ with resources.Get "images/47-print-0151.jpg" }}
         {{ with .Crop "3024x3780 Bottom" }}
-          {{ $i296 := .Resize "296x" }}
-          {{ $i400 := .Resize "400x" }}
-          {{ $i560 := .Resize "560x" }}
-          {{ $i592 := .Resize "592x" }}
-          {{ $i800 := .Resize "800x" }}
-          {{ $i1120 := .Resize "1120x" }}
+
+          {{ $jpeg296 := .Resize "296x" }}
+          {{ $webp296 := $jpeg296.Process "webp" }}
+          {{ $avif296 := $jpeg296.Process "avif" }}
+
+          {{ $jpeg400 := .Resize "400x" }}
+          {{ $webp400 := $jpeg400.Process "webp" }}
+          {{ $avif400 := $jpeg400.Process "avif" }}
+
+          {{ $jpeg560 := .Resize "560x" }}
+          {{ $webp560 := $jpeg560.Process "webp" }}
+          {{ $avif560 := $jpeg560.Process "avif" }}
+
+          {{ $jpeg592 := .Resize "592x" }}
+          {{ $webp592 := $jpeg592.Process "webp" }}
+          {{ $avif592 := $jpeg592.Process "avif" }}
+
+          {{ $jpeg800 := .Resize "800x" }}
+          {{ $webp800 := $jpeg800.Process "webp" }}
+          {{ $avif800 := $jpeg800.Process "avif" }}
+
+          {{ $jpeg1120 := .Resize "1120x" }}
+          {{ $webp1120 := $jpeg1120.Process "webp" }}
+          {{ $avif1120 := $jpeg1120.Process "avif" }}
+
           <figure class="margin-top:u8 margin-x:auto" style="max-width: 560px">
-            <img
-              src="{{ $i296.RelPermalink }}"
-              width="{{ .Width }}"
-              height="{{ .Height }}"
-              alt="Twin modern buildings, seen from across the street at roof level. The building on the right is numbered 8250. Mountains can be seen in the distance."
-              sizes="(min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
-              srcset="
-                {{ $i296.RelPermalink }} {{ $i296.Width }}w,
-                {{ $i400.RelPermalink }} {{ $i400.Width }}w,
-                {{ $i560.RelPermalink }} {{ $i560.Width }}w,
-                {{ $i592.RelPermalink }} {{ $i592.Width }}w,
-                {{ $i800.RelPermalink }} {{ $i800.Width }}w,
-                {{ $i1120.RelPermalink }} {{ $i1120.Width }}w,
-              "
-              class="border-radius:u1"
-            >
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  {{ $avif296.RelPermalink }} {{ $avif296.Width }}w,
+                  {{ $avif400.RelPermalink }} {{ $avif400.Width }}w,
+                  {{ $avif560.RelPermalink }} {{ $avif560.Width }}w,
+                  {{ $avif592.RelPermalink }} {{ $avif592.Width }}w,
+                  {{ $avif800.RelPermalink }} {{ $avif800.Width }}w,
+                  {{ $avif1120.RelPermalink }} {{ $avif1120.Width }}w,
+                "
+              >
+              <source
+                type="image/webp"
+                srcset="
+                  {{ $webp296.RelPermalink }} {{ $webp296.Width }}w,
+                  {{ $webp400.RelPermalink }} {{ $webp400.Width }}w,
+                  {{ $webp560.RelPermalink }} {{ $webp560.Width }}w,
+                  {{ $webp592.RelPermalink }} {{ $webp592.Width }}w,
+                  {{ $webp800.RelPermalink }} {{ $webp800.Width }}w,
+                  {{ $webp1120.RelPermalink }} {{ $webp1120.Width }}w,
+                "
+              >
+              <img
+                src="{{ $jpeg296.RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="Twin modern buildings, seen from across the street at roof level. The building on the right is numbered 8250. Mountains can be seen in the distance."
+                sizes="(min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
+                srcset="
+                  {{ $jpeg296.RelPermalink }} {{ $jpeg296.Width }}w,
+                  {{ $jpeg400.RelPermalink }} {{ $jpeg400.Width }}w,
+                  {{ $jpeg560.RelPermalink }} {{ $jpeg560.Width }}w,
+                  {{ $jpeg592.RelPermalink }} {{ $jpeg592.Width }}w,
+                  {{ $jpeg800.RelPermalink }} {{ $jpeg800.Width }}w,
+                  {{ $jpeg1120.RelPermalink }} {{ $jpeg1120.Width }}w,
+                "
+                class="border-radius:u1"
+              >
+            </picture>
             <figcaption>Our premises are in the Marine Landing B building, on Manitoba Street just south of SW Marine Drive.</figcaption>
           </figure>
         {{ end }}
