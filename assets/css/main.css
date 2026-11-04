@@ -610,6 +610,9 @@ figcaption {
 .font-leading\:1 {
   line-height:1.2;
 }
+.border-radius\:u1 {
+  border-radius: var(--u1);
+}
 .header {
   position: relative;
   z-index: 3;
