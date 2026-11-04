@@ -65,7 +65,8 @@
                 width="{{ .Width }}"
                 height="{{ .Height }}"
                 alt="Twin modern buildings, seen from across the street at roof level. The building on the right is numbered 8250. Mountains can be seen in the distance."
-                sizes="(min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
+                sizes="auto, (min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
+                loading="lazy"
                 srcset="
                   {{ $jpeg296.RelPermalink }} {{ $jpeg296.Width }}w,
                   {{ $jpeg400.RelPermalink }} {{ $jpeg400.Width }}w,

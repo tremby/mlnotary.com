@@ -613,6 +613,15 @@ figcaption {
 .border-radius\:u1 {
   border-radius: var(--u1);
 }
+.object-fit\:cover {
+  object-fit: cover;
+}
+.inset\:0 {
+  inset: 0;
+}
+.position\:absolute {
+  position: absolute;
+}
 .header {
   position: relative;
   z-index: 3;
@@ -689,7 +698,7 @@ figcaption {
   background-size: cover;
   background-position: 50%;
 }
-.hero\:services:before {
+.purple-overlay {
   content: "";
   display: block;
   position: absolute;

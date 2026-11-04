@@ -1,6 +1,337 @@
 {{ define "main" }}
   <section class="row fill:white">
-    <div class="column:12 hero:services" style="background-image: url('{{ with resources.Get "images/office-04.jpg" }}{{ .RelPermalink }}{{ end }}')">
+    <div class="column:12 hero:services">
+      {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-1.jpg" }}
+        {{ $jpeg5_6 := .Crop "2881x3457 Center" }}
+
+        {{ $jpeg5_6_375 := $jpeg5_6.Resize "375x" }}
+        {{ $webp5_6_375 := $jpeg5_6_375.Process "webp" }}
+        {{ $avif5_6_375 := $jpeg5_6_375.Process "avif" }}
+
+        {{ $jpeg5_6_562 := $jpeg5_6.Resize "562x" }}
+        {{ $webp5_6_562 := $jpeg5_6_562.Process "webp" }}
+        {{ $avif5_6_562 := $jpeg5_6_562.Process "avif" }}
+
+        {{ $jpeg5_6_750 := $jpeg5_6.Resize "750x" }}
+        {{ $webp5_6_750 := $jpeg5_6_750.Process "webp" }}
+        {{ $avif5_6_750 := $jpeg5_6_750.Process "avif" }}
+
+        {{ $jpeg5_4 := .Crop "4080x3264 Center" }}
+
+        {{ $jpeg5_4_420 := $jpeg5_4.Resize "420x" }}
+        {{ $webp5_4_420 := $jpeg5_4_420.Process "webp" }}
+        {{ $avif5_4_420 := $jpeg5_4_420.Process "avif" }}
+
+        {{ $jpeg5_4_630 := $jpeg5_4.Resize "630x" }}
+        {{ $webp5_4_630 := $jpeg5_4_630.Process "webp" }}
+        {{ $avif5_4_630 := $jpeg5_4_630.Process "avif" }}
+
+        {{ $jpeg5_4_840 := $jpeg5_4.Resize "840x" }}
+        {{ $webp5_4_840 := $jpeg5_4_840.Process "webp" }}
+        {{ $avif5_4_840 := $jpeg5_4_840.Process "avif" }}
+
+        {{ $jpeg7_5 := .Crop "4080x2914 Center" }}
+
+        {{ $jpeg7_5_768 := $jpeg7_5.Resize "768x" }}
+        {{ $webp7_5_768 := $jpeg7_5_768.Process "webp" }}
+        {{ $avif7_5_768 := $jpeg7_5_768.Process "avif" }}
+
+        {{ $jpeg7_5_1152 := $jpeg7_5.Resize "1152x" }}
+        {{ $webp7_5_1152 := $jpeg7_5_1152.Process "webp" }}
+        {{ $avif7_5_1152 := $jpeg7_5_1152.Process "avif" }}
+
+        {{ $jpeg7_5_1536 := $jpeg7_5.Resize "1536x" }}
+        {{ $webp7_5_1536 := $jpeg7_5_1536.Process "webp" }}
+        {{ $avif7_5_1536 := $jpeg7_5_1536.Process "avif" }}
+
+        {{ $jpeg2_1 := .Crop "4080x2040 Center" }}
+
+        {{ $jpeg2_1_640 := $jpeg2_1.Resize "640x" }}
+        {{ $webp2_1_640 := $jpeg2_1_640.Process "webp" }}
+        {{ $avif2_1_640 := $jpeg2_1_640.Process "avif" }}
+
+        {{ $jpeg2_1_960 := $jpeg2_1.Resize "960x" }}
+        {{ $webp2_1_960 := $jpeg2_1_960.Process "webp" }}
+        {{ $avif2_1_960 := $jpeg2_1_960.Process "avif" }}
+
+        {{ $jpeg2_1_1280 := $jpeg2_1.Resize "1280x" }}
+        {{ $webp2_1_1280 := $jpeg2_1_1280.Process "webp" }}
+        {{ $avif2_1_1280 := $jpeg2_1_1280.Process "avif" }}
+
+        {{ $jpeg2_1_1024 := $jpeg2_1.Resize "1024x" }}
+        {{ $webp2_1_1024 := $jpeg2_1_1024.Process "webp" }}
+        {{ $avif2_1_1024 := $jpeg2_1_1024.Process "avif" }}
+
+        {{ $jpeg2_1_1536 := $jpeg2_1.Resize "1536x" }}
+        {{ $webp2_1_1536 := $jpeg2_1_1536.Process "webp" }}
+        {{ $avif2_1_1536 := $jpeg2_1_1536.Process "avif" }}
+
+        {{ $jpeg2_1_2048 := $jpeg2_1.Resize "2048x" }}
+        {{ $webp2_1_2048 := $jpeg2_1_2048.Process "webp" }}
+        {{ $avif2_1_2048 := $jpeg2_1_2048.Process "avif" }}
+
+        {{ $tmp := .Crop (printf "%dx%d BottomRight" .Width (sub .Height 1428)) }}
+        {{ $jpeg3_1 := $tmp.Crop "4080x1316 TopLeft" }}
+
+        {{ $jpeg3_1_1476 := $jpeg3_1.Resize "1476x" }}
+        {{ $webp3_1_1476 := $jpeg3_1_1476.Process "webp" }}
+        {{ $avif3_1_1476 := $jpeg3_1_1476.Process "avif" }}
+
+        {{ $jpeg3_1_2214 := $jpeg3_1.Resize "2214x" }}
+        {{ $webp3_1_2214 := $jpeg3_1_2214.Process "webp" }}
+        {{ $avif3_1_2214 := $jpeg3_1_2214.Process "avif" }}
+
+        {{ $jpeg3_1_2952 := $jpeg3_1.Resize "2952x" }}
+        {{ $webp3_1_2952 := $jpeg3_1_2952.Process "webp" }}
+        {{ $avif3_1_2952 := $jpeg3_1_2952.Process "avif" }}
+
+        {{ $tmp := .Crop (printf "%dx%d BottomRight" .Width (sub .Height 1618)) }}
+        {{ $jpeg4_1 := $tmp.Crop "4080x1020 TopLeft" }}
+
+        {{ $jpeg4_1_1968 := $jpeg4_1.Resize "1968x" }}
+        {{ $webp4_1_1968 := $jpeg4_1_1968.Process "webp" }}
+        {{ $avif4_1_1968 := $jpeg4_1_1968.Process "avif" }}
+
+        {{ $jpeg4_1_2952 := $jpeg4_1.Resize "2952x" }}
+        {{ $webp4_1_2952 := $jpeg4_1_2952.Process "webp" }}
+        {{ $avif4_1_2952 := $jpeg4_1_2952.Process "avif" }}
+
+        {{ $jpeg4_1_3936 := $jpeg4_1.Resize "3936x" }}
+        {{ $webp4_1_3936 := $jpeg4_1_3936.Process "webp" }}
+        {{ $avif4_1_3936 := $jpeg4_1_3936.Process "avif" }}
+
+        <picture>
+          <!-- 4:1 -->
+          <source
+            media="(min-width: 1722px)"
+            type="image/avif"
+            srcset="
+              {{ $avif4_1_1968.RelPermalink }} {{ $avif4_1_1968.Width }}w,
+              {{ $avif4_1_2952.RelPermalink }} {{ $avif4_1_2952.Width }}w,
+              {{ $avif4_1_3936.RelPermalink }} {{ $avif4_1_3936.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1722px)"
+            type="image/webp"
+            srcset="
+              {{ $webp4_1_1968.RelPermalink }} {{ $webp4_1_1968.Width }}w,
+              {{ $webp4_1_2952.RelPermalink }} {{ $webp4_1_2952.Width }}w,
+              {{ $webp4_1_3936.RelPermalink }} {{ $webp4_1_3936.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1722px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg4_1_1968.RelPermalink }} {{ $jpeg4_1_1968.Width }}w,
+              {{ $jpeg4_1_2952.RelPermalink }} {{ $jpeg4_1_2952.Width }}w,
+              {{ $jpeg4_1_3936.RelPermalink }} {{ $jpeg4_1_3936.Width }}w,
+            "
+          >
+
+          <!-- 3:1 -->
+          <source
+            media="(min-width: 1250px)"
+            type="image/avif"
+            srcset="
+              {{ $avif3_1_1476.RelPermalink }} {{ $avif3_1_1476.Width }}w,
+              {{ $avif3_1_2214.RelPermalink }} {{ $avif3_1_2214.Width }}w,
+              {{ $avif3_1_2952.RelPermalink }} {{ $avif3_1_2952.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1250px)"
+            type="image/webp"
+            srcset="
+              {{ $webp3_1_1476.RelPermalink }} {{ $webp3_1_1476.Width }}w,
+              {{ $webp3_1_2214.RelPermalink }} {{ $webp3_1_2214.Width }}w,
+              {{ $webp3_1_2952.RelPermalink }} {{ $webp3_1_2952.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1250px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg3_1_1476.RelPermalink }} {{ $jpeg3_1_1476.Width }}w,
+              {{ $jpeg3_1_2214.RelPermalink }} {{ $jpeg3_1_2214.Width }}w,
+              {{ $jpeg3_1_2952.RelPermalink }} {{ $jpeg3_1_2952.Width }}w,
+            "
+          >
+
+          <!-- 2:1 wide -->
+          <source
+            media="(min-width: 896px)"
+            type="image/avif"
+            srcset="
+              {{ $avif2_1_640.RelPermalink }} {{ $avif2_1_640.Width }}w,
+              {{ $avif2_1_960.RelPermalink }} {{ $avif2_1_960.Width }}w,
+              {{ $avif2_1_1024.RelPermalink }} {{ $avif2_1_1024.Width }}w,
+              {{ $avif2_1_1280.RelPermalink }} {{ $avif2_1_1280.Width }}w,
+              {{ $avif2_1_1536.RelPermalink }} {{ $avif2_1_1536.Width }}w,
+              {{ $avif2_1_2048.RelPermalink }} {{ $avif2_1_2048.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 896px)"
+            type="image/webp"
+            srcset="
+              {{ $webp2_1_640.RelPermalink }} {{ $webp2_1_640.Width }}w,
+              {{ $webp2_1_960.RelPermalink }} {{ $webp2_1_960.Width }}w,
+              {{ $webp2_1_1024.RelPermalink }} {{ $webp2_1_1024.Width }}w,
+              {{ $webp2_1_1280.RelPermalink }} {{ $webp2_1_1280.Width }}w,
+              {{ $webp2_1_1536.RelPermalink }} {{ $webp2_1_1536.Width }}w,
+              {{ $webp2_1_2048.RelPermalink }} {{ $webp2_1_2048.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 896px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg2_1_640.RelPermalink }} {{ $jpeg2_1_640.Width }}w,
+              {{ $jpeg2_1_960.RelPermalink }} {{ $jpeg2_1_960.Width }}w,
+              {{ $jpeg2_1_1024.RelPermalink }} {{ $jpeg2_1_1024.Width }}w,
+              {{ $jpeg2_1_1280.RelPermalink }} {{ $jpeg2_1_1280.Width }}w,
+              {{ $jpeg2_1_1536.RelPermalink }} {{ $jpeg2_1_1536.Width }}w,
+              {{ $jpeg2_1_2048.RelPermalink }} {{ $jpeg2_1_2048.Width }}w,
+            "
+          >
+
+          <!-- 7:5 -->
+          <source
+            media="(min-width: 704px)"
+            type="image/avif"
+            srcset="
+              {{ $avif7_5_768.RelPermalink }} {{ $avif7_5_768.Width }}w,
+              {{ $avif7_5_1152.RelPermalink }} {{ $avif7_5_1152.Width }}w,
+              {{ $avif7_5_1536.RelPermalink }} {{ $avif7_5_1536.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 704px)"
+            type="image/webp"
+            srcset="
+              {{ $webp7_5_768.RelPermalink }} {{ $webp7_5_768.Width }}w,
+              {{ $webp7_5_1152.RelPermalink }} {{ $webp7_5_1152.Width }}w,
+              {{ $webp7_5_1536.RelPermalink }} {{ $webp7_5_1536.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 704px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg7_5_768.RelPermalink }} {{ $jpeg7_5_768.Width }}w,
+              {{ $jpeg7_5_1152.RelPermalink }} {{ $jpeg7_5_1152.Width }}w,
+              {{ $jpeg7_5_1536.RelPermalink }} {{ $jpeg7_5_1536.Width }}w,
+            "
+          >
+
+          <!-- 2:1 narrow -->
+          <source
+            media="(min-width: 480px)"
+            type="image/avif"
+            srcset="
+              {{ $avif2_1_640.RelPermalink }} {{ $avif2_1_640.Width }}w,
+              {{ $avif2_1_960.RelPermalink }} {{ $avif2_1_960.Width }}w,
+              {{ $avif2_1_1024.RelPermalink }} {{ $avif2_1_1024.Width }}w,
+              {{ $avif2_1_1280.RelPermalink }} {{ $avif2_1_1280.Width }}w,
+              {{ $avif2_1_1536.RelPermalink }} {{ $avif2_1_1536.Width }}w,
+              {{ $avif2_1_2048.RelPermalink }} {{ $avif2_1_2048.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 480px)"
+            type="image/webp"
+            srcset="
+              {{ $webp2_1_640.RelPermalink }} {{ $webp2_1_640.Width }}w,
+              {{ $webp2_1_960.RelPermalink }} {{ $webp2_1_960.Width }}w,
+              {{ $webp2_1_1024.RelPermalink }} {{ $webp2_1_1024.Width }}w,
+              {{ $webp2_1_1280.RelPermalink }} {{ $webp2_1_1280.Width }}w,
+              {{ $webp2_1_1536.RelPermalink }} {{ $webp2_1_1536.Width }}w,
+              {{ $webp2_1_2048.RelPermalink }} {{ $webp2_1_2048.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 480px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg2_1_640.RelPermalink }} {{ $jpeg2_1_640.Width }}w,
+              {{ $jpeg2_1_960.RelPermalink }} {{ $jpeg2_1_960.Width }}w,
+              {{ $jpeg2_1_1024.RelPermalink }} {{ $jpeg2_1_1024.Width }}w,
+              {{ $jpeg2_1_1280.RelPermalink }} {{ $jpeg2_1_1280.Width }}w,
+              {{ $jpeg2_1_1536.RelPermalink }} {{ $jpeg2_1_1536.Width }}w,
+              {{ $jpeg2_1_2048.RelPermalink }} {{ $jpeg2_1_2048.Width }}w,
+            "
+          >
+
+          <!-- 5:4 -->
+          <source
+            media="(min-width: 397px)"
+            type="image/avif"
+            srcset="
+              {{ $avif5_4_420.RelPermalink }} {{ $avif5_4_420.Width }}w,
+              {{ $avif5_4_630.RelPermalink }} {{ $avif5_4_630.Width }}w,
+              {{ $avif5_4_840.RelPermalink }} {{ $avif5_4_840.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 397px)"
+            type="image/webp"
+            srcset="
+              {{ $webp5_4_420.RelPermalink }} {{ $webp5_4_420.Width }}w,
+              {{ $webp5_4_630.RelPermalink }} {{ $webp5_4_630.Width }}w,
+              {{ $webp5_4_840.RelPermalink }} {{ $webp5_4_840.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 397px)"
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg5_4_420.RelPermalink }} {{ $jpeg5_4_420.Width }}w,
+              {{ $jpeg5_4_630.RelPermalink }} {{ $jpeg5_4_630.Width }}w,
+              {{ $jpeg5_4_840.RelPermalink }} {{ $jpeg5_4_840.Width }}w,
+            "
+          >
+
+          <!-- 5:6 -->
+          <source
+            type="image/avif"
+            srcset="
+              {{ $avif5_6_375.RelPermalink }} {{ $avif5_6_375.Width }}w,
+              {{ $avif5_6_562.RelPermalink }} {{ $avif5_6_562.Width }}w,
+              {{ $avif5_6_750.RelPermalink }} {{ $avif5_6_750.Width }}w,
+            "
+          >
+          <source
+            type="image/webp"
+            srcset="
+              {{ $webp5_6_375.RelPermalink }} {{ $webp5_6_375.Width }}w,
+              {{ $webp5_6_562.RelPermalink }} {{ $webp5_6_562.Width }}w,
+              {{ $webp5_6_750.RelPermalink }} {{ $webp5_6_750.Width }}w,
+            "
+          >
+          <source
+            type="image/jpeg"
+            srcset="
+              {{ $jpeg5_6_375.RelPermalink }} {{ $jpeg5_6_375.Width }}w,
+              {{ $jpeg5_6_562.RelPermalink }} {{ $jpeg5_6_562.Width }}w,
+              {{ $jpeg5_6_750.RelPermalink }} {{ $jpeg5_6_750.Width }}w,
+            "
+          >
+
+          <!-- fallback -->
+          <img
+            src="{{ $jpeg5_6_375.RelPermalink }}"
+            width="{{ $jpeg5_6_375.Width }}"
+            height="{{ $jpeg5_6_375.Height }}"
+            alt=""
+            sizes="auto"
+            loading="lazy"
+            class="with-purple-overlay object-fit:cover inset:0 position:absolute width:100% height:100%"
+          >
+        </picture>
+      {{ end }}
+      <div class="purple-overlay"></div>
       <div class="wrap">
         <div class="margin:auto align:center padding-x:3 padding-y:u10 padding-y@sm:u13 position:relative">
           <p class="color:white margin-bottom:3">Our services</p>
