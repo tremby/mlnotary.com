@@ -56,13 +56,230 @@
         </a>
       </div>
     </article>
-    <div
-      class="two-links__image two-links__1 padding-y:u12 fill-size:cover fill-position:center-center"
-      style="
-        background-image: url('{{ with resources.Get "images/office-02.jpg" }}{{ .RelPermalink }}{{ end }}');
-        background-position: bottom center !important;
-      "
-    ></div>
+    <div class="two-links__image two-links__1 position:relative">
+      {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-7.jpg" }}
+        {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 1870) (sub .Height 0)) }}
+        {{ $1_2 := $tmpCrop.Crop "1964x3928 TopLeft" }}
+
+        {{ $1_2_jpeg_285 := $1_2.Resize "285x" }}
+        {{ $1_2_webp_285 := $1_2_jpeg_285.Process "webp" }}
+        {{ $1_2_avif_285 := $1_2_jpeg_285.Process "avif" }}
+
+        {{ $1_2_jpeg_428 := $1_2.Resize "428x" }}
+        {{ $1_2_webp_428 := $1_2_jpeg_428.Process "webp" }}
+        {{ $1_2_avif_428 := $1_2_jpeg_428.Process "avif" }}
+
+        {{ $1_2_jpeg_570 := $1_2.Resize "570x" }}
+        {{ $1_2_webp_570 := $1_2_jpeg_570.Process "webp" }}
+        {{ $1_2_avif_570 := $1_2_jpeg_570.Process "avif" }}
+
+        {{ $square := .Resize "3928x3928 Right" }}
+
+        {{ $square_jpeg_580 := $square.Resize "580x" }}
+        {{ $square_webp_580 := $square_jpeg_580.Process "webp" }}
+        {{ $square_avif_580 := $square_jpeg_580.Process "avif" }}
+
+        {{ $square_jpeg_870 := $square.Resize "870x" }}
+        {{ $square_webp_870 := $square_jpeg_870.Process "webp" }}
+        {{ $square_avif_870 := $square_jpeg_870.Process "avif" }}
+
+        {{ $square_jpeg_1160 := $square.Resize "1160x" }}
+        {{ $square_webp_1160 := $square_jpeg_1160.Process "webp" }}
+        {{ $square_avif_1160 := $square_jpeg_1160.Process "avif" }}
+
+        {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 640)) }}
+        {{ $16_9 := $tmpCrop.Crop "4080x2295 TopLeft" }}
+
+        {{ $16_9_jpeg_375 := $16_9.Resize "375x" }}
+        {{ $16_9_webp_375 := $16_9_jpeg_375.Process "webp" }}
+        {{ $16_9_avif_375 := $16_9_jpeg_375.Process "avif" }}
+
+        {{ $16_9_jpeg_640 := $16_9.Resize "640x" }}
+        {{ $16_9_webp_640 := $16_9_jpeg_640.Process "webp" }}
+        {{ $16_9_avif_640 := $16_9_jpeg_640.Process "avif" }}
+
+        {{ $16_9_jpeg_768 := $16_9.Resize "768x" }}
+        {{ $16_9_webp_768 := $16_9_jpeg_768.Process "webp" }}
+        {{ $16_9_avif_768 := $16_9_jpeg_768.Process "avif" }}
+
+        {{ $16_9_jpeg_1024 := $16_9.Resize "1024x" }}
+        {{ $16_9_webp_1024 := $16_9_jpeg_1024.Process "webp" }}
+        {{ $16_9_avif_1024 := $16_9_jpeg_1024.Process "avif" }}
+
+        {{ $16_9_jpeg_1152 := $16_9.Resize "1152x" }}
+        {{ $16_9_webp_1152 := $16_9_jpeg_1152.Process "webp" }}
+        {{ $16_9_avif_1152 := $16_9_jpeg_1152.Process "avif" }}
+
+        {{ $16_9_jpeg_1536 := $16_9.Resize "1536x" }}
+        {{ $16_9_webp_1536 := $16_9_jpeg_1536.Process "webp" }}
+        {{ $16_9_avif_1536 := $16_9_jpeg_1536.Process "avif" }}
+
+        <picture>
+          <source
+            media="(min-width: 2400px)"
+            type="image/avif"
+            srcset="
+              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
+              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
+              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
+              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
+              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
+              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 2400px)"
+            type="image/webp"
+            srcset="
+              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
+              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
+              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
+              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
+              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
+              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 2400px)"
+            type="image/jpeg"
+            srcset="
+              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
+              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
+              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
+              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
+              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
+              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
+            "
+          >
+
+          <source
+            media="(min-width: 1400px)"
+            type="image/avif"
+            srcset="
+              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
+              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
+              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1400px)"
+            type="image/webp"
+            srcset="
+              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
+              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
+              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1400px)"
+            type="image/jpeg"
+            srcset="
+              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
+              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
+              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
+            "
+          >
+
+          <source
+            media="(min-width: 1140px)"
+            type="image/avif"
+            srcset="
+              {{ $1_2_avif_285.RelPermalink }} {{ $1_2_avif_285.Width }}w,
+              {{ $1_2_avif_428.RelPermalink }} {{ $1_2_avif_428.Width }}w,
+              {{ $1_2_avif_570.RelPermalink }} {{ $1_2_avif_570.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1140px)"
+            type="image/webp"
+            srcset="
+              {{ $1_2_webp_285.RelPermalink }} {{ $1_2_webp_285.Width }}w,
+              {{ $1_2_webp_428.RelPermalink }} {{ $1_2_webp_428.Width }}w,
+              {{ $1_2_webp_570.RelPermalink }} {{ $1_2_webp_570.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 1140px)"
+            type="image/jpeg"
+            srcset="
+              {{ $1_2_jpeg_285.RelPermalink }} {{ $1_2_jpeg_285.Width }}w,
+              {{ $1_2_jpeg_428.RelPermalink }} {{ $1_2_jpeg_428.Width }}w,
+              {{ $1_2_jpeg_570.RelPermalink }} {{ $1_2_jpeg_570.Width }}w,
+            "
+          >
+
+          <source
+            media="(min-width: 768px)"
+            type="image/avif"
+            srcset="
+              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
+              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
+              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 768px)"
+            type="image/webp"
+            srcset="
+              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
+              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
+              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
+            "
+          >
+          <source
+            media="(min-width: 768px)"
+            type="image/jpeg"
+            srcset="
+              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
+              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
+              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
+            "
+          >
+
+          <source
+            type="image/avif"
+            srcset="
+              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
+              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
+              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
+              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
+              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
+              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
+            "
+          >
+          <source
+            type="image/webp"
+            srcset="
+              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
+              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
+              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
+              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
+              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
+              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
+            "
+          >
+          <source
+            type="image/jpeg"
+            srcset="
+              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
+              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
+              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
+              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
+              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
+              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
+            "
+          >
+          <img
+            class="object-fit:cover inset:0 width:100% height:100%"
+            style="object-position: right center"
+            src="{{ $16_9_jpeg_375.RelPermalink }}"
+            loading="lazy"
+            sizes="auto"
+            alt="A modern reception area with a long marble desk, wood-paneled walls, warm ceiling lighting, and a sign for Marine Landing Notary Public. The space feels calm and professional."
+          >
+        </picture>
+      {{ end }}
+    </div>
     <article class="two-links__text two-links__2 padding:u8 padding@md:u10">
       <div>
         <h2 class="font-size:h4 font-weight:regular font-leading:1 margin-bottom:u4">
