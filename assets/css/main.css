@@ -1255,6 +1255,7 @@ _::-webkit-full-page-media, _:future,
   }
 }
 .two-links__text.two-links__1 { grid-area: text1; }
+.two-links__image { position: relative; }
 .two-links__image.two-links__1 { grid-area: image1; }
 .two-links__text.two-links__2 { grid-area: text2; }
 .two-links__image.two-links__2 { grid-area: image2; }

@@ -184,7 +184,7 @@
         </a>
       </div>
     </article>
-    <div class="two-links__image two-links__1 position:relative">
+    <div class="two-links__image two-links__1">
       {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-3.jpg" }}
         {{ $1_2 := .Crop "2040x4080 Center" }}
 
@@ -317,7 +317,7 @@
         </a>
       </div>
     </article>
-    <div class="two-links__image two-links__2 position:relative">
+    <div class="two-links__image two-links__2">
       {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-7.jpg" }}
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 1870) (sub .Height 0)) }}
         {{ $1_2 := $tmpCrop.Crop "1964x3928 TopLeft" }}
