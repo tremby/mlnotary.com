@@ -13,7 +13,22 @@
     <meta property="og:title" content="{{ default hugo.Data.meta.title .Page.Title }}" />
     <meta property="og:site_name" content="{{ hugo.Data.meta.title }}" />
     <meta property="og:description" content="{{ default hugo.Data.meta.description .Page.Params.description }}" />
-    <meta property="og:image" content="{{ absURL "/assets/images/office-02.jpg" }}" />
+    {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-4.jpg" }}
+      {{ with .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 727)) }}
+        {{ with .Crop "4080x2142 TopLeft" }}
+          {{ $jpeg := .Resize "1200x jpeg q95" }}
+          {{ $webp := .Resize "1200x webp q95" }}
+          <meta property="og:image" content="{{ $webp.Permalink }}" />
+          <meta property="og:image:type" content="{{ $webp.MediaType.Type }}" />
+          <meta property="og:image:width" content="{{ $webp.Width }}" />
+          <meta property="og:image:height" content="{{ $webp.Height }}" />
+          <meta property="og:image" content="{{ $jpeg.Permalink }}" />
+          <meta property="og:image:type" content="{{ $jpeg.MediaType.Type }}" />
+          <meta property="og:image:width" content="{{ $jpeg.Width }}" />
+          <meta property="og:image:height" content="{{ $jpeg.Height }}" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:card" content="summary_large_image" />
 
