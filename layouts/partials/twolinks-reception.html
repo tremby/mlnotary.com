@@ -1,0 +1,114 @@
+{{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-7.jpg" }}
+  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 1870) (sub .Height 0)) }}
+  {{ $1_2 := $tmpCrop.Crop "1964x3928 TopLeft" }}
+
+  {{ $square := .Crop "3928x3928 Right" }}
+
+  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 640)) }}
+  {{ $16_9 := $tmpCrop.Crop "4080x2295 TopLeft" }}
+
+  <picture>
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $16_9.Process $format }}
+        <source
+          media="(min-width: 2400px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $square.Process $format }}
+        <source
+          media="(min-width: 1400px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $1_2.Process $format }}
+        <source
+          media="(min-width: 1140px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "285x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "428x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "570x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $square.Process $format }}
+        <source
+          media="(min-width: 768px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $16_9.Process $format }}
+        <source
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ with $16_9.Resize "375x jpeg" }}
+      <img
+        class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+        style="object-position: right center"
+        src="{{ .RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+        loading="lazy"
+        sizes="auto"
+        alt="A modern reception area with a long marble desk, wood-paneled walls, warm ceiling lighting, and a sign for Marine Landing Notary Public. The space feels calm and professional."
+      >
+    {{ end }}
+  </picture>
+{{ end }}

@@ -1,0 +1,115 @@
+{{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-3.jpg" }}
+  {{ $1_2 := .Crop "2040x4080 Center" }}
+
+  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 850)) }}
+  {{ $square := $tmpCrop.Crop "2646x2646 TopLeft" }}
+
+  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 1765)) }}
+  {{ $16_9 := $tmpCrop.Crop "2646x1488 TopLeft" }}
+
+  <picture>
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $16_9 }}
+        <source
+          media="(min-width: 2400px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize (printf "%dx %s" 375 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize (printf "%dx %s" 640 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize (printf "%dx %s" 768 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize (printf "%dx %s" 1024 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize (printf "%dx %s" 1152 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize (printf "%dx %s" 1536 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $square }}
+        <source
+          media="(min-width: 1400px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $1_2 }}
+        <source
+          media="(min-width: 1140px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "285x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "428x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "570x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $square }}
+        <source
+          media="(min-width: 768px)"
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ range slice "avif" "webp" "jpeg" }}
+      {{ $format := . }}
+      {{ with $16_9 }}
+        <source
+          type="image/{{ $format }}"
+          srcset="
+            {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+            {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+          "
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        >
+      {{ end }}
+    {{ end }}
+
+    {{ with $16_9 }}
+      <img
+        class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+        src="{{ ($16_9.Resize "375x jpeg").RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+        loading="lazy"
+        sizes="auto"
+        alt="A modern private meeting room with a round wood table, orange swivel chairs, wall-mounted screen, and wood-and-glass walls, creating a warm, polished feel."
+      >
+    {{ end }}
+  </picture>
+{{ end }}
