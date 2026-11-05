@@ -15,12 +15,73 @@
 
   <section>
     <div class="row fill:white">
-      <div
-        class="display:none display@md:block column:12 column@md:3 padding-y:u10 fill-size:cover fill-position:center-center"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1504355080015-bba52674577b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=090323df2e679b3b5df56edc7f2629cb&auto=format&fit=crop&w=800&q=60');
-        "
-      ></div>
+      <div class="display:none display@md:block column:12 column@md:3 position:relative">
+        {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-8.jpg" }}
+          {{ $2_5 := .Crop "1572x3930 Left" }}
+          {{ $7_10 := .Crop "2751x3930 Left" }}
+          {{ $square := .Crop "3930x3930 Left" }}
+          <picture>
+            {{ range slice "avif" "webp" "jpeg" }}
+              {{ $format := . }}
+              {{ with $square }}
+                <source
+                  media="(min-width: 1860px)"
+                  type="image/{{ $format }}"
+                  srcset="
+                    {{ with .Resize (printf "%dx %s" 550 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 825 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 1100 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  "
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                >
+              {{ end }}
+            {{ end }}
+            {{ range slice "avif" "webp" "jpeg" }}
+              {{ $format := . }}
+              {{ with $7_10 }}
+                <source
+                  media="(min-width: 1500px)"
+                  type="image/{{ $format }}"
+                  srcset="
+                    {{ with .Resize (printf "%dx %s" 420 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 630 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 840 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  "
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                >
+              {{ end }}
+            {{ end }}
+            {{ range slice "avif" "webp" "jpeg" }}
+              {{ $format := . }}
+              {{ with $2_5 }}
+                <source
+                  type="image/{{ $format }}"
+                  srcset="
+                    {{ with .Resize (printf "%dx %s" 285 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 428 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 570 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  "
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                >
+              {{ end }}
+            {{ end }}
+            {{ with $2_5 }}
+              <img
+                class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                loading="lazy"
+                sizes="auto"
+                alt="Modern office kitchenette with wood cabinets, white counters, microwave and espresso machine beside a glass-walled dining nook with black chairs; sleek, calm atmosphere."
+              >
+            {{ end }}
+          </picture>
+        {{ end }}
+      </div>
       <div class="column:12 column@md:6 padding-y:u8 padding-y@sm:u12 padding-x:u8 fill:primary">
         <div class="align:center padding-y:u6">
           <span class="line line:short margin-bottom:u6 fill:white margin:auto"></span>
