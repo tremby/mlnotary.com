@@ -15,3 +15,13 @@ target = "data"
 source = "generated"
 target = "data"
 files = ["hours.json"]
+
+[imaging]
+resampleFilter = "lanczos"
+
+[imaging.jpeg]
+quality = 85
+
+[imaging.webp]
+quality = 85
+method = 6
