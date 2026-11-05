@@ -60,222 +60,116 @@
       {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-3.jpg" }}
         {{ $1_2 := .Crop "2040x4080 Center" }}
 
-        {{ $1_2_jpeg_285 := $1_2.Resize "285x" }}
-        {{ $1_2_webp_285 := $1_2_jpeg_285.Process "webp" }}
-        {{ $1_2_avif_285 := $1_2_jpeg_285.Process "avif" }}
-
-        {{ $1_2_jpeg_428 := $1_2.Resize "428x" }}
-        {{ $1_2_webp_428 := $1_2_jpeg_428.Process "webp" }}
-        {{ $1_2_avif_428 := $1_2_jpeg_428.Process "avif" }}
-
-        {{ $1_2_jpeg_570 := $1_2.Resize "570x" }}
-        {{ $1_2_webp_570 := $1_2_jpeg_570.Process "webp" }}
-        {{ $1_2_avif_570 := $1_2_jpeg_570.Process "avif" }}
-
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 850)) }}
         {{ $square := $tmpCrop.Crop "2646x2646 TopLeft" }}
-
-        {{ $square_jpeg_580 := $square.Resize "580x" }}
-        {{ $square_webp_580 := $square_jpeg_580.Process "webp" }}
-        {{ $square_avif_580 := $square_jpeg_580.Process "avif" }}
-
-        {{ $square_jpeg_870 := $square.Resize "870x" }}
-        {{ $square_webp_870 := $square_jpeg_870.Process "webp" }}
-        {{ $square_avif_870 := $square_jpeg_870.Process "avif" }}
-
-        {{ $square_jpeg_1160 := $square.Resize "1160x" }}
-        {{ $square_webp_1160 := $square_jpeg_1160.Process "webp" }}
-        {{ $square_avif_1160 := $square_jpeg_1160.Process "avif" }}
 
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 1765)) }}
         {{ $16_9 := $tmpCrop.Crop "2646x1488 TopLeft" }}
 
-        {{ $16_9_jpeg_375 := $16_9.Resize "375x" }}
-        {{ $16_9_webp_375 := $16_9_jpeg_375.Process "webp" }}
-        {{ $16_9_avif_375 := $16_9_jpeg_375.Process "avif" }}
-
-        {{ $16_9_jpeg_640 := $16_9.Resize "640x" }}
-        {{ $16_9_webp_640 := $16_9_jpeg_640.Process "webp" }}
-        {{ $16_9_avif_640 := $16_9_jpeg_640.Process "avif" }}
-
-        {{ $16_9_jpeg_768 := $16_9.Resize "768x" }}
-        {{ $16_9_webp_768 := $16_9_jpeg_768.Process "webp" }}
-        {{ $16_9_avif_768 := $16_9_jpeg_768.Process "avif" }}
-
-        {{ $16_9_jpeg_1024 := $16_9.Resize "1024x" }}
-        {{ $16_9_webp_1024 := $16_9_jpeg_1024.Process "webp" }}
-        {{ $16_9_avif_1024 := $16_9_jpeg_1024.Process "avif" }}
-
-        {{ $16_9_jpeg_1152 := $16_9.Resize "1152x" }}
-        {{ $16_9_webp_1152 := $16_9_jpeg_1152.Process "webp" }}
-        {{ $16_9_avif_1152 := $16_9_jpeg_1152.Process "avif" }}
-
-        {{ $16_9_jpeg_1536 := $16_9.Resize "1536x" }}
-        {{ $16_9_webp_1536 := $16_9_jpeg_1536.Process "webp" }}
-        {{ $16_9_avif_1536 := $16_9_jpeg_1536.Process "avif" }}
-
         <picture>
-          <source
-            media="(min-width: 2400px)"
-            type="image/avif"
-            srcset="
-              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
-              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
-              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
-              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
-              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
-              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 2400px)"
-            type="image/webp"
-            srcset="
-              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
-              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
-              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
-              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
-              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
-              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 2400px)"
-            type="image/jpeg"
-            srcset="
-              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
-              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
-              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
-              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
-              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
-              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $16_9 }}
+              <source
+                media="(min-width: 2400px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize (printf "%dx %s" 375 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize (printf "%dx %s" 640 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize (printf "%dx %s" 768 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize (printf "%dx %s" 1024 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize (printf "%dx %s" 1152 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize (printf "%dx %s" 1536 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 1400px)"
-            type="image/avif"
-            srcset="
-              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
-              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
-              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1400px)"
-            type="image/webp"
-            srcset="
-              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
-              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
-              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1400px)"
-            type="image/jpeg"
-            srcset="
-              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
-              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
-              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $square }}
+              <source
+                media="(min-width: 1400px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 1140px)"
-            type="image/avif"
-            srcset="
-              {{ $1_2_avif_285.RelPermalink }} {{ $1_2_avif_285.Width }}w,
-              {{ $1_2_avif_428.RelPermalink }} {{ $1_2_avif_428.Width }}w,
-              {{ $1_2_avif_570.RelPermalink }} {{ $1_2_avif_570.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1140px)"
-            type="image/webp"
-            srcset="
-              {{ $1_2_webp_285.RelPermalink }} {{ $1_2_webp_285.Width }}w,
-              {{ $1_2_webp_428.RelPermalink }} {{ $1_2_webp_428.Width }}w,
-              {{ $1_2_webp_570.RelPermalink }} {{ $1_2_webp_570.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1140px)"
-            type="image/jpeg"
-            srcset="
-              {{ $1_2_jpeg_285.RelPermalink }} {{ $1_2_jpeg_285.Width }}w,
-              {{ $1_2_jpeg_428.RelPermalink }} {{ $1_2_jpeg_428.Width }}w,
-              {{ $1_2_jpeg_570.RelPermalink }} {{ $1_2_jpeg_570.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $1_2 }}
+              <source
+                media="(min-width: 1140px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "285x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "428x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "570x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 768px)"
-            type="image/avif"
-            srcset="
-              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
-              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
-              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 768px)"
-            type="image/webp"
-            srcset="
-              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
-              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
-              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 768px)"
-            type="image/jpeg"
-            srcset="
-              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
-              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
-              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $square }}
+              <source
+                media="(min-width: 768px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            type="image/avif"
-            srcset="
-              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
-              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
-              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
-              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
-              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
-              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
-            "
-          >
-          <source
-            type="image/webp"
-            srcset="
-              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
-              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
-              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
-              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
-              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
-              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
-            "
-          >
-          <source
-            type="image/jpeg"
-            srcset="
-              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
-              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
-              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
-              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
-              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
-              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
-            "
-          >
-          <img
-            class="object-fit:cover inset:0 width:100% height:100%"
-            src="{{ $16_9_jpeg_375.RelPermalink }}"
-            loading="lazy"
-            sizes="auto"
-            alt="A modern private meeting room with a round wood table, orange swivel chairs, wall-mounted screen, and wood-and-glass walls, creating a warm, polished feel."
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $16_9 }}
+              <source
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
+
+          {{ with $16_9 }}
+            <img
+              class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+              src="{{ ($16_9.Resize "375x jpeg").RelPermalink }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
+              loading="lazy"
+              sizes="auto"
+              alt="A modern private meeting room with a round wood table, orange swivel chairs, wall-mounted screen, and wood-and-glass walls, creating a warm, polished feel."
+            >
+          {{ end }}
         </picture>
       {{ end }}
     </div>
@@ -300,222 +194,114 @@
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 1870) (sub .Height 0)) }}
         {{ $1_2 := $tmpCrop.Crop "1964x3928 TopLeft" }}
 
-        {{ $1_2_jpeg_285 := $1_2.Resize "285x" }}
-        {{ $1_2_webp_285 := $1_2_jpeg_285.Process "webp" }}
-        {{ $1_2_avif_285 := $1_2_jpeg_285.Process "avif" }}
-
-        {{ $1_2_jpeg_428 := $1_2.Resize "428x" }}
-        {{ $1_2_webp_428 := $1_2_jpeg_428.Process "webp" }}
-        {{ $1_2_avif_428 := $1_2_jpeg_428.Process "avif" }}
-
-        {{ $1_2_jpeg_570 := $1_2.Resize "570x" }}
-        {{ $1_2_webp_570 := $1_2_jpeg_570.Process "webp" }}
-        {{ $1_2_avif_570 := $1_2_jpeg_570.Process "avif" }}
-
-        {{ $square := .Resize "3928x3928 Right" }}
-
-        {{ $square_jpeg_580 := $square.Resize "580x" }}
-        {{ $square_webp_580 := $square_jpeg_580.Process "webp" }}
-        {{ $square_avif_580 := $square_jpeg_580.Process "avif" }}
-
-        {{ $square_jpeg_870 := $square.Resize "870x" }}
-        {{ $square_webp_870 := $square_jpeg_870.Process "webp" }}
-        {{ $square_avif_870 := $square_jpeg_870.Process "avif" }}
-
-        {{ $square_jpeg_1160 := $square.Resize "1160x" }}
-        {{ $square_webp_1160 := $square_jpeg_1160.Process "webp" }}
-        {{ $square_avif_1160 := $square_jpeg_1160.Process "avif" }}
+        {{ $square := .Crop "3928x3928 Right" }}
 
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 640)) }}
         {{ $16_9 := $tmpCrop.Crop "4080x2295 TopLeft" }}
 
-        {{ $16_9_jpeg_375 := $16_9.Resize "375x" }}
-        {{ $16_9_webp_375 := $16_9_jpeg_375.Process "webp" }}
-        {{ $16_9_avif_375 := $16_9_jpeg_375.Process "avif" }}
-
-        {{ $16_9_jpeg_640 := $16_9.Resize "640x" }}
-        {{ $16_9_webp_640 := $16_9_jpeg_640.Process "webp" }}
-        {{ $16_9_avif_640 := $16_9_jpeg_640.Process "avif" }}
-
-        {{ $16_9_jpeg_768 := $16_9.Resize "768x" }}
-        {{ $16_9_webp_768 := $16_9_jpeg_768.Process "webp" }}
-        {{ $16_9_avif_768 := $16_9_jpeg_768.Process "avif" }}
-
-        {{ $16_9_jpeg_1024 := $16_9.Resize "1024x" }}
-        {{ $16_9_webp_1024 := $16_9_jpeg_1024.Process "webp" }}
-        {{ $16_9_avif_1024 := $16_9_jpeg_1024.Process "avif" }}
-
-        {{ $16_9_jpeg_1152 := $16_9.Resize "1152x" }}
-        {{ $16_9_webp_1152 := $16_9_jpeg_1152.Process "webp" }}
-        {{ $16_9_avif_1152 := $16_9_jpeg_1152.Process "avif" }}
-
-        {{ $16_9_jpeg_1536 := $16_9.Resize "1536x" }}
-        {{ $16_9_webp_1536 := $16_9_jpeg_1536.Process "webp" }}
-        {{ $16_9_avif_1536 := $16_9_jpeg_1536.Process "avif" }}
-
         <picture>
-          <source
-            media="(min-width: 2400px)"
-            type="image/avif"
-            srcset="
-              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
-              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
-              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
-              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
-              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
-              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 2400px)"
-            type="image/webp"
-            srcset="
-              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
-              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
-              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
-              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
-              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
-              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 2400px)"
-            type="image/jpeg"
-            srcset="
-              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
-              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
-              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
-              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
-              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
-              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $16_9.Process $format }}
+              <source
+                media="(min-width: 2400px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 1400px)"
-            type="image/avif"
-            srcset="
-              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
-              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
-              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1400px)"
-            type="image/webp"
-            srcset="
-              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
-              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
-              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1400px)"
-            type="image/jpeg"
-            srcset="
-              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
-              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
-              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $square.Process $format }}
+              <source
+                media="(min-width: 1400px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 1140px)"
-            type="image/avif"
-            srcset="
-              {{ $1_2_avif_285.RelPermalink }} {{ $1_2_avif_285.Width }}w,
-              {{ $1_2_avif_428.RelPermalink }} {{ $1_2_avif_428.Width }}w,
-              {{ $1_2_avif_570.RelPermalink }} {{ $1_2_avif_570.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1140px)"
-            type="image/webp"
-            srcset="
-              {{ $1_2_webp_285.RelPermalink }} {{ $1_2_webp_285.Width }}w,
-              {{ $1_2_webp_428.RelPermalink }} {{ $1_2_webp_428.Width }}w,
-              {{ $1_2_webp_570.RelPermalink }} {{ $1_2_webp_570.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 1140px)"
-            type="image/jpeg"
-            srcset="
-              {{ $1_2_jpeg_285.RelPermalink }} {{ $1_2_jpeg_285.Width }}w,
-              {{ $1_2_jpeg_428.RelPermalink }} {{ $1_2_jpeg_428.Width }}w,
-              {{ $1_2_jpeg_570.RelPermalink }} {{ $1_2_jpeg_570.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $1_2.Process $format }}
+              <source
+                media="(min-width: 1140px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "285x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "428x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "570x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            media="(min-width: 768px)"
-            type="image/avif"
-            srcset="
-              {{ $square_avif_580.RelPermalink }} {{ $square_avif_580.Width }}w,
-              {{ $square_avif_870.RelPermalink }} {{ $square_avif_870.Width }}w,
-              {{ $square_avif_1160.RelPermalink }} {{ $square_avif_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 768px)"
-            type="image/webp"
-            srcset="
-              {{ $square_webp_580.RelPermalink }} {{ $square_webp_580.Width }}w,
-              {{ $square_webp_870.RelPermalink }} {{ $square_webp_870.Width }}w,
-              {{ $square_webp_1160.RelPermalink }} {{ $square_webp_1160.Width }}w,
-            "
-          >
-          <source
-            media="(min-width: 768px)"
-            type="image/jpeg"
-            srcset="
-              {{ $square_jpeg_580.RelPermalink }} {{ $square_jpeg_580.Width }}w,
-              {{ $square_jpeg_870.RelPermalink }} {{ $square_jpeg_870.Width }}w,
-              {{ $square_jpeg_1160.RelPermalink }} {{ $square_jpeg_1160.Width }}w,
-            "
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $square.Process $format }}
+              <source
+                media="(min-width: 768px)"
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "580x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "870x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1160x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
 
-          <source
-            type="image/avif"
-            srcset="
-              {{ $16_9_avif_375.RelPermalink }} {{ $16_9_avif_375.Width }}w,
-              {{ $16_9_avif_640.RelPermalink }} {{ $16_9_avif_640.Width }}w,
-              {{ $16_9_avif_768.RelPermalink }} {{ $16_9_avif_768.Width }}w,
-              {{ $16_9_avif_1024.RelPermalink }} {{ $16_9_avif_1024.Width }}w,
-              {{ $16_9_avif_1152.RelPermalink }} {{ $16_9_avif_1152.Width }}w,
-              {{ $16_9_avif_1536.RelPermalink }} {{ $16_9_avif_1536.Width }}w,
-            "
-          >
-          <source
-            type="image/webp"
-            srcset="
-              {{ $16_9_webp_375.RelPermalink }} {{ $16_9_webp_375.Width }}w,
-              {{ $16_9_webp_640.RelPermalink }} {{ $16_9_webp_640.Width }}w,
-              {{ $16_9_webp_768.RelPermalink }} {{ $16_9_webp_768.Width }}w,
-              {{ $16_9_webp_1024.RelPermalink }} {{ $16_9_webp_1024.Width }}w,
-              {{ $16_9_webp_1152.RelPermalink }} {{ $16_9_webp_1152.Width }}w,
-              {{ $16_9_webp_1536.RelPermalink }} {{ $16_9_webp_1536.Width }}w,
-            "
-          >
-          <source
-            type="image/jpeg"
-            srcset="
-              {{ $16_9_jpeg_375.RelPermalink }} {{ $16_9_jpeg_375.Width }}w,
-              {{ $16_9_jpeg_640.RelPermalink }} {{ $16_9_jpeg_640.Width }}w,
-              {{ $16_9_jpeg_768.RelPermalink }} {{ $16_9_jpeg_768.Width }}w,
-              {{ $16_9_jpeg_1024.RelPermalink }} {{ $16_9_jpeg_1024.Width }}w,
-              {{ $16_9_jpeg_1152.RelPermalink }} {{ $16_9_jpeg_1152.Width }}w,
-              {{ $16_9_jpeg_1536.RelPermalink }} {{ $16_9_jpeg_1536.Width }}w,
-            "
-          >
-          <img
-            class="object-fit:cover inset:0 width:100% height:100%"
-            style="object-position: right center"
-            src="{{ $16_9_jpeg_375.RelPermalink }}"
-            loading="lazy"
-            sizes="auto"
-            alt="A modern reception area with a long marble desk, wood-paneled walls, warm ceiling lighting, and a sign for Marine Landing Notary Public. The space feels calm and professional."
-          >
+          {{ range slice "avif" "webp" "jpeg" }}
+            {{ $format := . }}
+            {{ with $16_9.Process $format }}
+              <source
+                type="image/{{ $format }}"
+                srcset="
+                  {{ with .Resize "375x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "640x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "768x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1024x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1152x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  {{ with .Resize "1536x" }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+              >
+            {{ end }}
+          {{ end }}
+
+          {{ with $16_9.Resize "375x jpeg" }}
+            <img
+              class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+              style="object-position: right center"
+              src="{{ .RelPermalink }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
+              loading="lazy"
+              sizes="auto"
+              alt="A modern reception area with a long marble desk, wood-paneled walls, warm ceiling lighting, and a sign for Marine Landing Notary Public. The space feels calm and professional."
+            >
+          {{ end }}
         </picture>
       {{ end }}
     </div>

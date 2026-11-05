@@ -11,70 +11,33 @@
       <span class="line line:short margin-top:u8"></span>
       {{ with resources.Get "images/261022-MLNotary-Final-6144px-0012.jpg" }}
         {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 102) (sub .Height 264)) }}
-        {{ $crop := $tmpCrop.Crop "3994x3994 TopLeft" }}
-
-        {{ $jpeg296 := $crop.Resize "296x" }}
-        {{ $webp296 := $jpeg296.Process "webp" }}
-        {{ $avif296 := $jpeg296.Process "avif" }}
-
-        {{ $jpeg400 := $crop.Resize "400x" }}
-        {{ $webp400 := $jpeg400.Process "webp" }}
-        {{ $avif400 := $jpeg400.Process "avif" }}
-
-        {{ $jpeg460 := $crop.Resize "460x" }}
-        {{ $webp460 := $jpeg460.Process "webp" }}
-        {{ $avif460 := $jpeg460.Process "avif" }}
-
-        {{ $jpeg592 := $crop.Resize "592x" }}
-        {{ $webp592 := $jpeg592.Process "webp" }}
-        {{ $avif592 := $jpeg592.Process "avif" }}
-
-        {{ $jpeg800 := $crop.Resize "800x" }}
-        {{ $webp800 := $jpeg800.Process "webp" }}
-        {{ $avif800 := $jpeg800.Process "avif" }}
-
-        {{ $jpeg920 := $crop.Resize "920x" }}
-        {{ $webp920 := $jpeg920.Process "webp" }}
-        {{ $avif920 := $jpeg920.Process "avif" }}
-
+        {{ $img := $tmpCrop.Crop "3994x3994 TopLeft" }}
         <figure class="margin-top:u8 margin-x:auto" style="max-width: 460px">
           <picture>
-            <source
-              type="image/avif"
-              srcset="
-                {{ $avif296.RelPermalink }} {{ $avif296.Width }}w,
-                {{ $avif400.RelPermalink }} {{ $avif400.Width }}w,
-                {{ $avif460.RelPermalink }} {{ $avif460.Width }}w,
-                {{ $avif592.RelPermalink }} {{ $avif592.Width }}w,
-                {{ $avif800.RelPermalink }} {{ $avif800.Width }}w,
-                {{ $avif920.RelPermalink }} {{ $avif920.Width }}w,
-              "
-            >
-            <source
-              type="image/webp"
-              srcset="
-                {{ $webp296.RelPermalink }} {{ $webp296.Width }}w,
-                {{ $webp400.RelPermalink }} {{ $webp400.Width }}w,
-                {{ $webp460.RelPermalink }} {{ $webp460.Width }}w,
-                {{ $webp592.RelPermalink }} {{ $webp592.Width }}w,
-                {{ $webp800.RelPermalink }} {{ $webp800.Width }}w,
-                {{ $webp920.RelPermalink }} {{ $webp920.Width }}w,
-              "
-            >
+            {{ range slice "avif" "webp" "jpeg" }}
+              {{ $format := . }}
+              {{ with $img }}
+                <source
+                  type="image/{{ $format }}"
+                  srcset="
+                    {{ with .Resize (printf "%dx %s" 296 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 400 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 460 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 592 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 800 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    {{ with .Resize (printf "%dx %s" 920 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                  "
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                >
+              {{ end }}
+            {{ end }}
             <img
-              src="{{ $jpeg296.RelPermalink }}"
-              width="{{ $crop.Width }}"
-              height="{{ $crop.Height }}"
+              src="{{ ($img.Resize "296x jpeg").RelPermalink }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
               alt="An Asian man with glasses smiles at the camera. He wears a blue suit with a white shirt and a blue tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
               sizes="(min-width: 1140px) 460px, (min-width: 768px) 40vw, (min-width: 536px) 460px, 79vw"
-              srcset="
-                {{ $jpeg296.RelPermalink }} {{ $jpeg296.Width }}w,
-                {{ $jpeg400.RelPermalink }} {{ $jpeg400.Width }}w,
-                {{ $jpeg460.RelPermalink }} {{ $jpeg460.Width }}w,
-                {{ $jpeg592.RelPermalink }} {{ $jpeg592.Width }}w,
-                {{ $jpeg800.RelPermalink }} {{ $jpeg800.Width }}w,
-                {{ $jpeg920.RelPermalink }} {{ $jpeg920.Width }}w,
-              "
               class="border-radius:u1"
             >
           </picture>

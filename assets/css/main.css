@@ -415,6 +415,9 @@ figcaption {
 .position\:relative {
   position: relative !important;
 }
+.position\:absolute {
+  position: absolute !important;
+}
 .color\:primary {
   color: var(--primary) !important;
 }
