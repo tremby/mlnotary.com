@@ -1261,6 +1261,7 @@ _::-webkit-full-page-media, _:future,
 @media (min-width: 768px) {
   .two-links__image {
     aspect-ratio: auto;
+    min-height: 320px;
   }
 }
 
