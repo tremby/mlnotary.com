@@ -18,4 +18,4 @@ Jonathan Wong brings over a decade of experience in the legal industry, having w
 
 Since its founding, Marine Landing Notary Public has assisted thousands of clients with legal services in real estate transactions, personal planning, and notarizations.
 
-Marine Landing Notary Public is operated by Jonathan Wong Notary Corporation.
+Marine Landing Notary Public is operated by {{< legal-name >}}.
