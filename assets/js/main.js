@@ -38,3 +38,21 @@ const mq = window.matchMedia("(min-width: 768px)");
 mq.addEventListener("change", (e) => {
   if (e.matches) toggleMenu(false);
 });
+
+// Popover for tel: links
+const popover = document.querySelector("#tel-popover");
+let activeLink;
+document.addEventListener("click", (event) => {
+  if (!popover.showPopover) return;
+
+  const link = event.target.closest('a[href^="tel:"]');
+  if (!link) return;
+  if (popover.contains(link)) return;
+  if (document.querySelector("footer").contains(link)) return;
+
+  activeLink?.style.removeProperty("anchor-name");
+  activeLink = link;
+  activeLink.style.setProperty("anchor-name", "--tel-link");
+
+  popover.showPopover();
+});

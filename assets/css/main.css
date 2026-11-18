@@ -1311,3 +1311,50 @@ _::-webkit-full-page-media, _:future,
     padding: 2rem;
   }
 }
+
+#tel-popover {
+  position: fixed;
+  inset: auto;
+  margin: 0.25rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 3px 10px color-mix(in srgb, var(--primary-d5), transparent 75%);
+  width: max-content;
+  background: var(--primary-d2);
+  color: var(--primary-l4);
+  font-size: 20px;
+  position-anchor: --tel-link;
+  position-area: block-end span-inline-end;
+  position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+
+  opacity: 0;
+  translate: 0 -0.5rem;
+  --duration: 200ms;
+  transition:
+    opacity var(--duration) ease,
+    translate var(--duration) ease,
+    display var(--duration) allow-discrete,
+    overlay var(--duration) allow-discrete;
+
+  &:popover-open {
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 -0.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --duration: 0s;
+  }
+
+  a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: var(--primary-l5);
+    &:hover { color: var(--primary-l4) }
+    &:active { color: var(--primary-l5) }
+  }
+}
