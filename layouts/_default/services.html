@@ -185,6 +185,7 @@
           <div class="tab/item">
             <article class="max-width:prose markup">
               {{ .Content }}
+              {{ partial "call-cta.html" .Page.Params.callCta }}
             </article>
           </div>
         </div>
