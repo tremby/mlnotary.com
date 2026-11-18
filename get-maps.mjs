@@ -1,11 +1,11 @@
-import { readFileSync, createWriteStream } from "node:fs";
+import { createWriteStream } from "node:fs";
 import { finished } from "node:stream/promises";
 import { Readable } from "node:stream";
 import path from "node:path";
 
-import { parse as parseYaml } from "yaml";
+import { getMeta } from "./lib/get-meta.mjs";
 
-const hugoMeta = parseYaml(readFileSync("./data/meta.yaml", "utf-8"));
+const hugoMeta = getMeta();
 
 const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 const CENTER_LATITUDE = hugoMeta.address.coordinates.latitude;
