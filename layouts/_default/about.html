@@ -10,8 +10,7 @@
       </p>
       <span class="line line:short margin-top:u8"></span>
       {{ with resources.Get "images/261022-MLNotary-Final-6144px-0012.jpg" }}
-        {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 102) (sub .Height 264)) }}
-        {{ $img := $tmpCrop.Crop "3994x3994 TopLeft" }}
+        {{ $img := partial "crop-offset.html" (slice . "3994x3994+102+264") }}
         <figure class="margin-top:u8 margin-x:auto" style="max-width: 460px">
           <picture>
             {{ range slice "avif" "webp" "jpeg" }}

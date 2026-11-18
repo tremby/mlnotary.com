@@ -6,12 +6,8 @@
         {{ $5_4 := .Crop "4080x3264 Center" }}
         {{ $7_5 := .Crop "4080x2914 Center" }}
         {{ $2_1 := .Crop "4080x2040 Center" }}
-
-        {{ $tmp := .Crop (printf "%dx%d BottomRight" .Width (sub .Height 1428)) }}
-        {{ $3_1 := $tmp.Crop "4080x1316 TopLeft" }}
-
-        {{ $tmp := .Crop (printf "%dx%d BottomRight" .Width (sub .Height 1618)) }}
-        {{ $4_1 := $tmp.Crop "4080x1020 TopLeft" }}
+        {{ $3_1 := partial "crop-offset.html" (slice . "4080x1316+0+1428") }}
+        {{ $4_1 := partial "crop-offset.html" (slice . "4080x1020+0+1618") }}
 
         <picture>
           <!-- 4:1 -->

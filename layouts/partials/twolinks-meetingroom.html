@@ -1,11 +1,7 @@
 {{ with resources.Get "images/Upper Left Photography - Marine Landing Notary-3.jpg" }}
   {{ $1_2 := .Crop "2040x4080 Center" }}
-
-  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 850)) }}
-  {{ $square := $tmpCrop.Crop "2646x2646 TopLeft" }}
-
-  {{ $tmpCrop := .Crop (printf "%dx%d BottomRight" (sub .Width 0) (sub .Height 1765)) }}
-  {{ $16_9 := $tmpCrop.Crop "2646x1488 TopLeft" }}
+  {{ $square := partial "crop-offset.html" (slice . "2646x2646+0+850") }}
+  {{ $16_9 := partial "crop-offset.html" (slice . "2646x1488+0+1765") }}
 
   <picture>
     {{ range slice "avif" "webp" "jpeg" }}

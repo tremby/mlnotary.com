@@ -1,0 +1,35 @@
+{{- /*
+
+Exact-offset crop partial
+
+Crop an image to given dimensions with given offset from top-right.
+
+Geometry syntax is like the X11 geometry format, but nothing is optional,
+and only positive offsets (i.e. from left and top) are supported.
+
+    WIDTHxHEIGHT+XOFFSET+YOFFSET
+
+Usage:
+
+    {{ with resources.Get "image.jpg" }}
+      {{ $img := partial "crop-offset.html" (slice . "1200x450+100+200") }}
+      ...
+    {{ end }}
+
+*/ -}}
+
+{{- $image := index . 0 -}}
+{{- $geometry := index . 1 -}}
+
+{{- $dimensions := findRE "[0-9]+" $geometry -}}
+{{- $width := int (index $dimensions 0) -}}
+{{- $height := int (index $dimensions 1) -}}
+{{- $x := int (index $dimensions 2) -}}
+{{- $y := int (index $dimensions 3) -}}
+
+{{- return ($image.Filter (images.Padding
+  (sub 0 $y)
+  (sub (add $x $width) $image.Width)
+  (sub (add $y $height) $image.Height)
+  (sub 0 $x)
+)) -}}
