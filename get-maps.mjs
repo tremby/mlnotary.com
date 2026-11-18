@@ -1,11 +1,15 @@
-import { createWriteStream } from "node:fs";
+import { readFileSync, createWriteStream } from "node:fs";
 import { finished } from "node:stream/promises";
 import { Readable } from "node:stream";
 import path from "node:path";
 
+import { parse as parseYaml } from "yaml";
+
+const hugoMeta = parseYaml(readFileSync("./data/meta.yaml", "utf-8"));
+
 const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
-const CENTER_LATITUDE = 49.2108;
-const CENTER_LONGITUDE = -123.1092;
+const CENTER_LATITUDE = hugoMeta.address.coordinates.latitude;
+const CENTER_LONGITUDE = hugoMeta.address.coordinates.longitude;
 const HEIGHT = 500;
 
 if (!MAPBOX_ACCESS_TOKEN) throw new Error("Expected MAPBOX_ACCESS_TOKEN to be set");

@@ -7,6 +7,9 @@ address:
   locality: Vancouver
   region: BC
   postalcode: V5X 0L6
+  coordinates:
+    latitude: 49.2108
+    longitude: -123.1092
 directions_url: https://www.google.com/maps/dir/?api=1&destination=Marine%20Landing%20Notary%20Public%2C%20%23590-8250%20Manitoba%20Street%2C%20Vancouver%2C%20BC%20V5X%200L6&destination_place_id=ChIJsQix7el2hlQRT_e6qJ1x46I
 email: jwong@mlnotary.com
 phone_intl: "+16046876166"
