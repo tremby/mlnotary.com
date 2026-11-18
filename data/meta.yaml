@@ -2,8 +2,11 @@
 title: Marine Landing Notary Public
 legal_name: "Jonathan Wong Notary Corporation"
 description: Full-service notary practice operated by Jonathan Wong, located in South Vancouver.
-address_1: "#590–8250 Manitoba Street"
-address_2: Vancouver, BC V5X 0L6
+address:
+  streetaddr: "#590–8250 Manitoba Street"
+  locality: Vancouver
+  region: BC
+  postalcode: V5X 0L6
 directions_url: https://www.google.com/maps/dir/?api=1&destination=Marine%20Landing%20Notary%20Public%2C%20%23590-8250%20Manitoba%20Street%2C%20Vancouver%2C%20BC%20V5X%200L6&destination_place_id=ChIJsQix7el2hlQRT_e6qJ1x46I
 email: jwong@mlnotary.com
 phone_intl: "+16046876166"
