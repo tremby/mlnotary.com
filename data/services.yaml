@@ -1,0 +1,20 @@
+- name: Real estate services
+  services:
+    - name: Real estate purchases and sales
+      url: /services/real-estate-purchases-and-sales/
+    - name: Mortgage refinancing
+      url: /services/mortgage-refinancing/
+
+- name: Personal planning
+  services:
+    - name: Wills
+      url: /services/wills/
+    - name: Powers of attorney
+      url: /services/powers-of-attorney/
+    - name: Other personal planning documents
+      url: /services/other-personal-planning-documents/
+
+- name: Notarizations
+  services:
+    - name: Notarizations
+      url: /services/notarizations/

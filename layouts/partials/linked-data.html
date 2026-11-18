@@ -1,0 +1,100 @@
+{{- $meta := hugo.Data.meta -}}
+
+{{- $images := slice -}}
+{{- with resources.Get "images/47-print-0151.jpg" -}}
+  {{- $image := .Resize "1600x" -}}
+  {{- $images = $images | append (dict
+    "@type" "ImageObject"
+    "contentUrl" $image.Permalink
+    "width" $image.Width
+    "height" $image.Height
+  ) -}}
+{{- end -}}
+{{- with resources.Get "images/Upper Left Photography - Marine Landing Notary-7.jpg" -}}
+  {{- $image := .Fill "1600x900 center" -}}
+  {{- $images = $images | append (dict
+    "@type" "ImageObject"
+    "contentUrl" $image.Permalink
+    "width" $image.Width
+    "height" $image.Height
+  ) -}}
+{{- end -}}
+
+{{- $business := dict
+  "@context" "https://schema.org"
+  "@type" "Notary"
+  "name" $meta.title
+  "legalName" $meta.legal_name
+  "url" site.Home.Permalink
+  "description" $meta.description
+  "telephone" $meta.phone_intl
+  "faxNumber" $meta.fax_intl
+  "email" $meta.email
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" $meta.address.streetaddr
+    "addressLocality" $meta.address.locality
+    "addressRegion" $meta.address.region
+    "postalCode" $meta.address.postalcode
+    "addressCountry" $meta.address.country
+  )
+  "image" $images
+  "geo" (dict
+    "@type" "GeoCoordinates"
+    "latitude" $meta.address.coordinates.latitude
+    "longitude" $meta.address.coordinates.longitude
+  )
+  "openingHoursSpecification" hugo.Data.hours.openingHoursSpecification
+  "areaServed" (slice
+    (dict "@type" "City" "name" "Vancouver")
+    (dict "@type" "City" "name" "Richmond")
+    (dict "@type" "City" "name" "Burnaby")
+  )
+  "sameAs" (slice
+    "https://maps.app.goo.gl/MMRPruSkhkP6KdaX8"
+    "https://www.facebook.com/p/Marine-Landing-Notary-Public-61565484281287/"
+    "https://www.instagram.com/marinelandingnotary/"
+    "https://m.yelp.ca/biz/jonathan-wong-notary-corporation-vancouver"
+  )
+-}}
+
+{{- with resources.Get "images/logomark-brand.svg" -}}
+  {{- $business = merge $business (dict "logo" .Permalink) -}}
+{{- end -}}
+
+{{- $catalog := slice -}}
+
+{{- range hugo.Data.services -}}
+  {{- $services := slice -}}
+
+  {{- range .services -}}
+    {{- $service := dict
+      "@type" "Service"
+      "name" .name
+      "url" (absURL .url)
+    -}}
+
+    {{- $services = $services | append (dict
+      "@type" "Offer"
+      "itemOffered" $service
+    ) -}}
+  {{- end -}}
+
+  {{- $catalog = $catalog | append (dict
+    "@type" "OfferCatalog"
+    "name" .name
+    "itemListElement" $services
+  ) -}}
+{{- end -}}
+
+{{- $business = merge $business (dict
+  "hasOfferCatalog" (dict
+    "@type" "OfferCatalog"
+    "name" "Notary Services"
+    "itemListElement" $catalog
+  )
+) -}}
+
+<script type="application/ld+json">
+  {{- $business | jsonify | safeJS -}}
+</script>
