@@ -107,6 +107,7 @@ img,
 li,
 p,
 section,
+footer,
 span,
 ul {
   margin: 0;
@@ -119,7 +120,8 @@ ul {
 article,
 aside,
 header,
-section {
+section,
+footer {
   display: block;
 }
 body {
