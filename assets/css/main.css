@@ -1304,6 +1304,7 @@ _::-webkit-full-page-media, _:future,
 
   p {
     margin-block: 1em;
+    text-wrap: pretty;
   }
 
   @media (min-width: 512px) {
