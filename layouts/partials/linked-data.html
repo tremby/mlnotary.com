@@ -22,7 +22,7 @@
 
 {{- $business := dict
   "@context" "https://schema.org"
-  "@type" "Notary"
+  "@type" (slice "LocalBusiness" "Notary")
   "name" $meta.title
   "legalName" $meta.legal_name
   "url" site.Home.Permalink
