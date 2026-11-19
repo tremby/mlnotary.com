@@ -1,0 +1,10 @@
+<section class="call-cta" aria-labelledby="call-cta-heading">
+  <h2 id="call-cta__heading">{{ .heading }}</h2>
+
+  <p>{{ .text }}</p>
+
+  <a href="tel:{{ hugo.Data.meta.phone_intl }}" class="call-cta__button button font-size:h6 nowrap">
+    {{ partial "phone-icon.html" }}
+    Call Us
+  </a>
+</section>

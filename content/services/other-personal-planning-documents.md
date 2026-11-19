@@ -3,6 +3,9 @@ layout = "services"
 weight = 50
 title = "Other personal planning documents"
 description = "Alongside your will, we can assist with other personal planning documents, including representation agreements, advance directives, and related paperwork."
+[callCta]
+  heading = "Planning for your future care?"
+  text = "Representation agreements and advance directives can help ensure your healthcare wishes are respected. Give us a call to discuss which documents may be right for you."
 [menus]
   [menus.main]
     parent = "services"
