@@ -10,38 +10,42 @@
       </p>
       <span class="line line:short margin-top:u8"></span>
       {{ with resources.Get "images/261022-MLNotary-Final-6144px-0012.jpg" }}
-        {{ $img := partial "crop-offset.html" (slice . "3994x3994+102+264") }}
-        <figure class="margin-top:u8 margin-x:auto" style="max-width: 460px">
-          <picture>
-            {{ range slice "avif" "webp" "jpeg" }}
-              {{ $format := . }}
-              {{ with $img }}
-                <source
-                  type="image/{{ $format }}"
-                  srcset="
-                    {{ with .Resize (printf "%dx %s" 296 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                    {{ with .Resize (printf "%dx %s" 400 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                    {{ with .Resize (printf "%dx %s" 460 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                    {{ with .Resize (printf "%dx %s" 592 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                    {{ with .Resize (printf "%dx %s" 800 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                    {{ with .Resize (printf "%dx %s" 920 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
-                  "
+        {{ with partial "crop-offset.html" (slice . "3994x3994+102+264") }}
+          {{ $img := . }}
+          <figure class="margin-top:u8 margin-x:auto" style="max-width: 460px">
+            <picture>
+              {{ range slice "avif" "webp" "jpeg" }}
+                {{ $format := . }}
+                {{ with $img }}
+                  <source
+                    type="image/{{ $format }}"
+                    srcset="
+                      {{ with .Resize (printf "%dx %s" 296 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                      {{ with .Resize (printf "%dx %s" 400 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                      {{ with .Resize (printf "%dx %s" 460 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                      {{ with .Resize (printf "%dx %s" 592 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                      {{ with .Resize (printf "%dx %s" 800 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                      {{ with .Resize (printf "%dx %s" 920 $format) }}{{ .RelPermalink }} {{ .Width }}w,{{ end }}
+                    "
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                  >
+                {{ end }}
+              {{ end }}
+              {{ with .Resize "296x jpeg" }}
+                <img
+                  src="{{ .RelPermalink }}"
                   width="{{ .Width }}"
                   height="{{ .Height }}"
+                  alt="An Asian man with glasses smiles at the camera. He wears a blue suit with a white shirt and a blue tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
+                  sizes="auto, (min-width: 1140px) 460px, (min-width: 768px) 40vw, (min-width: 536px) 460px, 79vw"
+                  class="border-radius:u1 width:100%"
                 >
               {{ end }}
-            {{ end }}
-            <img
-              src="{{ ($img.Resize "296x jpeg").RelPermalink }}"
-              width="{{ .Width }}"
-              height="{{ .Height }}"
-              alt="An Asian man with glasses smiles at the camera. He wears a blue suit with a white shirt and a blue tie. His dark hair is cropped short on the sides, and is longer on top, styled to the side."
-              sizes="auto, (min-width: 1140px) 460px, (min-width: 768px) 40vw, (min-width: 536px) 460px, 79vw"
-              class="border-radius:u1"
-            >
-          </picture>
-          <figcaption>Jonathan Wong</figcaption>
-        </figure>
+            </picture>
+            <figcaption>Jonathan Wong</figcaption>
+          </figure>
+        {{ end }}
       {{ end }}
     </div>
     <div class="column:12 column@sm:6 padding:u10 padding-top:u8 font-size:h6">

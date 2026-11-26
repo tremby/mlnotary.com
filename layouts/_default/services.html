@@ -142,15 +142,17 @@
           {{ end }}
 
           <!-- fallback -->
-          <img
-            src="{{ ($5_6.Resize "375x jpeg").RelPermalink }}"
-            width="{{ .Width }}"
-            height="{{ .Height }}"
-            alt=""
-            loading="eager"
-            sizes="auto, 100vw"
-            class="with-purple-overlay object-fit:cover inset:0 position:absolute width:100% height:100%"
-          >
+          {{ with $5_6.Resize "375x jpeg" }}
+            <img
+              src="{{ .RelPermalink }}"
+              width="{{ .Width }}"
+              height="{{ .Height }}"
+              alt=""
+              loading="eager"
+              sizes="auto, 100vw"
+              class="with-purple-overlay object-fit:cover inset:0 position:absolute width:100% height:100%"
+            >
+          {{ end }}
         </picture>
       {{ end }}
       <div class="purple-overlay"></div>

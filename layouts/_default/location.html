@@ -32,15 +32,17 @@
                   >
                 {{ end }}
               {{ end }}
-              <img
-                src="{{ (.Resize "296x jpeg").RelPermalink }}"
-                width="{{ .Width }}"
-                height="{{ .Height }}"
-                alt="Twin modern buildings, seen from across the street at roof level. The building on the right is numbered 8250. Mountains can be seen in the distance."
-                sizes="auto, (min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
-                loading="eager"
-                class="border-radius:u1"
-              >
+              {{ with .Resize "296x jpeg" }}
+                <img
+                  src="{{ .RelPermalink }}"
+                  width="{{ .Width }}"
+                  height="{{ .Height }}"
+                  alt="Twin modern buildings, seen from across the street at roof level. The building on the right is numbered 8250. Mountains can be seen in the distance."
+                  sizes="auto, (min-width: 1332px) 560px, (min-width: 768px) 40vw, (min-width: 640px) 560px, 79vw"
+                  loading="eager"
+                  class="border-radius:u1 width:100%"
+                >
+              {{ end }}
             </picture>
             <figcaption>Our premises are in the Marine Landing B building, on Manitoba Street just south of SW Marine Drive.</figcaption>
           </figure>
