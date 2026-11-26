@@ -29,7 +29,14 @@
       <source type="image/avif" srcset="{{ $avif1x.RelPermalink }}, {{ $avif2x.RelPermalink }} 2x" width="{{ $avif1x.Width }}" height="{{ $avif1x.Height }}">
       <source type="image/webp" srcset="{{ $webp1x.RelPermalink }}, {{ $webp2x.RelPermalink }} 2x" width="{{ $webp1x.Width }}" height="{{ $webp1x.Height }}">
       <source type="image/png" srcset="{{ $png1x.RelPermalink }}, {{ $png2x.RelPermalink }} 2x" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}">
-      <img class="map__center" src="{{ $png1x.RelPermalink }}" width="{{ $png1x.Width }}" height="{{ $png1x.Height }}" alt="Map of South Vancouver, centred on Marine Landing Notary Public's location on Manitoba Street just south of SW Marine Drive." loading="lazy">
+      <img
+        class="map__center"
+        src="{{ $png1x.RelPermalink }}"
+        width="{{ $png1x.Width }}"
+        height="{{ $png1x.Height }}"
+        alt="Map of South Vancouver, centred on Marine Landing Notary Public's location on Manitoba Street just south of SW Marine Drive."
+        loading="lazy"
+      >
     </picture>
 
     {{- range seq 3 -}}
