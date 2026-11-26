@@ -74,8 +74,8 @@
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
-                loading="lazy"
-                sizes="auto"
+                loading="eager"
+                sizes="auto, (min-width: 1140px) 25vw, 0px"
                 alt="Modern office kitchenette with wood cabinets, white counters, microwave and espresso machine beside a glass-walled dining nook with black chairs; sleek, calm atmosphere."
               >
             {{ end }}
@@ -154,8 +154,8 @@
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
-                loading="lazy"
-                sizes="auto"
+                loading="eager"
+                sizes="auto, (min-width: 1140px) 25vw, 0px"
                 alt="Compact modern office with deep navy walls, a wood desk and computer, orange lounge chair, round coffee table, and gray sofa, creating a calm, polished feel."
               >
             {{ end }}
