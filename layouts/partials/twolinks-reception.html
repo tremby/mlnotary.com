@@ -97,7 +97,7 @@
     {{ with $16_9.Resize "375x jpeg" }}
       <img
         class="position:absolute inset:0 width:100% height:100% object-fit:cover"
-        style="object-position: right center"
+        style="object-position: right center; {{ partial "lqip-style-rule.html" . | safeCSS }}"
         src="{{ .RelPermalink }}"
         width="{{ .Width }}"
         height="{{ .Height }}"

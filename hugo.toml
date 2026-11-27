@@ -14,7 +14,7 @@ target = "data"
 [[module.mounts]]
 source = "generated"
 target = "data"
-files = ["hours.json"]
+files = ["hours.json", "lqips.yaml"]
 
 [imaging]
 resampleFilter = "lanczos"

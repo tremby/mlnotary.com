@@ -1,0 +1,7 @@
+{{- /*
+Return the lquip integer for an image, e.g.
+  {{ partial "lqip-value.html" $img }}
+*/ -}}
+{{- with index hugo.Data.lqips .Name -}}
+  --lqip: {{ . }};
+{{- end -}}

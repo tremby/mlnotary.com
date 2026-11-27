@@ -6,6 +6,7 @@
     "dev": "hugo --watch server",
     "get-hours": "node get-hours.mjs",
     "get-maps": "node get-maps.mjs",
+    "generate-lqips": "bash -O globstar -O extglob -O nullglob -O nocaseglob -c 'for file in assets/images/**/*.@(png|jpg|jpeg); do echo \"\\\"${file#assets}\\\": $(lrlqip \"$file\")\"; done;' >generated/lqips.yaml",
     "build": "hugo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

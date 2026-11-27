@@ -70,13 +70,14 @@
             {{ end }}
             {{ with $2_5 }}
               <img
-                class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+                class="force-lqip position:absolute inset:0 width:100% height:100% object-fit:cover"
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
                 loading="eager"
                 sizes="auto, (min-width: 1140px) 25vw, 0px"
                 alt="Modern office kitchenette with wood cabinets, white counters, microwave and espresso machine beside a glass-walled dining nook with black chairs; sleek, calm atmosphere."
+                style="{{ partial "lqip-style-rule.html" . | safeCSS }}"
               >
             {{ end }}
           </picture>
@@ -150,13 +151,14 @@
             {{ end }}
             {{ with $2_5 }}
               <img
-                class="position:absolute inset:0 width:100% height:100% object-fit:cover"
+                class="force-lqip position:absolute inset:0 width:100% height:100% object-fit:cover"
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
                 loading="eager"
                 sizes="auto, (min-width: 1140px) 25vw, 0px"
                 alt="Compact modern office with deep navy walls, a wood desk and computer, orange lounge chair, round coffee table, and gray sofa, creating a calm, polished feel."
+                style="{{ partial "lqip-style-rule.html" . | safeCSS }}"
               >
             {{ end }}
           </picture>

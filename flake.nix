@@ -1,9 +1,15 @@
 {
   description = "Node.js dev environment for MLNP site";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    lrlqip = {
+      url = "github:tremby/lrlqip";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, lrlqip }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -12,6 +18,7 @@
         packages = [
           pkgs.nodejs_24
           pkgs.hugo
+          lrlqip.packages.${system}.default
         ];
 
         shellHook = ''
