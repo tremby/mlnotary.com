@@ -1,14 +1,21 @@
-+++
-layout = "about"
-title = "About us"
-description = "Marine Landing Notary Public, led by Jonathan Wong, has provided trustworthy and affordable legal services in Vancouver since 2017."
-headline = "At Marine Landing Notary Public, we want all our clients to be confident that their legal needs are met while being delivered at the highest quality."
-weight = 30
-[menus]
-  [menus.main]
-    name = "About"
-    post = "Us"
-+++
+---
+layout: about
+title: About us
+description: >
+  Marine Landing Notary Public, led by Jonathan Wong,
+  has provided trustworthy and affordable legal services
+  in Vancouver since 2017.
+headline: >
+  At Marine Landing Notary Public,
+  we want all our clients to be confident
+  that their legal needs are met while being delivered
+  at the highest quality.
+weight: 30
+menus:
+  main:
+    name: About
+    post: Us
+---
 
 # About Marine Landing Notary Public
 

@@ -1,17 +1,24 @@
-+++
-layout = "services"
-weight = 40
-title = "Powers of attorney services"
-description = "We offer legal help for managing powers of attorney, which can authorize someone to act on your behalf, whether enduring or for specific circumstances."
-[callCta]
-  heading = "Need a power of attorney?"
-  text = "Whether you’re planning ahead or need a power of attorney for a specific transaction, we can help you understand your options. Give us a call to discuss your needs."
-[menus]
-  [menus.main]
-    parent = "services"
-  [menus.services]
-    name = "Powers of attorney"
-+++
+---
+layout: services
+weight: 40
+title: Powers of attorney services
+description: >
+  We offer legal help for managing powers of attorney,
+  which can authorize someone to act on your behalf,
+  whether enduring or for specific circumstances.
+callCta:
+  heading: Need a power of attorney?
+  text: >
+    Whether you’re planning ahead
+    or need a power of attorney for a specific transaction,
+    we can help you understand your options.
+    Give us a call to discuss your needs.
+menus:
+  main:
+    parent: services
+  services:
+    name: Powers of attorney
+---
 
 # Powers of attorney services
 

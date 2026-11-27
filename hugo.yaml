@@ -1,0 +1,30 @@
+baseURL: https://mlnotary.com
+locale: en-CA
+title: Marine Landing Notary Public
+
+disableKinds:
+  - taxonomy
+  - term
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+module:
+  mounts:
+    - source: data
+      target: data
+    - source: generated
+      target: data
+      files:
+        - hours.json
+        - lqips.yaml
+
+imaging:
+  resampleFilter: lanczos
+  jpeg:
+    quality: 85
+  webp:
+    quality: 85
+    method: 6

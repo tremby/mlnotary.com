@@ -1,17 +1,22 @@
-+++
-layout = "services"
-weight = 30
-title = "Wills and estate planning services"
-description = "Crucial if you own assets or have dependents, we can craft you a personalized will under BC's Wills, Estates, and Succession Act."
-[callCta]
-  heading = "Ready to plan for the future?"
-  text = "Making a will is an important step in protecting your wishes and providing for your loved ones. Give us a call to discuss getting started."
-[menus]
-  [menus.main]
-    parent = "services"
-  [menus.services]
-    name = "Wills and estate planning"
-+++
+---
+layout: services
+weight: 30
+title: Wills and estate planning services
+description: >
+  Crucial if you own assets or have dependents,
+  we can craft you a personalized will under BC's Wills, Estates, and Succession Act.
+callCta:
+  heading: Ready to plan for the future?
+  text: >
+    Making a will is an important step
+    in protecting your wishes and providing for your loved ones.
+    Give us a call to discuss getting started.
+menus:
+  main:
+    parent: services
+  services:
+    name: Wills and estate planning
+---
 
 # Wills and estate planning services
 

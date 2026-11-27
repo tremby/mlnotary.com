@@ -1,17 +1,22 @@
-+++
-layout = "services"
-weight = 10
-title = "Real estate purchase and sale services"
-description = "We facilitate seamless property transactions in BC, covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates for homes and businesses."
-[callCta]
-  heading = "Buying or selling a home?"
-  text = "We’re here to help make your property transfer as smooth as possible. Give us a call to discuss your transaction."
-[menus]
-  [menus.main]
-    parent = "services"
-  [menus.services]
-    name = "Real estate purchase and sale"
-+++
+---
+layout: services
+weight: 10
+title: Real estate purchase and sale services
+description: >
+  We facilitate seamless property transactions in BC,
+  covering transfers, mortgages, taxes, adjustments, strata forms, and title certificates
+  for homes and businesses.
+callCta:
+  heading: Buying or selling a home?
+  text: >
+    We’re here to help make your property transfer as smooth as possible.
+    Give us a call to discuss your transaction.
+menus:
+  main:
+    parent: services
+  services:
+    name: Real estate purchase and sale
+---
 
 # Real estate purchase and sale services
 

@@ -1,12 +1,14 @@
-+++
-layout = "calculator"
-title = "Property transfer tax calculator"
-description = "Find out how much tax will be due on your property transfer, taking into account 2024’s updated first-time home buyer and newly-built home exemptions."
-weight = 50
-[menus]
-  [menus.main]
-    name = "PTT Calculator"
-+++
+---
+layout: calculator
+title: Property transfer tax calculator
+description: >
+  Find out how much tax will be due on your property transfer,
+  taking into account 2024’s updated first-time home buyer and newly-built home exemptions.
+weight: 50
+menus:
+  main:
+    name: PTT Calculator
+---
 
 # Property transfer tax calculator
 

@@ -1,17 +1,24 @@
-+++
-layout = "services"
-weight = 60
-title = "Notarization services"
-description = "We notarize diverse personal documents, such as statutory declarations, insurance loss declarations, certified copies, proofs of identity, and affidavits."
-[callCta]
-  heading = "Need a document notarized?"
-  text = "Whether you need a signature witnessed, a document certified, or an oath administered, we’re happy to help. Give us a call to discuss what you need."
-[menus]
-  [menus.main]
-    parent = "services"
-  [menus.services]
-    name = "Notarizations"
-+++
+---
+layout: services
+weight: 60
+title: Notarization services
+description: >
+  We notarize diverse personal documents,
+  such as statutory declarations, insurance loss declarations,
+  certified copies, proofs of identity, and affidavits.
+callCta:
+  heading: Need a document notarized?
+  text: >
+    Whether you need a signature witnessed,
+    a document certified, or an oath administered,
+    we’re happy to help.
+    Give us a call to discuss what you need.
+menus:
+  main:
+    parent: services
+  services:
+    name: Notarizations
+---
 
 # Notarization services
 
