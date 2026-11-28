@@ -1302,7 +1302,7 @@ _::-webkit-full-page-media, _:future,
     color: var(--primary-d1);
   }
 
-  p {
+  .call-cta__body {
     margin-block: 1em;
     text-wrap: pretty;
   }

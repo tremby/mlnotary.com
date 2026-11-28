@@ -7,7 +7,7 @@ description: >
   including representation agreements, advance directives, and related paperwork.
 callCta:
   heading: Planning for your future care?
-  text: >
+  textMd: |
     Representation agreements and advance directives
     can help ensure your healthcare wishes are respected.
     Give us a call to discuss which documents may be right for you.

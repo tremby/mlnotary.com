@@ -8,8 +8,8 @@ description: >
   whether enduring or for specific circumstances.
 callCta:
   heading: Need a power of attorney?
-  text: >
-    Whether you’re planning ahead
+  textMd: |
+    Whether you're planning ahead
     or need a power of attorney for a specific transaction,
     we can help you understand your options.
     Give us a call to discuss your needs.

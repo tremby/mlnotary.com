@@ -7,7 +7,7 @@ description: >
   we can craft you a personalized will under BC's Wills, Estates, and Succession Act.
 callCta:
   heading: Ready to plan for the future?
-  text: >
+  textMd: |
     Making a will is an important step
     in protecting your wishes and providing for your loved ones.
     Give us a call to discuss getting started.

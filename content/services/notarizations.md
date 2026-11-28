@@ -8,10 +8,10 @@ description: >
   certified copies, proofs of identity, and affidavits.
 callCta:
   heading: Need a document notarized?
-  text: >
+  textMd: |
     Whether you need a signature witnessed,
     a document certified, or an oath administered,
-    we’re happy to help.
+    we're happy to help.
     Give us a call to discuss what you need.
 menus:
   main:

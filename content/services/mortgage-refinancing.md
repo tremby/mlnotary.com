@@ -7,9 +7,9 @@ description: >
   helping you leverage home equity for your important life decisions.
 callCta:
   heading: Refinancing your mortgage?
-  text: >
-    Whether you’re accessing equity in your home or arranging a new mortgage,
-    we’re here to help.
+  textMd: |
+    Whether you're accessing equity in your home or arranging a new mortgage,
+    we're here to help.
     Give us a call to discuss your refinancing needs.
 menus:
   main:

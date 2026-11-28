@@ -8,8 +8,8 @@ description: >
   for homes and businesses.
 callCta:
   heading: Buying or selling a home?
-  text: >
-    We’re here to help make your property transfer as smooth as possible.
+  textMd: |
+    We're here to help make your property transfer as smooth as possible.
     Give us a call to discuss your transaction.
 menus:
   main:

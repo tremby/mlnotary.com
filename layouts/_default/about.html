@@ -5,9 +5,9 @@
 
   <section class="row fill:white">
     <div class="column:12 column@sm:6 padding:u10 padding-top:u8">
-      <p class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
-        {{ .Params.headline }}
-      </p>
+      <div class="font-weight:light font-height:1.2 font-size:h2 font-size@sm:h2 max-width:prose margin:auto text-wrap:balance">
+        {{ .Params.headlineMd | markdownify }}
+      </div>
       <span class="line line:short margin-top:u8"></span>
       {{ with resources.Get "images/261022-MLNotary-Final-6144px-0012.jpg" }}
         {{ with partial "crop-offset.html" (slice . "3994x3994+102+264") }}
