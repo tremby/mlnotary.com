@@ -25,6 +25,8 @@ locationTextMd: |
   on Manitoba Street just south of SW Marine Drive,
   our office is easily accessible from
   Vancouver, Richmond, and surrounding areas.
+
+  Appointments are strongly recommended for all services.
 weight: 10
 menus:
   main:

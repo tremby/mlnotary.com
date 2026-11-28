@@ -31,3 +31,5 @@ unable to act for themselves. Specific powers of attorney are most commonly used
 purchase or sale of property, or even for purchasing and/or leasing vehicles. Enduring powers of
 attorney are most commonly discussed in conjunction with other personal planning documents with older
 adults. A power of attorney can be revoked or changed at any time.
+
+Appointments are necessary for powers of attorney services.

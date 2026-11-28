@@ -36,3 +36,6 @@ We notarize a variety of personal documents, including but not limited to:
 - Proof of identity for travel purposes
 - Passport application documentation
 - Identity documents required for your notarization appointment
+
+Walk-ins are possible for simple notarizations
+but we strongly recommend making an appointment to avoid waiting.

@@ -56,3 +56,5 @@ such a document in British Columbia. The document that is most similar to a livi
 advance directive. An advance directive differs from a representation agreement in that it lists your healthcare
 wishes and does not appoint a representative to act for you. We consult with our clients about this and
 can assist with the preparation of advance directives.
+
+Appointments are necessary for services involving personal planning documents.

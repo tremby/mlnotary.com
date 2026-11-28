@@ -27,3 +27,5 @@ When paying out an existing loan and obtaining a new loan, this is known as mort
 At Marine Landing Notary Public, we guide you through the mortgage refinancing process by providing expert legal advice,
 preparing all necessary documentation,
 and managing the disbursement of mortgage funds to help you meet your financial goals.
+
+Appointments are necessary for mortgage refinancing services.

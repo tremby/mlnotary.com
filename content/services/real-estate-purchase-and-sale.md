@@ -53,3 +53,5 @@ As your notary public, we will assist you with the following:
 - **State of title certificate**:
   Upon completion, we will obtain a state of title certificate from the Land Title Office,
   confirming your status as the registered owner.
+
+Appointments are necessary for real estate conveyancing services.

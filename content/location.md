@@ -40,6 +40,9 @@ menus:
 
 [Get directions via Google Maps]({{< directions-url >}})
 
+Appointments are required in most cases.
+[Call us](tel:{{< phone-intl >}}) to set up yours.
+
 ## Transit
 
 We are conveniently located within walking distance of the Marine Drive Canada Line station and its bus loop.
