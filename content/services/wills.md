@@ -24,10 +24,10 @@ menus:
 > If you die without a will, your property will be divided according to BC law, and the costs to administer your estate will increase.
 > You'll also be giving up the right to appoint the guardian of your choice for any children in your care.
 >
-> [– BC Provincial Government](https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/financial-legal-matters/wills-and-estate-planning)
+> [-- BC Provincial Government](https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/financial-legal-matters/wills-and-estate-planning)
 
-Under British Columbia’s Wills, Estates and Succession Act (WESA),
-a will is a legal document that provides instructions on how a person’s estate should be managed after their death.
+Under British Columbia's Wills, Estates and Succession Act (WESA),
+a will is a legal document that provides instructions on how a person's estate should be managed after their death.
 Creating a will is essential to ensure that your wishes are respected and that your loved ones are taken care of.
 
 At Marine Landing Notary Public, we assist in the preparation and witnessing of your will, tailored to your specific needs.

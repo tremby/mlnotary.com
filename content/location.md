@@ -47,10 +47,10 @@ We are conveniently located within walking distance of the Marine Drive Canada L
 ## Parking
 
 Visitor parking is available in front of the building.
-Feel free to park in any of the designated visitor spots (marked with numbers), but please avoid the spots marked “loading”.
+Feel free to park in any of the designated visitor spots (marked with numbers), but please avoid the spots marked "loading".
 There is also street parking along Manitoba Street.
 
 ## Finding our office
 
 Use the main door near the middle of the building to enter the lobby.
-You'll find an unlocked door which leads to the elevators – please enter and take the elevator to **5R**.
+You'll find an unlocked door which leads to the elevators -- please enter and take the elevator to **5R**.
