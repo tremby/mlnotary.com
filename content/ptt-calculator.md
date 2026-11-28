@@ -3,7 +3,7 @@ layout: calculator
 title: Property transfer tax calculator
 description: >
   Find out how much tax will be due on your property transfer,
-  taking into account 2024’s updated first-time home buyer and newly-built home exemptions.
+  taking into account the first-time home buyer and newly-built home exemptions.
 weight: 50
 menus:
   main:
@@ -23,10 +23,10 @@ Depending on the value of the home this can save you a lot of money!
 
 ## FAQ
 
-### Is this up to date for the 2024 changes?
+### How up to date is this calculator?
 
-Yes,
-this calculator is updated to take into account the April 2024 changes to the exemption rules,
+This calculator is up to date and accurate as of December 2026.
+It takes into account the April 2024 changes to the exemption rules,
 and assumes a registration date of April 1 2024 or later.
 
 ### Why isn't the exemption applying?
